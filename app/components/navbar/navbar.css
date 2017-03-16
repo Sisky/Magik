@@ -1,0 +1,45 @@
+div#navbar {
+    position:fixed;
+    height:100%;
+    width:10%;
+    top:0;
+    left:0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgray;
+    position: fixed;
+    width: 10%;
+    height: 100%;
+}
+
+ul li {
+    display: block;
+    height: calc(100%/6);
+    text-align: center;
+    border-bottom: 1px solid;
+    vertical-align: middle;
+    background-image: url(app/images/test2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul li.bottom {
+    display: block;
+    height: calc((100%/6)*2);
+    text-align: center;
+    background: grey;
+}
+
+/* Change the link color to #111 (black) on hover */
+li:hover {
+    background-color: lightblue;
+}
+
+a:active {
+    background-color: #4CAF50;
+}

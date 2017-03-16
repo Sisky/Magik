@@ -9,5 +9,6 @@ src/**/*.js
 *.js.map
 e2e/**/*.js
 e2e/**/*.js.map
+*.js
 _test-output
 _temp
