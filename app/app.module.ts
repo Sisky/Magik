@@ -8,6 +8,11 @@ import ApplicationComponent from './components/application/application';
 import HomeComponent from './components/home/home';
 import {AppRoutingModule} from "./modules/app.routing";
 import DisclaimerComponent from "./components/disclaimer/disclaimer";
+import SideNavComponent from "./components/side-nav/side-nav";
+import HeaderComponent from "./components/planner/header/header";
+import CalenderComponent from "./components/planner/calender/calender";
+import {BookingService} from "./services/BookingService";
+import {DateService} from "./services/DateService";
 
 @NgModule({
   imports: [
@@ -19,10 +24,15 @@ import DisclaimerComponent from "./components/disclaimer/disclaimer";
   declarations: [
       ApplicationComponent,
       HomeComponent,
-      DisclaimerComponent
+      DisclaimerComponent,
+      SideNavComponent,
+      HeaderComponent,
+      CalenderComponent
   ],
   providers: [
-      { provide: LocationStrategy, useClass: HashLocationStrategy },
+            BookingService,
+            DateService,
+            {provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [ ApplicationComponent ]
 })

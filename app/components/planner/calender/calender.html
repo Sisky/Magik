@@ -1,0 +1,64 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <br>
+    </div>
+
+    <div class="col col-md-2">
+    <!--<br><br>-->
+    <!--{{date}}-->
+</div>
+
+    <div class="col col-md-2">
+        <div *ngIf='bookings[0]'>Day: {{bookings[0].date | date:'EEEE dd'}} </div>
+        <div *ngFor="let booking of bookings">
+            <div class="row">
+                <h1>Room: {{booking.room}}</h1>
+                <h2>Level: {{booking.level}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-2">
+        <div *ngIf='tuesdayBookings[0]'>Day: {{tuesdayBookings[0].date | date:'EEEE dd'}} </div>
+        <div *ngFor="let booking of tuesdayBookings">
+            <div class="row">
+                <h1>Room: {{booking.room}}</h1>
+                <h2>Level: {{booking.level}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-2">
+        <div *ngIf='wednesdayBookings[0]'>Day: {{wednesdayBookings[0].date | date:'EEEE dd'}} </div>
+        <div *ngFor="let booking of wednesdayBookings">
+            <div class="row">
+                <h1>Room: {{booking.room}}</h1>
+                <h2>Level: {{booking.level}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-2">
+        <div *ngIf='thursdayBookings[0]'>Day: {{thursdayBookings[0].date | date:'EEEE dd'}} </div>
+        <div *ngFor="let booking of thursdayBookings">
+            <div class="row">
+                <h1>Room: {{booking.room}}</h1>
+                <h2>Level: {{booking.level}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-2">
+        <div *ngIf='fridayBookings[0]'>Day: {{fridayBookings[0].date | date:'EEEE dd'}} </div>
+        <div *ngFor="let booking of fridayBookings">
+            <div class="row">
+                <h1>Room: {{booking.room}}</h1>
+                <h2>Level: {{booking.level}}</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
