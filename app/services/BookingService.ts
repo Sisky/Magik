@@ -36,6 +36,15 @@ var bookings = [
     {
         "date": "03-27-2017",
         "level": 9,
+        "room": 6,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-27-2017",
+        "level": 9,
         "room": 1,
         "am_dept": "General",
         "pm_dept": "General",
@@ -305,7 +314,7 @@ var bookings = [
     },
     {
         "date": "03-20-2017",
-        "level": 9,
+        "level": 1,
         "room": 1,
         "am_dept": "General",
         "pm_dept": "General",
@@ -314,7 +323,7 @@ var bookings = [
     },
     {
         "date": "03-20-2017",
-        "level": 9,
+        "level": 1,
         "room": 2,
         "am_dept": "General",
         "pm_dept": "General",
@@ -323,7 +332,7 @@ var bookings = [
     },
     {
         "date": "03-21-2017",
-        "level": 9,
+        "level": 1,
         "room": 1,
         "am_dept": "General",
         "pm_dept": "General",
@@ -332,7 +341,7 @@ var bookings = [
     },
     {
         "date": "03-21-2017",
-        "level": 9,
+        "level": 1,
         "room": 2,
         "am_dept": "General",
         "pm_dept": "General",
@@ -341,7 +350,7 @@ var bookings = [
     },
     {
         "date": "03-22-2017",
-        "level": 9,
+        "level": 1,
         "room": 1,
         "am_dept": "General",
         "pm_dept": "General",
@@ -350,7 +359,7 @@ var bookings = [
     },
     {
         "date": "03-22-2017",
-        "level": 9,
+        "level": 1,
         "room": 2,
         "am_dept": "General",
         "pm_dept": "General",
@@ -359,7 +368,7 @@ var bookings = [
     },
     {
         "date": "03-23-2017",
-        "level": 9,
+        "level": 1,
         "room": 1,
         "am_dept": "General",
         "pm_dept": "General",
@@ -368,7 +377,7 @@ var bookings = [
     },
     {
         "date": "03-23-2017",
-        "level": 9,
+        "level": 1,
         "room": 2,
         "am_dept": "General",
         "pm_dept": "General",
@@ -377,7 +386,7 @@ var bookings = [
     },
     {
         "date": "03-24-2017",
-        "level": 9,
+        "level": 1,
         "room": 1,
         "am_dept": "General",
         "pm_dept": "General",
@@ -386,8 +395,395 @@ var bookings = [
     },
     {
         "date": "03-24-2017",
-        "level": 9,
+        "level": 1,
         "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-03-2017",
+        "level": 1,
+        "room": 5,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-27-2017",
+        "level": 1,
+        "room": 6,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-27-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-27-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-28-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-28-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-29-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-29-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-30-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-30-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-31-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-31-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-01-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-01-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-02-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-02-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-03-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-03-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-04-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-04-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-05-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-05-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-06-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-06-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-07-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-07-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-08-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-08-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-09-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-09-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-10-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-10-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-20-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-20-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-21-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-21-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-22-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-22-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-23-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-23-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-24-2017",
+        "level": 1,
+        "room": 1,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "03-24-2017",
+        "level": 1,
+        "room": 2,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-03-2017",
+        "level": 1,
+        "room": 5,
         "am_dept": "General",
         "pm_dept": "General",
         "am_surg": "Dr. Ben Smith",

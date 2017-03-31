@@ -13,13 +13,16 @@ import HeaderComponent from "./components/planner/header/header";
 import CalenderComponent from "./components/planner/calender/calender";
 import {BookingService} from "./services/BookingService";
 import {DateService} from "./services/DateService";
+import {DropdownModule} from "ngx-dropdown";
+import {LevelService} from "./services/LevelService";
 
 @NgModule({
   imports: [
       BrowserModule,
       FormsModule,
       ReactiveFormsModule,
-      AppRoutingModule
+      AppRoutingModule,
+      DropdownModule
   ],
   declarations: [
       ApplicationComponent,
@@ -32,6 +35,7 @@ import {DateService} from "./services/DateService";
   providers: [
             BookingService,
             DateService,
+            LevelService,
             {provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [ ApplicationComponent ]

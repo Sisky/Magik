@@ -5,7 +5,8 @@ System.config({
     module: "commonjs"},
   map: {
     '@angular': 'node_modules/@angular',
-    'rxjs'    : 'node_modules/rxjs'
+    'rxjs'    : 'node_modules/rxjs',
+      'ngx-dropdown': 'node_modules/ngx-dropdown'
   },
   paths: {
     'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
@@ -22,7 +23,8 @@ System.config({
     '@angular/router'                  : {main: 'router.umd.min.js'},
     '@angular/forms'                  : {main: 'forms.umd.min.js'},
     '@angular/platform-browser'        : {main: 'platform-browser.umd.min.js'},
-    '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'}
+    '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'},
+      'ngx-dropdown': { main: 'index.js', defaultExtension: 'js' }
   }
 });
 

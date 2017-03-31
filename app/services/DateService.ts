@@ -10,7 +10,6 @@ export class DateService {
 
     constructor() {
         this.date = new Date();
-        this.dateChange.next(this.date);
     }
     setDate(date: Date) {
         this.date = date;

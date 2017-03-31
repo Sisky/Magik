@@ -6,6 +6,7 @@ import {Component, Input} from '@angular/core';
 import {Booking, BookingService} from '../../../services/BookingService';
 import {DateService} from "../../../services/DateService";
 import {Subscription} from "rxjs";
+import {LevelService} from "../../../services/LevelService";
 
 
 @Component({
@@ -29,9 +30,9 @@ export default class CalenderComponent {
     thursdayBookings:Booking[];
     fridayBookings: Booking[];
 
-    constructor(private bookingService: BookingService, private dateService: DateService) {
+    constructor(private bookingService: BookingService, private dateService: DateService, private levelService: LevelService) {
         //hard coded for testing
-        this.level = 9;
+        this.level = levelService.getLevel();
 
         this.date = dateService.getMonday();
         this.tuesDate = dateService.getTuesday();
@@ -45,6 +46,7 @@ export default class CalenderComponent {
         this.thursdayBookings = bookingService.getDayBooking(this.thursDate, this.level);
         this.fridayBookings = bookingService.getDayBooking(this.friDate, this.level);
 
+        //re render with new date
 
         let _subscription = dateService.dateChange$.subscribe((value) => {
             this.date = dateService.getMonday();
@@ -59,9 +61,26 @@ export default class CalenderComponent {
             this.fridayBookings = bookingService.getDayBooking(this.friDate, this.level);
         });
 
+        //re render with new level
+        let _subscriptionL = levelService.levelChange$.subscribe((value) => {
+            this.level = value;
 
-
+            this.date = dateService.getMonday();
+            this.bookings = bookingService.getDayBooking(this.date, this.level);
+            this.tuesDate = dateService.getTuesday();
+            this.tuesdayBookings = bookingService.getDayBooking(this.tuesDate, this.level);
+            this.wedsDate = dateService.getWednesday();
+            this.wednesdayBookings = bookingService.getDayBooking(this.wedsDate, this.level);
+            this.thursDate = dateService.getThursday();
+            this.thursdayBookings = bookingService.getDayBooking(this.thursDate, this.level);
+            this.friDate = dateService.getFriday();
+            this.fridayBookings = bookingService.getDayBooking(this.friDate, this.level);
+        });
     }
+
+
+
+
 
 
 
