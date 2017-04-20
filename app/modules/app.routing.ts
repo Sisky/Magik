@@ -5,12 +5,12 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import HomeComponent from "../components/home/home";
 import DisclaimerComponent from "../components/disclaimer/disclaimer";
-import CalenderComponent from "../components/planner/calender/calender";
+import CalendarComponent from "../components/planner/calendar/calendar";
 
 const routes: Routes = [
     {path: '',           component: HomeComponent},
     {path: 'disclaimer', component: DisclaimerComponent},
-    {path: 'calender', component: CalenderComponent},
+    {path: 'calendar', component: CalendarComponent},
 
 ];
 

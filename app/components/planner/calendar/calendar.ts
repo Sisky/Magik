@@ -10,12 +10,12 @@ import {LevelService} from "../../../services/LevelService";
 
 
 @Component({
-    selector: 'calender',
-    templateUrl:'./app/components/planner/calender/calender.html',
+    selector: 'calendar',
+    templateUrl:'./app/components/planner/calendar/calendar.html',
     styleUrls:['./node_modules/bootstrap/dist/css/bootstrap.css']
 })
 
-export default class CalenderComponent {
+export default class CalendarComponent {
     level: number;
 
     date: Date;

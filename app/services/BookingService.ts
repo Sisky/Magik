@@ -403,15 +403,6 @@ var bookings = [
         "pm_surg": "Dr. Ben Smith"
     },
     {
-        "date": "04-03-2017",
-        "level": 1,
-        "room": 5,
-        "am_dept": "General",
-        "pm_dept": "General",
-        "am_surg": "Dr. Ben Smith",
-        "pm_surg": "Dr. Ben Smith"
-    },
-    {
         "date": "03-27-2017",
         "level": 1,
         "room": 6,
@@ -783,10 +774,65 @@ var bookings = [
     {
         "date": "04-03-2017",
         "level": 1,
+        "room": 3,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-03-2017",
+        "level": 1,
+        "room": 4,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-03-2017",
+        "level": 1,
         "room": 5,
         "am_dept": "General",
         "pm_dept": "General",
         "am_surg": "Dr. Ben Smith",
         "pm_surg": "Dr. Ben Smith"
     },
+    {
+        "date": "04-04-2017",
+        "level": 1,
+        "room": 3,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-04-2017",
+        "level": 1,
+        "room": 4,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-04-2017",
+        "level": 1,
+        "room": 5,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+    {
+        "date": "04-05-2017",
+        "level": 1,
+        "room": 3,
+        "am_dept": "General",
+        "pm_dept": "General",
+        "am_surg": "Dr. Ben Smith",
+        "pm_surg": "Dr. Ben Smith"
+    },
+
 ];

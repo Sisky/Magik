@@ -10,7 +10,7 @@ import {AppRoutingModule} from "./modules/app.routing";
 import DisclaimerComponent from "./components/disclaimer/disclaimer";
 import SideNavComponent from "./components/side-nav/side-nav";
 import HeaderComponent from "./components/planner/header/header";
-import CalenderComponent from "./components/planner/calender/calender";
+import CalendarComponent from "./components/planner/calendar/calendar";
 import {BookingService} from "./services/BookingService";
 import {DateService} from "./services/DateService";
 import {DropdownModule} from "ngx-dropdown";
@@ -30,7 +30,7 @@ import {LevelService} from "./services/LevelService";
       DisclaimerComponent,
       SideNavComponent,
       HeaderComponent,
-      CalenderComponent
+      CalendarComponent
   ],
   providers: [
             BookingService,

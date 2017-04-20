@@ -1,7 +1,6 @@
 {
-  "name": "auction_ch7",
-  "description": "Sample Online Auction from Chapter 7 from the book Angular 2 Development with TypeScript",
-  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "name": "OR Booking",
+  "description": "OR Booking",
   "private": true,
   "scripts": {
     "start": "live-server"
