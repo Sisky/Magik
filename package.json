@@ -1,5 +1,5 @@
 {
-  "name": "OR Booking",
+  "name": "Magik",
   "description": "OR Booking",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "npm": ">=2.14.x"
   },
   "dependencies": {
+    "@angular/animations": "^4.0.3",
     "@angular/common": "2.0.1",
     "@angular/compiler": "2.0.1",
     "@angular/core": "2.0.1",
@@ -25,7 +26,7 @@
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.37",
     "zone.js": "0.6.21"
-  },
+      },
   "devDependencies": {
     "@types/es6-shim": "0.0.29",
     "live-server": "0.8.x",

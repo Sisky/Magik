@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
+
+
 import ApplicationComponent from './components/application/application';
 import HomeComponent from './components/home/home';
 import {AppRoutingModule} from "./modules/app.routing";
@@ -15,6 +17,7 @@ import {BookingService} from "./services/BookingService";
 import {DateService} from "./services/DateService";
 import {DropdownModule} from "ngx-dropdown";
 import {LevelService} from "./services/LevelService";
+import BookingComponent from "./components/planner/calendar/booking/booking";
 
 @NgModule({
   imports: [
@@ -22,15 +25,16 @@ import {LevelService} from "./services/LevelService";
       FormsModule,
       ReactiveFormsModule,
       AppRoutingModule,
-      DropdownModule
-  ],
+      DropdownModule,
+      ],
   declarations: [
       ApplicationComponent,
       HomeComponent,
       DisclaimerComponent,
       SideNavComponent,
       HeaderComponent,
-      CalendarComponent
+      CalendarComponent,
+      BookingComponent
   ],
   providers: [
             BookingService,

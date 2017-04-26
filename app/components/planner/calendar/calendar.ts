@@ -47,7 +47,6 @@ export default class CalendarComponent {
         this.fridayBookings = bookingService.getDayBooking(this.friDate, this.level);
 
         //re render with new date
-
         let _subscription = dateService.dateChange$.subscribe((value) => {
             this.date = dateService.getMonday();
             this.bookings = bookingService.getDayBooking(this.date, this.level);
@@ -60,7 +59,6 @@ export default class CalendarComponent {
             this.friDate = dateService.getFriday();
             this.fridayBookings = bookingService.getDayBooking(this.friDate, this.level);
         });
-
         //re render with new level
         let _subscriptionL = levelService.levelChange$.subscribe((value) => {
             this.level = value;

@@ -1,11 +1,16 @@
 
-<div class="row no-gutter">
-    <div class="col-lg-6">
-        <button (click)="backWeek()">back 1 week</button>
-        week starting {{today}}
-        <button (click)="forwardWeek()">forward 1 week</button>
+
+    <div class="col-md-1">
+        <a class="waves-effect waves-light btn" (click)="backWeek()"><<</a>
     </div>
-    <div class="col-lg-6">
+    <div class="col-md-4">
+        <div class="card-panel">Week starting {{today}}</div>
+    </div>
+    <div class="col-md-1">
+        <a class="waves-effect waves-light btn" (click)="forwardWeek()">>></a>
+    </div>
+
+    <div class="col-md-6">
         <div class="dropdown" dropdown [dropdownToggle]="false" style="padding: 0px">
             <button dropdown-open>level {{level}}</button>
                 <ul class="dropdown-menu">
@@ -22,4 +27,3 @@
         </div>
     </div>
 
-</div>
