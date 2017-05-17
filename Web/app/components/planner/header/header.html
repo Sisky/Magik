@@ -1,0 +1,86 @@
+<div class="row ">
+    <div class="valign-wrapper">
+
+        <div class="col col-md-2">
+
+        </div>
+        <div class="col col-md-1">
+            <a (click)="backWeek()"><< Back</a>
+        </div>
+        <div class="col col-md-2">
+            <h6 >Week starting {{today}}</h6>
+        </div>
+        <div class="col col-md-1">
+            <a (click)="forwardWeek()">Forward >></a>
+        </div>
+        <div class="col col-md-2">
+
+        </div>
+        <div class="col col-md-4">
+            <div class="dropdown" dropdown [dropdownToggle]="false" style="padding: 0px">
+                <button dropdown-open>level {{level}}</button>
+                <ul class="dropdown-menu">
+                    <li (click)="changeLevel(4)">Level 4</li>
+                    <li (click)="changeLevel(8)">Level 8</li>
+                    <li (click)="changeLevel(9)">Level 9</li>
+                    <li (click)="changeLevel(1)">GSU</li>
+                    <li (click)="changeLevel(2)">SSOR</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--<div class="row ">-->
+
+    <!--<div class="col-md-6 ">-->
+
+        <!--<div class="valign-wrapper">-->
+        <!--<div id="left">-->
+            <!--<a (click)="backWeek()"><< Back</a>-->
+        <!--</div>-->
+            <!--<div id="center">-->
+            <!--<h6 >Week starting {{today}}</h6>-->
+            <!--</div>-->
+        <!--<div id="right">-->
+            <!--<a (click)="forwardWeek()">Forward >></a>-->
+         <!--</div>-->
+
+
+        <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<div class="col-md-6 ">-->
+        <!--<div class="dropdown" dropdown [dropdownToggle]="false" style="padding: 0px">-->
+            <!--<button dropdown-open>level {{level}}</button>-->
+                <!--<ul class="dropdown-menu">-->
+                    <!--<li (click)="changeLevel(1)">1</li>-->
+                    <!--<li (click)="changeLevel(2)">2</li>-->
+                    <!--<li (click)="changeLevel(3)">3</li>-->
+                    <!--<li (click)="changeLevel(4)">4</li>-->
+                    <!--<li (click)="changeLevel(5)">5</li>-->
+                    <!--<li (click)="changeLevel(6)">6</li>-->
+                    <!--<li (click)="changeLevel(7)">7</li>-->
+                    <!--<li (click)="changeLevel(8)">8</li>-->
+                    <!--<li (click)="changeLevel(9)">9</li>-->
+                <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+

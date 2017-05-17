@@ -8,7 +8,7 @@ export class LevelService {
     levelChange$ = this.levelChange.asObservable();
 
     constructor() {
-        this.level = 1;
+        this.level = 4;
     }
     getLevel(): number {
         return this.level;
@@ -19,3 +19,5 @@ export class LevelService {
     }
 
 }
+
+// 1 is GSU 2 is SSOR ************************

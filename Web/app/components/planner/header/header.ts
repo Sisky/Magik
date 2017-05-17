@@ -2,6 +2,7 @@ import {Component, Output} from '@angular/core';
 import {EventEmitter} from "@angular/common/src/facade/async";
 import {DateService} from "../../../services/DateService";
 import {LevelService} from "../../../services/LevelService";
+
 declare var moment: any;
 
 @Component({
@@ -25,6 +26,9 @@ export default class HeaderComponent {
         let _subscription = levelService.levelChange$.subscribe((value) => {
             this.level = value;
         });
+
+
+
     }
     //gets the previous monday formats 'Monday January 2nd 2017' style
     backWeek() {

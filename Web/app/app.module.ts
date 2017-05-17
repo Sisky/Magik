@@ -18,6 +18,7 @@ import {DateService} from "./services/DateService";
 import {DropdownModule} from "ngx-dropdown";
 import {LevelService} from "./services/LevelService";
 import BookingComponent from "./components/planner/calendar/booking/booking";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import BookingComponent from "./components/planner/calendar/booking/booking";
       ReactiveFormsModule,
       AppRoutingModule,
       DropdownModule,
+      HttpModule
       ],
   declarations: [
       ApplicationComponent,

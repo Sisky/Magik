@@ -1,7 +1,7 @@
 System.config({
   transpiler: 'typescript',
   typescriptOptions: {emitDecoratorMetadata: true,
-    target: "ES5",
+    target: "ES6",
     module: "commonjs"},
   map: {
     '@angular': 'node_modules/@angular',
@@ -20,6 +20,7 @@ System.config({
   packages: {
     'app'                              : {main: 'main', defaultExtension: 'ts'},
     'rxjs'                             : {main: 'Rx'},
+      '@angular/http'                   : {main: 'http.umd.min.js'},
     '@angular/core'                    : {main: 'core.umd.min.js'},
     '@angular/common'                  : {main: 'common.umd.min.js'},
     '@angular/compiler'                : {main: 'compiler.umd.min.js'},

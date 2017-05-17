@@ -21,5 +21,16 @@ export default class BookingComponent {
     @Input() deptPM: string;
     @Input() surgPM: string;
 
+
+
+
+    
+    beep:string;
+
     constructor() {}
+
+    popUp() {
+
+        console.log("test " + this.deptPM );
+    }
 }

@@ -17,3 +17,13 @@ div {
 .beep {
     padding: 0px;
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#container{width:100%;}
+#left{float:left;width: 33%;}
+#right{float:right;width: 33%;}
+#center{margin:0 auto;width: 33%;}
