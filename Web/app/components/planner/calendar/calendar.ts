@@ -17,7 +17,6 @@ import {LevelService} from "../../../services/LevelService";
 
 export default class CalendarComponent {
     level: number;
-    beep: string;
 
     date: Date;
     tuesDate: Date;
@@ -25,7 +24,7 @@ export default class CalendarComponent {
     thursDate: Date;
     friDate: Date;
 
-    bookings:Object[];
+    mondayBookings:Object[];
     tuesdayBookings:Object[];
     wednesdayBookings:Object[];
     thursdayBookings:Object[];
@@ -34,105 +33,62 @@ export default class CalendarComponent {
     constructor(private bookingService: BookingService, private dateService: DateService, private levelService: LevelService) {
         //hard coded for testing
         this.level = levelService.getLevel();
+        this.populate();
 
-        this.date = dateService.getMonday();
-        this.tuesDate = dateService.getTuesday();
-        this.wedsDate = dateService.getWednesday();
-        this.thursDate = dateService.getThursday();
-        this.friDate = dateService.getFriday();
+        //re render with new date
+        let _subscription = dateService.dateChange$.subscribe((value) => {
+            this.populate()
+        });
+        //re render with new level
+        let _subscriptionL = levelService.levelChange$.subscribe((value) => {
+            this.populate();
+        });
+    }
 
+    populate() {
+        this.level = this.levelService.getLevel();
+
+        this.date = this.dateService.getMonday();
+        this.tuesDate = this.dateService.getTuesday();
+        this.wedsDate = this.dateService.getWednesday();
+        this.thursDate = this.dateService.getThursday();
+        this.friDate = this.dateService.getFriday();
+
+        //Monday
         this.bookingService.getLevelBooking(this.date, this.level)
-            .subscribe(data => this.bookings = data,
+            .subscribe(data => this.mondayBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
-        //
-        // this.bookingService.getLevelBooking(this.tuesDate, this.level)
-        //     .then(data => this.tuesdayBookings = data);
-        //
-        // this.bookingService.getLevelBooking(this.wedsDate, this.level)
-        //     .then(data => this.wednesdayBookings = data);
-        //
-        // this.bookingService.getLevelBooking(this.thursDate, this.level)
-        //     .then(data => this.thursdayBookings = data);
-        //
-        // this.bookingService.getLevelBooking(this.friDate, this.level)
-        //     .then(data => this.fridayBookings = data);
-
-
-
-
-        //re render with new date
-        let _subscription = dateService.dateChange$.subscribe((value) => {
-
-            this.date = dateService.getMonday();
-            this.tuesDate = dateService.getTuesday();
-            this.wedsDate = dateService.getWednesday();
-            this.thursDate = dateService.getThursday();
-            this.friDate = dateService.getFriday();
-
-            this.bookingService.getLevelBooking(this.date, this.level)
-                .subscribe(data => this.bookings = data,
-                    err => {
-                        // Log errors if any
-                        console.log(err);
-                    });
-
-            // this.bookingService.getLevelBooking(this.tuesDate, this.level)
-            //     .then(data => this.tuesdayBookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.wedsDate, this.level)
-            //     .then(data => this.wednesdayBookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.thursDate, this.level)
-            //     .then(data => this.thursdayBookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.friDate, this.level)
-            //     .then(data => this.fridayBookings = data);
-        });
-        //re render with new level
-        let _subscriptionL = levelService.levelChange$.subscribe((value) => {
-            this.level = value;
-
-            this.date = dateService.getMonday();
-            this.tuesDate = dateService.getTuesday();
-            this.wedsDate = dateService.getWednesday();
-            this.thursDate = dateService.getThursday();
-            this.friDate = dateService.getFriday();
-
-            this.bookingService.getLevelBooking(this.date, this.level)
-                .subscribe(data => this.bookings = data,
-                    err => {
-                        // Log errors if any
-                        console.log(err);
-                    });
-
-                // .then(data => this.bookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.tuesDate, this.level)
-            //     .then(data => this.tuesdayBookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.wedsDate, this.level)
-            //     .then(data => this.wednesdayBookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.thursDate, this.level)
-            //     .then(data => this.thursdayBookings = data);
-            //
-            // this.bookingService.getLevelBooking(this.friDate, this.level)
-            //     .then(data => this.fridayBookings = data);
-        });
+        //Tuesday
+        this.bookingService.getLevelBooking(this.tuesDate, this.level)
+            .subscribe(data => this.tuesdayBookings = (data as any).results,
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                });
+        //Wednesday
+        this.bookingService.getLevelBooking(this.wedsDate, this.level)
+            .subscribe(data => this.wednesdayBookings = (data as any).results,
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                });
+        //Thursday
+        this.bookingService.getLevelBooking(this.thursDate, this.level)
+            .subscribe(data => this.thursdayBookings = (data as any).results,
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                });
+        //Friday
+        this.bookingService.getLevelBooking(this.friDate, this.level)
+            .subscribe(data => this.fridayBookings = (data as any).results,
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                });
     }
-
-
-
-
-
-
-
-
-
-
-
 }
 

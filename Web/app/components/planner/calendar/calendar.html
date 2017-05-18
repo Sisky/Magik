@@ -9,18 +9,15 @@
     </div>
 
     <div class="col col-md-1">
-    <!--<br><br>-->
-    <!--{{date}}-->
-</div>
 
+</div>
     <div class="col col-md-2" >
-        <div *ngFor="let booking of bookings">
+        <div *ngFor="let booking of mondayBookings">
             <div class="row" >
                 <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}"> </booking>
             </div>
-                 </div>
+        </div>
     </div>
-
 
     <div class="col col-md-2">
         <div *ngFor="let booking of tuesdayBookings">
@@ -31,7 +28,6 @@
     </div>
 
     <div class="col col-md-2">
-
         <div *ngFor="let booking of wednesdayBookings">
             <div class="row">
                 <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}"> </booking>
@@ -54,7 +50,4 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
