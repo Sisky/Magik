@@ -1,0 +1,1321 @@
+date,level,room,am_dept,pm_dept,am_surg,pm_surg
+2017-05-08,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-08,4,2,Card Con,Card Con,Finucane,Finucane
+2017-05-08,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-08,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-08,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-08,4,6,ORL,ORL,McIvor,McIvor
+2017-05-08,4,7,ORL,ORL,Chaplin,Chaplin
+2017-05-09,4,1,Cardiology,Cardiac,Not Specified,Not Specified
+2017-05-09,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-09,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-09,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-09,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-09,4,6,ORL,ORL,McIvor,McIvor
+2017-05-09,4,7,ORL,ORL,Douglas ,Nair
+2017-05-10,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-10,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-05-10,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-05-10,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-05-10,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-05-10,4,6,ORL,ORl,Vokes,McIvor
+2017-05-10,4,7,ORL,OH,Vokes,Ling
+2017-05-11,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,4,6,ORL,ORL,Tandon,Samant
+2017-05-11,4,7,ORL,ORL,Dorman,Dorman
+2017-05-12,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-05-12,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-12,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-12,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-12,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-12,4,6,ORL,ORL,Neeff,Not Specified
+2017-05-12,4,7,Gen Surg,Gen Surg,Ng,Ng
+2017-05-15,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-15,4,2,Card Con,Card Con,Finucane,Finucane
+2017-05-15,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-15,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-15,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-15,4,6,ORL,ORL,Chaplin,Chaplin
+2017-05-15,4,7,ORL,ORL,Douglas ,Douglas
+2017-05-16,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,4,6,ORL,ORL,Sillars,Sillars
+2017-05-16,4,7,ORL,ORL,Nair,Wong
+2017-05-17,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-17,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-05-17,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-05-17,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-05-17,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-05-17,4,6,ORL,ORL,McIvor,McIvor
+2017-05-17,4,7,ORL,ORL,Vokes,Vokes
+2017-05-18,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,4,6,OH,ORL,Ngo,Samant
+2017-05-18,4,7,ORL,ORL,Tandon,Dorman
+2017-05-19,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-05-19,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-19,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-19,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-19,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-19,4,6,ORL,ORL,Neeff,Fellow
+2017-05-19,4,7,Gen Surg,Gen Surg,Ng,Ng
+2017-05-22,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-22,4,2,Card Con,Card Con,Finucane,Finucane
+2017-05-22,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-22,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-22,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-22,4,6,ORL,ORL,Vokes,Vokes
+2017-05-22,4,7,ORL,ORL,Chaplin,Chaplin
+2017-05-23,4,1,Cardiology,Cardiac,Not Specified,Not Specified
+2017-05-23,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-23,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-23,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-23,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-23,4,6,ORL,ORL,McIvor,McIvor
+2017-05-23,4,7,ORL,ORL,Douglas ,Nair
+2017-05-24,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-24,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-05-24,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-05-24,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-05-24,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-05-24,4,6,ORL,ORL,Fellow,Samant
+2017-05-24,4,7,ORL,ORL,Nair,Vokes
+2017-05-25,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,4,6,ORL,ORL,Tandon,Samant
+2017-05-25,4,7,ORL,ORL,Dorman,Dorman
+2017-05-26,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-05-26,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-26,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-26,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-26,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-26,4,6,ORL,ORL,Neeff,Fellow
+2017-05-26,4,7,OH,ORL,Sealey,LX Fellow
+2017-05-29,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-29,4,2,Card Con,Card Con,Finucane,Finucane
+2017-05-29,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-29,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-29,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-29,4,6,ORL,ORL,Chaplin,Chaplin
+2017-05-29,4,7,ORL,ORL,Douglas ,Douglas
+2017-05-30,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,4,6,ORL,ORL,Sillars,Sillars
+2017-05-30,4,7,ORL,ORL,Wong,Wong
+2017-05-31,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-05-31,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-05-31,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-05-31,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-05-31,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-05-31,4,6,ORL,ORL,Huber,Huber
+2017-05-31,4,7,ORL,ORL,Vokes,Vokes
+2017-06-01,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,4,6,ORL,ORL,Samant,Samant
+2017-06-01,4,7,ORL,ORl,Tandon,Dorman
+2017-06-02,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-06-02,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-02,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-02,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-02,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-02,4,6,ORL,ORL,Neeff,Fellow
+2017-06-02,4,7,Resp,ORL,Not Specified,Not Specified
+2017-06-05,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-05,4,2,Card Con,Card Con,Finucane,Finucane
+2017-06-05,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-05,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-05,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-05,4,6,ORL,ORL,McIvor,McIvor
+2017-06-05,4,7,ORL,ORL,Chaplin,Chaplin
+2017-06-06,4,1,Cardiology,Cardiac,Not Specified,Not Specified
+2017-06-06,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-06,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-06,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-06,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-06,4,6,ORL,ORL,McIvor,McIvor
+2017-06-06,4,7,ORL,ORL,Douglas ,Nair
+2017-06-07,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-07,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-06-07,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-06-07,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-06-07,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-06-07,4,6,ORL,ORl,Vokes,McIvor
+2017-06-07,4,7,ORL,OH,Vokes,Ling
+2017-06-08,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,4,6,ORL,ORL,Tandon,Samant
+2017-06-08,4,7,ORL,ORL,Dorman,Dorman
+2017-06-09,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-06-09,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-09,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-09,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-09,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-09,4,6,ORL,ORL,Neeff,Not Specified
+2017-06-09,4,7,Gen Surg,Gen Surg,Ng,Ng
+2017-06-12,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-12,4,2,Card Con,Card Con,Finucane,Finucane
+2017-06-12,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-12,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-12,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-12,4,6,ORL,ORL,Chaplin,Chaplin
+2017-06-12,4,7,ORL,ORL,Douglas ,Douglas
+2017-06-13,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,4,6,ORL,ORL,Sillars,Sillars
+2017-06-13,4,7,ORL,ORL,Nair,Wong
+2017-06-14,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-14,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-06-14,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-06-14,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-06-14,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-06-14,4,6,ORL,ORL,McIvor,McIvor
+2017-06-14,4,7,ORL,ORL,Vokes,Vokes
+2017-06-15,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,4,6,OH,ORL,Ngo,Samant
+2017-06-15,4,7,ORL,ORL,Tandon,Dorman
+2017-06-16,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-06-16,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-16,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-16,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-16,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-16,4,6,ORL,ORL,Neeff,Fellow
+2017-06-16,4,7,Gen Surg,Gen Surg,Ng,Ng
+2017-06-19,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-19,4,2,Card Con,Card Con,Finucane,Finucane
+2017-06-19,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-19,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-19,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-19,4,6,ORL,ORL,Vokes,Vokes
+2017-06-19,4,7,ORL,ORL,Chaplin,Chaplin
+2017-06-20,4,1,Cardiology,Cardiac,Not Specified,Not Specified
+2017-06-20,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-20,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-20,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-20,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-20,4,6,ORL,ORL,McIvor,McIvor
+2017-06-20,4,7,ORL,ORL,Douglas ,Nair
+2017-06-21,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-21,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-06-21,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-06-21,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-06-21,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-06-21,4,6,ORL,ORL,Fellow,Samant
+2017-06-21,4,7,ORL,ORL,Nair,Vokes
+2017-06-22,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,4,6,ORL,ORL,Tandon,Samant
+2017-06-22,4,7,ORL,ORL,Dorman,Dorman
+2017-06-23,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-06-23,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-23,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-23,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-23,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-23,4,6,ORL,ORL,Neeff,Fellow
+2017-06-23,4,7,OH,ORL,Sealey,LX Fellow
+2017-06-26,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-26,4,2,Card Con,Card Con,Finucane,Finucane
+2017-06-26,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-26,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-26,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-26,4,6,ORL,ORL,Chaplin,Chaplin
+2017-06-26,4,7,ORL,ORL,Douglas ,Douglas
+2017-06-27,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,4,6,ORL,ORL,Sillars,Sillars
+2017-06-27,4,7,ORL,ORL,Wong,Wong
+2017-06-28,4,1,Vascular,Vascular,Not Specified,Not Specified
+2017-06-28,4,2,Flex,Cardiac,Not Specified,Not Specified
+2017-06-28,4,3,Flex,Cardiac,Not Specified,Not Specified
+2017-06-28,4,4,Flex,Cardiac,Not Specified,Not Specified
+2017-06-28,4,5,Flex,Cardiac,Not Specified,Not Specified
+2017-06-28,4,6,ORL,ORL,Huber,Huber
+2017-06-28,4,7,ORL,ORL,Vokes,Vokes
+2017-06-29,4,1,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,4,6,ORL,ORL,Samant,Samant
+2017-06-29,4,7,ORL,ORl,Tandon,Dorman
+2017-06-30,4,1,Cardiology,Cardiology,Not Specified,Not Specified
+2017-06-30,4,2,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-30,4,3,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-30,4,4,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-30,4,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-30,4,6,ORL,ORL,Neeff,Fellow
+2017-06-30,4,7,Resp,ORL,Not Specified,Not Specified
+2017-05-08,8,1,Neuro,Neuro,Aspoas,Aspoas
+2017-05-08,8,2,Neuro,Neuro,Law,Law
+2017-05-08,8,3,Vascular,Vascular,Vann,Vann
+2017-05-08,8,4,Urology,Urology,Lienert,Lienert
+2017-05-08,8,5,Urology,Urology,Mundy,Mundy
+2017-05-08,8,6,Urology,Urology,Masters,Masters
+2017-05-08,8,7,ASU,ASU,Hsee,Hsee
+2017-05-08,8,8,Gen Surg,Gen Surg,Beban,Beban
+2017-05-08,8,9,Gen Surg,Gen Surg,Johnston,Johnston
+2017-05-08,8,10,Ortho,Ortho,Hadlow,Hadlow
+2017-05-08,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-08,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-08,8,13,Ortho,Ortho,Ball,Ball
+2017-05-08,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-09,8,1,Neuro,Neuro,Heppner,Heppner
+2017-05-09,8,2,Neuro,Neuro,Law,Law
+2017-05-09,8,3,Vascular,Vascular,Bhamidipaty,Bhamidipaty
+2017-05-09,8,4,Gen Surg,Gen Surg,Jones,Jones
+2017-05-09,8,5,Urology,Urology,Merrilees,Merrilees
+2017-05-09,8,6,Gen Surg,Gen Surg,Al-Mozany,Al-Mozany
+2017-05-09,8,7,ASU,ASU,Pandanaboyana,Pandanaboyana
+2017-05-09,8,8,Ortho,Ortho,Hanlon,Hanlon
+2017-05-09,8,9,Gen Surg,Gen Surg,Bartlett,Bartlett
+2017-05-09,8,10,Ortho,Ortho,McCowan,McCowan
+2017-05-09,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-09,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-09,8,13,Ortho,Ortho,Not Specified,Not Specified
+2017-05-09,8,14,,,,
+2017-05-10,8,1,Neuro,Neuro,Mee,Mee
+2017-05-10,8,2,Neuro,Neuro,Bok,Bok
+2017-05-10,8,3,Vascular,Vascular,Bourchier,Bourchier
+2017-05-10,8,4,ASU,ASU,Hsee,Hsee
+2017-05-10,8,5,Gen Surg,Gen Surg,Cranshaw,Cranshaw
+2017-05-10,8,6,Gen Surg,Gen Surg,O'Grady,O'Grady
+2017-05-10,8,7,Gen Surg,Gen Surg,Shaw,Puttick
+2017-05-10,8,8,Ortho,Ortho,Not Specified,Not Specified
+2017-05-10,8,9,Transplant,Transplant,McCall,McCall
+2017-05-10,8,10,Ortho,Ortho,Ferguson,Ferguson
+2017-05-10,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-10,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-10,8,13,Ortho,Ortho,Ball,Ball
+2017-05-10,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-11,8,1,Neuro,Neuro,Aspoas,Aspoas
+2017-05-11,8,2,Neuro,Neuro,Heppner,Heppner
+2017-05-11,8,3,Vascular,Vascular,Muthu,Muthu
+2017-05-11,8,4,Urology,Urology,Tuckey,Tuckey
+2017-05-11,8,5,Urology,Urology,Williams,Williams
+2017-05-11,8,6,Gen Surg,Gen Surg,Hayes,Hayes
+2017-05-11,8,7,Gen Surg,Gen Surg,Collinson,Collinson
+2017-05-11,8,8,Ortho,Ortho,Munro,Munro
+2017-05-11,8,9,ASU,ASU,Al-Mozany,Al-Mozany
+2017-05-11,8,10,Ortho,Ortho,Campbell,Campbell
+2017-05-11,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-11,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-11,8,13,Ortho,Ortho,Blackley,Blackley
+2017-05-11,8,14,,,,
+2017-05-12,8,1,Neuro,Neuro,Not Specified,Not Specified
+2017-05-12,8,2,ASU,ASU,Puttick,Puttick
+2017-05-12,8,3,Vascular,Vascular,Not Specified,Not Specified
+2017-05-12,8,4,Gen Surg,Gen Surg,Ram,Ram
+2017-05-12,8,5,Urology,Urology,Rice,Rice
+2017-05-12,8,6,Urology,Urology,Not Specified,Not Specified
+2017-05-12,8,7,Gen Surg,Gen Surg,Pandanaboyana,Pandanaboyana
+2017-05-12,8,8,Ortho,Ortho,Field,Field
+2017-05-12,8,9,Gen Surg,Gen Surg,Beban,Beban
+2017-05-12,8,10,Ortho,Ortho,Robertson,Robertson
+2017-05-12,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-12,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-12,8,13,Ortho,Ortho,Don,Don
+2017-05-12,8,14,,,,
+2017-05-15,8,1,Neuro,Neuro,Mee,Mee
+2017-05-15,8,2,Neuro,Neuro,Bok,Bok
+2017-05-15,8,3,Neuro,Neuro,Schweder,Schweder
+2017-05-15,8,4,Urology,Urology,Lienert,Lienert
+2017-05-15,8,5,Urology,Urology,Mundy,Mundy
+2017-05-15,8,6,Urology,Urology,Masters,Masters
+2017-05-15,8,7,ASU,ASU,Hsee,Hsee
+2017-05-15,8,8,Ortho,Ortho,Don,Don
+2017-05-15,8,9,Gen Surg,Gen Surg,Evennett,Evennett
+2017-05-15,8,10,Ortho,Ortho,Robertson,Robertson
+2017-05-15,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-15,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-15,8,13,Ortho,Ortho,Twaddle,Twaddle
+2017-05-15,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-16,8,1,Neuro,Neuro,Furneaux,Furneaux
+2017-05-16,8,2,Neuro,Neuro,Law,Law
+2017-05-16,8,3,Vascular,Vascular,Bhamidipaty,Bhamidipaty
+2017-05-16,8,4,Neuro,Neuro,Schweder,Schweder
+2017-05-16,8,5,Urology,Urology,Merrilees,Merrilees
+2017-05-16,8,6,Gen Surg,Gen Surg,Bissett,Bissett
+2017-05-16,8,7,ASU,ASU,Pandanaboyana,Pandanaboyana
+2017-05-16,8,8,Gen Surg,Gen Surg,Taylor,Taylor
+2017-05-16,8,9,Gen Surg,Gen Surg,Windsor,Windsor
+2017-05-16,8,10,Ortho,Ortho,Hanlon,Hanlon
+2017-05-16,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-16,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-16,8,13,Ortho,Ortho,Fougere,Fougere
+2017-05-16,8,14,,,,
+2017-05-17,8,1,Neuro,Neuro,Mee,Mee
+2017-05-17,8,2,Neuro,Neuro,Bok,Bok
+2017-05-17,8,3,Vascular,Vascular,Bourchier,Bourchier
+2017-05-17,8,4,ASU,ASU,Hsee,Hsee
+2017-05-17,8,5,Urology,Urology,Mundy,Mundy
+2017-05-17,8,6,Gen Surg,Gen Surg,Al-Mozany,Al-Mozany
+2017-05-17,8,7,Gen Surg,Gen Surg,Shaw,Shaw
+2017-05-17,8,8,Ortho,Ortho,Munro,Munro
+2017-05-17,8,9,Transplant,Transplant,Not Specified,Not Specified
+2017-05-17,8,10,Ortho,Ortho,Mills,Mills
+2017-05-17,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-17,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-17,8,13,Ortho,Ortho,Brown,Brown
+2017-05-17,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-18,8,1,Neuro,Neuro,Aspoas,Aspoas
+2017-05-18,8,2,Neuro,Neuro,Furneaux,Furneaux
+2017-05-18,8,3,Vascular,Vascular,Muthu,Muthu
+2017-05-18,8,4,Urology,Urology,Tuckey,Tuckey
+2017-05-18,8,5,Urology,Urology,Williams,Williams
+2017-05-18,8,6,Gen Surg,Gen Surg,Hayes,Hayes
+2017-05-18,8,7,Gen Surg,Gen Surg,Collinson,Collinson
+2017-05-18,8,8,Ortho,Ortho,Rawlinson,Rawlinson
+2017-05-18,8,9,ASU,ASU,Evennett,Evennett
+2017-05-18,8,10,Ortho,Ortho,Campbell,Campbell
+2017-05-18,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-18,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-18,8,13,Ortho,Ortho,Blackley,Blackley
+2017-05-18,8,14,,,,
+2017-05-19,8,1,Neuro,Neuro,Not Specified,Not Specified
+2017-05-19,8,2,ASU,ASU,Puttick,Puttick
+2017-05-19,8,3,Vascular,Vascular,Not Specified,Not Specified
+2017-05-19,8,4,Transplant,Transplant,Not Specified,Not Specified
+2017-05-19,8,5,Urology,Urology,Rice,Rice
+2017-05-19,8,6,Urology,Urology,Not Specified,Not Specified
+2017-05-19,8,7,Gen Surg,Gen Surg,Pandanaboyana,Pandanaboyana
+2017-05-19,8,8,Ortho,Ortho,Don,Don
+2017-05-19,8,9,Gen Surg,Gen Surg,Beban,Beban
+2017-05-19,8,10,Ortho,Ortho,Wright,Wright
+2017-05-19,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-19,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-19,8,13,Ortho,Ortho,Hadlow,Hadlow
+2017-05-19,8,14,,,,
+2017-05-22,8,1,Neuro,Neuro,Aspoas,Aspoas
+2017-05-22,8,2,Neuro,Neuro,Law,Law
+2017-05-22,8,3,Vascular,Vascular,Vann,Vann
+2017-05-22,8,4,Urology,Urology,Lienert,Lienert
+2017-05-22,8,5,Urology,Urology,Mundy,Mundy
+2017-05-22,8,6,Urology,Urology,Masters,Masters
+2017-05-22,8,7,ASU,ASU,Hsee,Hsee
+2017-05-22,8,8,Gen Surg,Gen Surg,Beban,Beban
+2017-05-22,8,9,Gen Surg,Gen Surg,Johnston,Johnston
+2017-05-22,8,10,Ortho,Ortho,Hadlow,Hadlow
+2017-05-22,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-22,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-22,8,13,Ortho,Ortho,Ball,Ball
+2017-05-22,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-23,8,1,Neuro,Neuro,Law,Law
+2017-05-23,8,2,Neuro,Neuro,Heppner,Heppner
+2017-05-23,8,3,Vascular,Vascular,Bhamidipaty,Bhamidipaty
+2017-05-23,8,4,Gen Surg,Gen Surg,Jones,Jones
+2017-05-23,8,5,Urology,Urology,Merrilees,Merrilees
+2017-05-23,8,6,Gen Surg,Gen Surg,McCall,McCall
+2017-05-23,8,7,ASU,ASU,Pandanaboyana,Pandanaboyana
+2017-05-23,8,8,Ortho,Ortho,Fougere,Fougere
+2017-05-23,8,9,Gen Surg,Gen Surg,Bartlett,Bartlett
+2017-05-23,8,10,Ortho,Ortho,McCowan,McCowan
+2017-05-23,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-23,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-23,8,13,Ortho,Ortho,Not Specified,Not Specified
+2017-05-23,8,14,,,,
+2017-05-24,8,1,Neuro,Neuro,Mee,Mee
+2017-05-24,8,2,Neuro,Neuro,Bok,Bok
+2017-05-24,8,3,Vascular,Vascular,Bourchier,Bourchier
+2017-05-24,8,4,ASU,ASU,Hsee,Hsee
+2017-05-24,8,5,Urology,Urology,Mundy,Mundy
+2017-05-24,8,6,Gen Surg,Gen Surg,O'Grady,O'Grady
+2017-05-24,8,7,Gen Surg,Gen Surg,Shaw,Cranshaw
+2017-05-24,8,8,Ortho,Ortho,Munro,Munro
+2017-05-24,8,9,Transplant,Transplant,Not Specified,Not Specified
+2017-05-24,8,10,Ortho,Ortho,Brown,Brown
+2017-05-24,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-24,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-24,8,13,Ortho,Ortho,Ferguson,Ferguson
+2017-05-24,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-25,8,1,Neuro,Neuro,Aspoas,Aspoas
+2017-05-25,8,2,Neuro,Neuro,Heppner,Heppner
+2017-05-25,8,3,Vascular,Vascular,Muthu,Muthu
+2017-05-25,8,4,Urology,Urology,Tuckey,Tuckey
+2017-05-25,8,5,Urology,Urology,Williams,Williams
+2017-05-25,8,6,Gen Surg,Gen Surg,Hayes,Hayes
+2017-05-25,8,7,Gen Surg,Gen Surg,Collinson,Collinson
+2017-05-25,8,8,Ortho,Ortho,Rawlinson,Rawlinson
+2017-05-25,8,9,ASU,ASU,Al-Mozany,Al-Mozany
+2017-05-25,8,10,Ortho,Ortho,Blackley,Blackley
+2017-05-25,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-25,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-25,8,13,Ortho,Ortho,Munro,Munro
+2017-05-25,8,14,,,,
+2017-05-26,8,1,Neuro,Neuro,Not Specified,Not Specified
+2017-05-26,8,2,ASU,ASU,Puttick,Puttick
+2017-05-26,8,3,Vascular,Vascular,Not Specified,Not Specified
+2017-05-26,8,4,Gen Surg,Gen Surg,Ng,Ng
+2017-05-26,8,5,Urology,Urology,Rice,Rice
+2017-05-26,8,6,Urology,Urology,Not Specified,Not Specified
+2017-05-26,8,7,Gen Surg,Gen Surg,Pandanaboyana,Pandanaboyana
+2017-05-26,8,8,Ortho,Ortho,Field,Field
+2017-05-26,8,9,Gen Surg,Gen Surg,Ram,Ram
+2017-05-26,8,10,Ortho,Ortho,Robertson,Robertson
+2017-05-26,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-26,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-26,8,13,Ortho,Ortho,Ferguson,Ferguson
+2017-05-26,8,14,,,,
+2017-05-29,8,1,Neuro,Neuro,Mee,Mee
+2017-05-29,8,2,Neuro,Neuro,Heppner,Heppner
+2017-05-29,8,3,Neuro,Neuro,Schweder,Schweder
+2017-05-29,8,4,Renal (A),Renal (A),Yasutomi,Yasutomi
+2017-05-29,8,5,Urology,Urology,Mundy,Mundy
+2017-05-29,8,6,Urology,Urology,Masters,Masters
+2017-05-29,8,7,ASU,ASU,Hsee,Hsee
+2017-05-29,8,8,Ortho,Ortho,Don,Don
+2017-05-29,8,9,Gen Surg,Gen Surg,Evennett,Evennett
+2017-05-29,8,10,Ortho,Ortho,Robertson,Robertson
+2017-05-29,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-29,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-29,8,13,Ortho,Ortho,Twaddle,Twaddle
+2017-05-29,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-05-30,8,1,Neuro,Neuro,Law,Law
+2017-05-30,8,2,Neuro,Neuro,Furneaux,Furneaux
+2017-05-30,8,3,Vascular,Vascular,Bhamidipaty,Bhamidipaty
+2017-05-30,8,4,Neuro,Neuro,Heppner,Heppner
+2017-05-30,8,5,Urology,Urology,Merrilees,Merrilees
+2017-05-30,8,6,Gen Surg,Gen Surg,Bissett,Bissett
+2017-05-30,8,7,ASU,ASU,Marnewick,Marnewick
+2017-05-30,8,8,Gen Surg,Gen Surg,Windsor,Windsor
+2017-05-30,8,9,Gen Surg,Gen Surg,Bartlett,Bartlett
+2017-05-30,8,10,Ortho,Ortho,McCowan,McCowan
+2017-05-30,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-30,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-30,8,13,Ortho,Ortho,Hanlon,Hanlon
+2017-05-30,8,14,,,,
+2017-05-31,8,1,Neuro,Neuro,Mee,Mee
+2017-05-31,8,2,Neuro,Neuro,Bok,Bok
+2017-05-31,8,3,Vascular,Vascular,Bourchier,Bourchier
+2017-05-31,8,4,ASU,ASU,Hsee,Hsee
+2017-05-31,8,5,Gen Surg,Gen Surg,Al-Mozany,Al-Mozany
+2017-05-31,8,6,Gen Surg,Gen Surg,Merrie,Merrie
+2017-05-31,8,7,Gen Surg,Gen Surg,Cranshaw,Cranshaw
+2017-05-31,8,8,Ortho,Ortho,Twaddle,Twaddle
+2017-05-31,8,9,Transplant,Transplant,Not Specified,Not Specified
+2017-05-31,8,10,Ortho,Ortho,Mills,Mills
+2017-05-31,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-05-31,8,12,Acute,Acute,Not Specified,Not Specified
+2017-05-31,8,13,Ortho,Ortho,Brown,Brown
+2017-05-31,8,14,Vascular,Vascular,Not Specified,Not Specified
+2017-06-01,8,1,Neuro,Neuro,Aspoas,Aspoas
+2017-06-01,8,2,Neuro,Neuro,Furneaux,Furneaux
+2017-06-01,8,3,Vascular,Vascular,Muthu,Muthu
+2017-06-01,8,4,Urology,Urology,Tuckey,Tuckey
+2017-06-01,8,5,Urology,Urology,Williams,Williams
+2017-06-01,8,6,Gen Surg,Gen Surg,Hayes,Hayes
+2017-06-01,8,7,Gen Surg,Gen Surg,Collinson,Collinson
+2017-06-01,8,8,Ortho,Ortho,Munro,Munro
+2017-06-01,8,9,ASU,ASU,Evennett,Evennett
+2017-06-01,8,10,Ortho,Ortho,Compbell,Compbell
+2017-06-01,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-06-01,8,12,Acute,Acute,Not Specified,Not Specified
+2017-06-01,8,13,Ortho,Ortho,Rawlinson,Rawlinson
+2017-06-01,8,14,,,,
+2017-06-02,8,1,Neuro,Neuro,Not Specified,Not Specified
+2017-06-02,8,2,ASU,ASU,Puttick,Puttick
+2017-06-02,8,3,Vascular,Vascular,Not Specified,Not Specified
+2017-06-02,8,4,Gen Surg,Gen Surg,Ng,Ng
+2017-06-02,8,5,Urology,Urology,Rice,Rice
+2017-06-02,8,6,Urology,Urology,Not Specified,Not Specified
+2017-06-02,8,7,Gen Surg,Gen Surg,Taneja,Taneja
+2017-06-02,8,8,Ortho,Ortho,Not Specified,Not Specified
+2017-06-02,8,9,Gen Surg,Gen Surg,Beban,Beban
+2017-06-02,8,10,Ortho,Ortho,Wright,Wright
+2017-06-02,8,11,Ortho Acute,Ortho Acute,Not Specified,Not Specified
+2017-06-02,8,12,Acute,Acute,Not Specified,Not Specified
+2017-06-02,8,13,Ortho,Ortho,Ferguson,Ferguson
+2017-06-02,8,14,,,,
+2017-05-08,1,1,OH Adult,Urology,Ling,Rice
+2017-05-08,1,2,Paeds Ortho,Paeds Ortho,Not Specified,Not Specified
+2017-05-08,1,3,Gen Surg,Gen Surg,Ram,Ram
+2017-05-08,1,4,Ophth,Ophth,Gray,Welch
+2017-05-08,1,5,Ophth,Ophth,Ormonde,Dai
+2017-05-08,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-05-08,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-05-08,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-05-09,1,1,Gynae,TARPS,McDougall,Coe
+2017-05-09,1,2,Gen Surg (LA),Gen Surg (LA),Ng,Ng
+2017-05-09,1,3,Gen Surg,Gen Surg,Jones,Jones
+2017-05-09,1,4,Ophth,Ophth,Corbett,Corbett
+2017-05-09,1,5,Ophth,Ophth,Ahmad,Ahmad
+2017-05-09,1,6,Ophth,Ophth,Best,Donaldson
+2017-05-09,1,7,Gen Surg,Gen Surg,Evennett,Evennett
+2017-05-09,1,8,OH Adult,OH Paeds,Ngo,Corkill
+2017-05-10,1,1,Gynae,Gen Surg,Harilall,HNB&E
+2017-05-10,1,2,ORL Adult,OH Adult,Samant,Lewis
+2017-05-10,1,3,Gen Surg,Gen Surg,Parry,Parry
+2017-05-10,1,4,Ophth,Ophth,McMurray,Chew
+2017-05-10,1,5,Ophth,Ophth,Hart,Pendergrast
+2017-05-10,1,6,Ophth,Ophth,H. Patel,Barnes
+2017-05-10,1,7,Paed Surg,ORL Adult,Price,Not Specified
+2017-05-10,1,8,OH Paeds,OH Paeds,Ramadas,Narsinh
+2017-05-11,1,1,ORL Adult,Flex,Wong,Not Specified
+2017-05-11,1,2,Gynae,Gynae,Budden,McKenzie
+2017-05-11,1,3,Urology,Urology,Van Rij,Van Rij
+2017-05-11,1,4,Ophth,Ophth,Sloan,Carroll
+2017-05-11,1,5,Ophth,Ophth,Sims,Mora
+2017-05-11,1,6,Ophth,Ophth,Malik,McGhee
+2017-05-11,1,7,Paeds ORL,Paeds ORL,Van Der Meer,Van Der Meer
+2017-05-11,1,8,OH Paeds,OH Adult,Koopu,Bagadam
+2017-05-12,1,1,Pvt Gynae,Gen Surg,Bye et al,Merrie
+2017-05-12,1,2,Gynae,Flex,Harris,Not Specified
+2017-05-12,1,3,Gen Surg,Gen Surg,HNB&E,HNB&E
+2017-05-12,1,4,Ophth,Ophth,Rosser,Hart
+2017-05-12,1,5,Ophth,Ophth,Fellow,DeSouza
+2017-05-12,1,6,Ophth,Ophth,Bennett,Hadden
+2017-05-12,1,7,Flex,Flex,Not Specified,Not Specified
+2017-05-12,1,8,OH Adult,OH Paeds,Not Specified,Bach
+2017-05-15,1,1,OH Adult,Gynae,Butchard,Miller
+2017-05-15,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-05-15,1,3,ORL Adult,Gen Surg (LA),Tandon,Shaw
+2017-05-15,1,4,Ophth,Ophth,Gray,Sloan
+2017-05-15,1,5,Ophth,Ophth,Ormonde,Welch
+2017-05-15,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-05-15,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-05-15,1,8,OH Paeds,OH Paeds,Narsinh,Narsinh
+2017-05-16,1,1,Gen Surg (LA),Gen Surg (LA),Taylor,Taylor
+2017-05-16,1,2,Litho,Litho,Not Specified,Not Specified
+2017-05-16,1,3,Gen Surg,Gen Surg,Taylor,Taylor
+2017-05-16,1,4,OH Paeds,Ophth,Dawson,Corbett
+2017-05-16,1,5,Ophth,Ophth,Best,Ahmad
+2017-05-16,1,6,Ophth,Ophth,Hadden,Donaldson
+2017-05-16,1,7,Gen Surg,Gen Surg,Bartlett,Bartlett
+2017-05-16,1,8,OH Adult,OH Adult,Ngo,Cathro
+2017-05-17,1,1,Gynae,Gynae,Gibson,Liu
+2017-05-17,1,2,Gen Surg,Gen Surg,Puttick,Puttick
+2017-05-17,1,3,Ophth,Gen Surg,Cranshaw,Cranshaw
+2017-05-17,1,4,Ophth,Ophth,McMurray,Pendergrast
+2017-05-17,1,5,Ophth,Ophth,Hart,Chew
+2017-05-17,1,6,Ophth,Ophth,Ng,Dai
+2017-05-17,1,7,Paed Surg,OH Adult,Price,Reg
+2017-05-17,1,8,OH Paeds,OH Paeds,Gaynor,Dawson
+2017-05-18,1,1,Gynae,Gynae,Carter,Wise
+2017-05-18,1,2,Gynae,Gynae,Ooi,Ooi
+2017-05-18,1,3,Gen Surg,Gen Surg,Pandanaboyana,Pandanaboyana
+2017-05-18,1,4,Ophth,Ophth,Welch,Stangveldhouse
+2017-05-18,1,5,Ophth,Ophth,Sloan,Mora
+2017-05-18,1,6,Ophth,Ophth,McGhee,McGhee
+2017-05-18,1,7,Litho,Flex,Not Specified,Not Specified
+2017-05-18,1,8,OH Paeds,OH Paeds,Papa,Koopu
+2017-05-19,1,1,Pvt Gynae,Gen Surg,Bye et al,Hayes
+2017-05-19,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-05-19,1,3,ABR,ABR,Not Specified,Not Specified
+2017-05-19,1,4,Ophth,Ophth,Rosser,Squirrell
+2017-05-19,1,5,Ophth,Ophth,Subbiah,Fellow
+2017-05-19,1,6,Ophth,Ophth,Deva,Fellow
+2017-05-19,1,7,Gynae,Flex,Stefanelli,Not Specified
+2017-05-19,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-05-22,1,1,ORL Adult,Urology,Tandon,Rice
+2017-05-22,1,2,Paeds Ortho,Paeds Ortho,Not Specified,Not Specified
+2017-05-22,1,3,Gen Surg,Gen Surg,Ram,Ram
+2017-05-22,1,4,Ophth,Ophth,Gray,Sloan
+2017-05-22,1,5,Ophth,Ophth,Ormonde,Dai
+2017-05-22,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-05-22,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-05-22,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-05-23,1,1,Gynae,OH Adult,McDougall,Not Specified
+2017-05-23,1,2,Gen Surg (LA),Gen Surg (LA),Taylor,Taylor
+2017-05-23,1,3,Gen Surg,Gen Surg,Evennett,Evennett
+2017-05-23,1,4,Ophth,Ophth,Stangveldhouse,Corbett
+2017-05-23,1,5,Ophth,Ophth,Ahmad,Ahmad
+2017-05-23,1,6,Ophth,Ophth,Best,Donaldson
+2017-05-23,1,7,Gen Surg,Gen Surg,Al-Mozany,Al-Mozany
+2017-05-23,1,8,OH Adult,OH Paeds,Ngo,Corkill
+2017-05-24,1,1,Gynae,Gen Surg,Dawson,Puttick
+2017-05-24,1,2,Paed Surg,OH Adult,Price,Lewis
+2017-05-24,1,3,Gen Surg,Gen Surg,Lin,Lin
+2017-05-24,1,4,Ophth,Ophth,McMurray,Chew
+2017-05-24,1,5,Ophth,Ophth,Hart,Pendergrast
+2017-05-24,1,6,Ophth,Ophth,H. Patel,Barnes
+2017-05-24,1,7,OH Paeds,ORL Adult,Dawson,Fellow
+2017-05-24,1,8,OH Paeds,OH Paeds,Ramadas,Narsinh
+2017-05-25,1,1,ORL Adult,Flex,Wong,Not Specified
+2017-05-25,1,2,Gynae,Gynae,Sowter,McKenzie
+2017-05-25,1,3,Urology,Urology,Van Rij,Van Rij
+2017-05-25,1,4,Ophth,Ophth,Sloan,Carroll
+2017-05-25,1,5,Ophth,Ophth,Sims,Mora
+2017-05-25,1,6,Ophth,Ophth,Malik,McGhee
+2017-05-25,1,7,Paeds ORL,Paeds ORL,Van Der Meer,Van Der Meer
+2017-05-25,1,8,OH Paeds,OH Adult,Koopu,Bagadam
+2017-05-26,1,1,Pvt Gynae,Gen Surg,Bye et al,Collinson
+2017-05-26,1,2,Gynae,Flex,Reilly,Not Specified
+2017-05-26,1,3,Gen Surg,Gen Surg,Ng / Fellow,Ng / Fellow
+2017-05-26,1,4,Ophth,Ophth,Rosser,Hart
+2017-05-26,1,5,Ophth,Ophth,DeSouza,Deva
+2017-05-26,1,6,Ophth,Ophth,Bennett,Hadden
+2017-05-26,1,7,Flex,Flex,Not Specified,Not Specified
+2017-05-26,1,8,OH Adult,OH Paeds,Not Specified,Bach
+2017-05-29,1,1,OH Adult,Gynae,Butchard,Miller
+2017-05-29,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-05-29,1,3,ORL Adult,Gen Surg (LA),Tandon,Shaw
+2017-05-29,1,4,Ophth,Ophth,Gray,Sloan
+2017-05-29,1,5,Ophth,Ophth,Ormonde,Welch
+2017-05-29,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-05-29,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-05-29,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-05-30,1,1,Gen Surg (LA),Gen Surg (LA),Cranshaw,Cranshaw
+2017-05-30,1,2,Litho,Litho,Not Specified,Not Specified
+2017-05-30,1,3,Gen Surg,Gen Surg,Jones,Jones
+2017-05-30,1,4,Gen Surg,Gen Surg,Taylor,Taylor
+2017-05-30,1,5,Ophth,Ophth,Best,Ahmad
+2017-05-30,1,6,Ophth,Ophth,Hadden,Donaldson
+2017-05-30,1,7,OH Paeds,ORL Adult,Dawson,Samant
+2017-05-30,1,8,OH Adult,OH Adult,Ngo,Cathro
+2017-05-31,1,1,Gynae,Gynae,Moeed,Moeed
+2017-05-31,1,2,Gen Surg,Gen Surg,Puttick,Puttick
+2017-05-31,1,3,Gen Surg,Gen Surg,Shaw,Shaw
+2017-05-31,1,4,Ophth,Ophth,McMurray,Chew
+2017-05-31,1,5,Ophth,Ophth,Hart,Pendergrast
+2017-05-31,1,6,Ophth,Ophth,Ng,Dai
+2017-05-31,1,7,Paed Surg,OH Adult,Price,Reg
+2017-05-31,1,8,OH Paeds,OH Paeds,Gaynor,Dawson
+2017-06-01,1,1,Gynae,Gynae,Carter,Flower
+2017-06-01,1,2,Litho,Litho,Not Specified,Not Specified
+2017-06-01,1,3,Gen Surg,Gen Surg,Bissett,Bissett
+2017-06-01,1,4,Ophth,Ophth,Welch,Carroll
+2017-06-01,1,5,Ophth,Ophth,Slona,Mora
+2017-06-01,1,6,Ophth,Ophth,McGhee,McGhee
+2017-06-01,1,7,ORL Adult,TARPS,Neeff,Coe
+2017-06-01,1,8,OH Paeds,OH Paeds,Papa,Koopu
+2017-06-02,1,1,Pvt Gynae,Gen Surg,Bye et al,Al-Mozany
+2017-06-02,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-06-02,1,3,ABR,ABR,Not Specified,Not Specified
+2017-06-02,1,4,Ophth,Ophth,Rosser,Squirrell
+2017-06-02,1,5,Ophth,Ophth,Subbiah,Subbiah
+2017-06-02,1,6,Ophth,Ophth,Deva,Fellow
+2017-06-02,1,7,Gynae,Flex,Bilbrough,Not Specified
+2017-06-02,1,8,OH Adult,OH Paeds,Sealey,Bach
+2017-06-05,1,1,OH Adult,Urology,Ling,Rice
+2017-06-05,1,2,Paeds Ortho,Paeds Ortho,Not Specified,Not Specified
+2017-06-05,1,3,Gen Surg,Gen Surg,Ram,Ram
+2017-06-05,1,4,Ophth,Ophth,Gray,Welch
+2017-06-05,1,5,Ophth,Ophth,Ormonde,Dai
+2017-06-05,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-06-05,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-06-05,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-06-06,1,1,Gynae,TARPS,McDougall,Coe
+2017-06-06,1,2,Gen Surg (LA),Gen Surg (LA),Ng,Ng
+2017-06-06,1,3,Gen Surg,Gen Surg,Jones,Jones
+2017-06-06,1,4,Ophth,Ophth,Corbett,Corbett
+2017-06-06,1,5,Ophth,Ophth,Ahmad,Ahmad
+2017-06-06,1,6,Ophth,Ophth,Best,Donaldson
+2017-06-06,1,7,Gen Surg,Gen Surg,Evennett,Evennett
+2017-06-06,1,8,OH Adult,OH Paeds,Ngo,Corkill
+2017-06-07,1,1,Gynae,Gen Surg,Harilall,HNB&E
+2017-06-07,1,2,ORL Adult,OH Adult,Samant,Lewis
+2017-06-07,1,3,Gen Surg,Gen Surg,Parry,Parry
+2017-06-07,1,4,Ophth,Ophth,McMurray,Chew
+2017-06-07,1,5,Ophth,Ophth,Hart,Pendergrast
+2017-06-07,1,6,Ophth,Ophth,H. Patel,Barnes
+2017-06-07,1,7,Paed Surg,ORL Adult,Price,Not Specified
+2017-06-07,1,8,OH Paeds,OH Paeds,Ramadas,Narsinh
+2017-06-08,1,1,ORL Adult,Flex,Wong,Not Specified
+2017-06-08,1,2,Gynae,Gynae,Budden,McKenzie
+2017-06-08,1,3,Urology,Urology,Van Rij,Van Rij
+2017-06-08,1,4,Ophth,Ophth,Sloan,Carroll
+2017-06-08,1,5,Ophth,Ophth,Sims,Mora
+2017-06-08,1,6,Ophth,Ophth,Malik,McGhee
+2017-06-08,1,7,Paeds ORL,Paeds ORL,Van Der Meer,Van Der Meer
+2017-06-08,1,8,OH Paeds,OH Adult,Koopu,Bagadam
+2017-06-09,1,1,Pvt Gynae,Gen Surg,Bye et al,Merrie
+2017-06-09,1,2,Gynae,Flex,Harris,Not Specified
+2017-06-09,1,3,Gen Surg,Gen Surg,HNB&E,HNB&E
+2017-06-09,1,4,Ophth,Ophth,Rosser,Hart
+2017-06-09,1,5,Ophth,Ophth,Fellow,DeSouza
+2017-06-09,1,6,Ophth,Ophth,Bennett,Hadden
+2017-06-09,1,7,Flex,Flex,Not Specified,Not Specified
+2017-06-09,1,8,OH Adult,OH Paeds,Not Specified,Bach
+2017-06-12,1,1,OH Adult,Gynae,Butchard,Miller
+2017-06-12,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-06-12,1,3,ORL Adult,Gen Surg (LA),Tandon,Shaw
+2017-06-12,1,4,Ophth,Ophth,Gray,Sloan
+2017-06-12,1,5,Ophth,Ophth,Ormonde,Welch
+2017-06-12,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-06-12,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-06-12,1,8,OH Paeds,OH Paeds,Narsinh,Narsinh
+2017-06-13,1,1,Gen Surg (LA),Gen Surg (LA),Taylor,Taylor
+2017-06-13,1,2,Litho,Litho,Not Specified,Not Specified
+2017-06-13,1,3,Gen Surg,Gen Surg,Taylor,Taylor
+2017-06-13,1,4,OH Paeds,Ophth,Dawson,Corbett
+2017-06-13,1,5,Ophth,Ophth,Best,Ahmad
+2017-06-13,1,6,Ophth,Ophth,Hadden,Donaldson
+2017-06-13,1,7,Gen Surg,Gen Surg,Bartlett,Bartlett
+2017-06-13,1,8,OH Adult,OH Adult,Ngo,Cathro
+2017-06-14,1,1,Gynae,Gynae,Gibson,Liu
+2017-06-14,1,2,Gen Surg,Gen Surg,Puttick,Puttick
+2017-06-14,1,3,Ophth,Gen Surg,Cranshaw,Cranshaw
+2017-06-14,1,4,Ophth,Ophth,McMurray,Pendergrast
+2017-06-14,1,5,Ophth,Ophth,Hart,Chew
+2017-06-14,1,6,Ophth,Ophth,Ng,Dai
+2017-06-14,1,7,Paed Surg,OH Adult,Price,Reg
+2017-06-14,1,8,OH Paeds,OH Paeds,Gaynor,Dawson
+2017-06-15,1,1,Gynae,Gynae,Carter,Wise
+2017-06-15,1,2,Gynae,Gynae,Ooi,Ooi
+2017-06-15,1,3,Gen Surg,Gen Surg,Pandanaboyana,Pandanaboyana
+2017-06-15,1,4,Ophth,Ophth,Welch,Stangveldhouse
+2017-06-15,1,5,Ophth,Ophth,Sloan,Mora
+2017-06-15,1,6,Ophth,Ophth,McGhee,McGhee
+2017-06-15,1,7,Litho,Flex,Not Specified,Not Specified
+2017-06-15,1,8,OH Paeds,OH Paeds,Papa,Koopu
+2017-06-16,1,1,Pvt Gynae,Gen Surg,Bye et al,Hayes
+2017-06-16,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-06-16,1,3,ABR,ABR,Not Specified,Not Specified
+2017-06-16,1,4,Ophth,Ophth,Rosser,Squirrell
+2017-06-16,1,5,Ophth,Ophth,Subbiah,Fellow
+2017-06-16,1,6,Ophth,Ophth,Deva,Fellow
+2017-06-16,1,7,Gynae,Flex,Stefanelli,Not Specified
+2017-06-16,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-06-19,1,1,ORL Adult,Urology,Tandon,Rice
+2017-06-19,1,2,Paeds Ortho,Paeds Ortho,Not Specified,Not Specified
+2017-06-19,1,3,Gen Surg,Gen Surg,Ram,Ram
+2017-06-19,1,4,Ophth,Ophth,Gray,Sloan
+2017-06-19,1,5,Ophth,Ophth,Ormonde,Dai
+2017-06-19,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-06-19,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-06-19,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-06-20,1,1,Gynae,OH Adult,McDougall,Not Specified
+2017-06-20,1,2,Gen Surg (LA),Gen Surg (LA),Taylor,Taylor
+2017-06-20,1,3,Gen Surg,Gen Surg,Evennett,Evennett
+2017-06-20,1,4,Ophth,Ophth,Stangveldhouse,Corbett
+2017-06-20,1,5,Ophth,Ophth,Ahmad,Ahmad
+2017-06-20,1,6,Ophth,Ophth,Best,Donaldson
+2017-06-20,1,7,Gen Surg,Gen Surg,Al-Mozany,Al-Mozany
+2017-06-20,1,8,OH Adult,OH Paeds,Ngo,Corkill
+2017-06-21,1,1,Gynae,Gen Surg,Dawson,Puttick
+2017-06-21,1,2,Paed Surg,OH Adult,Price,Lewis
+2017-06-21,1,3,Gen Surg,Gen Surg,Lin,Lin
+2017-06-21,1,4,Ophth,Ophth,McMurray,Chew
+2017-06-21,1,5,Ophth,Ophth,Hart,Pendergrast
+2017-06-21,1,6,Ophth,Ophth,H. Patel,Barnes
+2017-06-21,1,7,OH Paeds,ORL Adult,Dawson,Fellow
+2017-06-21,1,8,OH Paeds,OH Paeds,Ramadas,Narsinh
+2017-06-22,1,1,ORL Adult,Flex,Wong,Not Specified
+2017-06-22,1,2,Gynae,Gynae,Sowter,McKenzie
+2017-06-22,1,3,Urology,Urology,Van Rij,Van Rij
+2017-06-22,1,4,Ophth,Ophth,Sloan,Carroll
+2017-06-22,1,5,Ophth,Ophth,Sims,Mora
+2017-06-22,1,6,Ophth,Ophth,Malik,McGhee
+2017-06-22,1,7,Paeds ORL,Paeds ORL,Van Der Meer,Van Der Meer
+2017-06-22,1,8,OH Paeds,OH Adult,Koopu,Bagadam
+2017-06-23,1,1,Pvt Gynae,Gen Surg,Bye et al,Collinson
+2017-06-23,1,2,Gynae,Flex,Reilly,Not Specified
+2017-06-23,1,3,Gen Surg,Gen Surg,Ng / Fellow,Ng / Fellow
+2017-06-23,1,4,Ophth,Ophth,Rosser,Hart
+2017-06-23,1,5,Ophth,Ophth,DeSouza,Deva
+2017-06-23,1,6,Ophth,Ophth,Bennett,Hadden
+2017-06-23,1,7,Flex,Flex,Not Specified,Not Specified
+2017-06-23,1,8,OH Adult,OH Paeds,Not Specified,Bach
+2017-06-26,1,1,OH Adult,Gynae,Butchard,Miller
+2017-06-26,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-06-26,1,3,ORL Adult,Gen Surg (LA),Tandon,Shaw
+2017-06-26,1,4,Ophth,Ophth,Gray,Sloan
+2017-06-26,1,5,Ophth,Ophth,Ormonde,Welch
+2017-06-26,1,6,Ophth,Ophth,Polkinghorne,Riley
+2017-06-26,1,7,Paed Surg,Paed Surg,Atkinson,Atkinson
+2017-06-26,1,8,OH Paeds,OH Paeds,Narsinh,Bach
+2017-06-27,1,1,Gen Surg (LA),Gen Surg (LA),Cranshaw,Cranshaw
+2017-06-27,1,2,Litho,Litho,Not Specified,Not Specified
+2017-06-27,1,3,Gen Surg,Gen Surg,Jones,Jones
+2017-06-27,1,4,Gen Surg,Gen Surg,Taylor,Taylor
+2017-06-27,1,5,Ophth,Ophth,Best,Ahmad
+2017-06-27,1,6,Ophth,Ophth,Hadden,Donaldson
+2017-06-27,1,7,OH Paeds,ORL Adult,Dawson,Samant
+2017-06-27,1,8,OH Adult,OH Adult,Ngo,Cathro
+2017-06-28,1,1,Gynae,Gynae,Moeed,Moeed
+2017-06-28,1,2,Gen Surg,Gen Surg,Puttick,Puttick
+2017-06-28,1,3,Gen Surg,Gen Surg,Shaw,Shaw
+2017-06-28,1,4,Ophth,Ophth,McMurray,Chew
+2017-06-28,1,5,Ophth,Ophth,Hart,Pendergrast
+2017-06-28,1,6,Ophth,Ophth,Ng,Dai
+2017-06-28,1,7,Paed Surg,OH Adult,Price,Reg
+2017-06-28,1,8,OH Paeds,OH Paeds,Gaynor,Dawson
+2017-06-29,1,1,Gynae,Gynae,Carter,Flower
+2017-06-29,1,2,Litho,Litho,Not Specified,Not Specified
+2017-06-29,1,3,Gen Surg,Gen Surg,Bissett,Bissett
+2017-06-29,1,4,Ophth,Ophth,Welch,Carroll
+2017-06-29,1,5,Ophth,Ophth,Slona,Mora
+2017-06-29,1,6,Ophth,Ophth,McGhee,McGhee
+2017-06-29,1,7,ORL Adult,TARPS,Neeff,Coe
+2017-06-29,1,8,OH Paeds,OH Paeds,Papa,Koopu
+2017-06-30,1,1,Pvt Gynae,Gen Surg,Bye et al,Al-Mozany
+2017-06-30,1,2,Paeds ORL,Paeds ORL,Salkeld,Salkeld
+2017-06-30,1,3,ABR,ABR,Not Specified,Not Specified
+2017-06-30,1,4,Ophth,Ophth,Rosser,Squirrell
+2017-06-30,1,5,Ophth,Ophth,Subbiah,Subbiah
+2017-06-30,1,6,Ophth,Ophth,Deva,Fellow
+2017-06-30,1,7,Gynae,Flex,Bilbrough,Not Specified
+2017-06-30,1,8,OH Adult,OH Paeds,Sealey,Bach
+2017-05-08,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-05-08,2,2,ORL,ORL,Brown,Barber
+2017-05-08,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-08,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-05-08,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-05-08,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-08,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-09,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-05-09,2,2,ORL,ORL,Mills,Neeff
+2017-05-09,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-09,2,4,Paed Surg,Paed Surg,Price,Price
+2017-05-09,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-09,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-09,2,7,Ortho,Ortho,Crawford,Crawford
+2017-05-10,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-05-10,2,2,ORL,ORL,Salkeld,Mills
+2017-05-10,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-10,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-05-10,2,5,Ortho,Ortho,Not Specified,Nicol
+2017-05-10,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-10,2,7,Ortho,Ortho,Ferguson,Ferguson
+2017-05-11,2,1,Onc,Paed Surg,Not Specified,Not Specified
+2017-05-11,2,2,ORL,ORL,Mahadevan,Mahadevan
+2017-05-11,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-11,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-05-11,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-11,2,7,Ortho,Ortho,Nicol,Not Specified
+2017-05-12,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-05-12,2,2,ORL,Ortho,Neeff,Not Specified
+2017-05-12,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-12,2,4,OH,Paed Surg,Ramadas,Atkinson
+2017-05-12,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-12,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-12,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-15,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-05-15,2,2,ORL,ORL,Brown,Barber
+2017-05-15,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-15,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-05-15,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-05-15,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-15,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-16,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-05-16,2,2,ORL,ORL,Mahadevan,Neeff
+2017-05-16,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-16,2,4,Paed Surg,Paed Surg,Price,Price
+2017-05-16,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-16,2,7,Ortho,Ortho,Crawford,Crawford
+2017-05-17,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-05-17,2,2,ORL,ORL,Salkeld,Mills
+2017-05-17,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-17,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-05-17,2,5,Ortho,Ortho,Not Specified,Nicol
+2017-05-17,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-17,2,7,Ortho,Ortho,Ferguson,Ferguson
+2017-05-18,2,1,Onc,Paed Surg,Not Specified,Upadhyay
+2017-05-18,2,2,ORL,ORL,Mahadevan,Barber
+2017-05-18,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-18,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-05-18,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-18,2,7,Ortho,Ortho,Nicol,Not Specified
+2017-05-19,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-05-19,2,2,ORL,Paed Surg,Mahadevan,Atkinson
+2017-05-19,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-19,2,4,OH,OH,Ramadas,Ramadas
+2017-05-19,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-19,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-19,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-22,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-05-22,2,2,ORL,ORL,Brown,Barber
+2017-05-22,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-22,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-05-22,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-05-22,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-22,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-23,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-05-23,2,2,ORL,ORL,Mills,Neeff
+2017-05-23,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-23,2,4,Paed Surg,Paed Surg,Price,Price
+2017-05-23,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-23,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-23,2,7,Ortho,Ortho,Crawford,Crawford
+2017-05-24,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-05-24,2,2,ORL,ORL,Salkeld,Mills
+2017-05-24,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-24,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-05-24,2,5,Ortho,Ortho,Not Specified,Nicol
+2017-05-24,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-24,2,7,Ortho,Ortho,Ferguson,Ferguson
+2017-05-25,2,1,Onc,Paed Surg,Not Specified,Upadhyay
+2017-05-25,2,2,ORL,ORL,Mahadevan,Mahadevan
+2017-05-25,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-25,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-05-25,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-25,2,7,Ortho,Ortho,Nicol,Not Specified
+2017-05-26,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-05-26,2,2,ORL,Ortho,Neeff,Not Specified
+2017-05-26,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-26,2,4,OH,Paed Surg,Ramadas,Atkinson
+2017-05-26,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-26,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-26,2,7,Ortho,Ortho,Bidwell,Bidwell
+2017-05-29,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-05-29,2,2,ORL,ORL,Brown,Barber
+2017-05-29,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-29,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-05-29,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-05-29,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-29,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-30,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-05-30,2,2,ORL,ORL,Mahadevan,Neeff
+2017-05-30,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-30,2,4,Paed Surg,Paed Surg,Price,Price
+2017-05-30,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-30,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-31,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-05-31,2,2,ORL,ORL,Salkeld,Mills
+2017-05-31,2,3,Acute,Acute,Not Specified,Not Specified
+2017-05-31,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-05-31,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-05-31,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-05-31,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-01,2,1,Onc,Paed Surg,Not Specified,Upadhyay
+2017-06-01,2,2,ORL,ORL,Mahadevan,Barber
+2017-06-01,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-01,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-06-01,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-01,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-02,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-06-02,2,2,ORL,Paed Surg,Mahadevan,Atkinson
+2017-06-02,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-02,2,4,OH,OH,Ramadas,Ramadas
+2017-06-02,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-02,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-02,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-05,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-06-05,2,2,ORL,ORL,Brown,Barber
+2017-06-05,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-05,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-06-05,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-06-05,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-05,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-06,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-06-06,2,2,ORL,ORL,Mills,Neeff
+2017-06-06,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-06,2,4,Paed Surg,Paed Surg,Price,Price
+2017-06-06,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-06,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-06,2,7,Ortho,Ortho,Crawford,Crawford
+2017-06-07,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-06-07,2,2,ORL,ORL,Salkeld,Mills
+2017-06-07,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-07,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-06-07,2,5,Ortho,Ortho,Not Specified,Nicol
+2017-06-07,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-07,2,7,Ortho,Ortho,Ferguson,Ferguson
+2017-06-08,2,1,Onc,Paed Surg,Not Specified,Not Specified
+2017-06-08,2,2,ORL,ORL,Mahadevan,Mahadevan
+2017-06-08,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-08,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-06-08,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-08,2,7,Ortho,Ortho,Nicol,Not Specified
+2017-06-09,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-06-09,2,2,ORL,Ortho,Neeff,Not Specified
+2017-06-09,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-09,2,4,OH,Paed Surg,Ramadas,Atkinson
+2017-06-09,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-09,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-09,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-12,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-06-12,2,2,ORL,ORL,Brown,Barber
+2017-06-12,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-12,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-06-12,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-06-12,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-12,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-13,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-06-13,2,2,ORL,ORL,Mahadevan,Neeff
+2017-06-13,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-13,2,4,Paed Surg,Paed Surg,Price,Price
+2017-06-13,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-13,2,7,Ortho,Ortho,Crawford,Crawford
+2017-06-14,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-06-14,2,2,ORL,ORL,Salkeld,Mills
+2017-06-14,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-14,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-06-14,2,5,Ortho,Ortho,Not Specified,Nicol
+2017-06-14,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-14,2,7,Ortho,Ortho,Ferguson,Ferguson
+2017-06-15,2,1,Onc,Paed Surg,Not Specified,Upadhyay
+2017-06-15,2,2,ORL,ORL,Mahadevan,Barber
+2017-06-15,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-15,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-06-15,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-15,2,7,Ortho,Ortho,Nicol,Not Specified
+2017-06-16,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-06-16,2,2,ORL,Paed Surg,Mahadevan,Atkinson
+2017-06-16,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-16,2,4,OH,OH,Ramadas,Ramadas
+2017-06-16,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-16,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-16,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-19,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-06-19,2,2,ORL,ORL,Brown,Barber
+2017-06-19,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-19,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-06-19,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-06-19,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-19,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-20,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-06-20,2,2,ORL,ORL,Mills,Neeff
+2017-06-20,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-20,2,4,Paed Surg,Paed Surg,Price,Price
+2017-06-20,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-20,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-20,2,7,Ortho,Ortho,Crawford,Crawford
+2017-06-21,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-06-21,2,2,ORL,ORL,Salkeld,Mills
+2017-06-21,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-21,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-06-21,2,5,Ortho,Ortho,Not Specified,Nicol
+2017-06-21,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-21,2,7,Ortho,Ortho,Ferguson,Ferguson
+2017-06-22,2,1,Onc,Paed Surg,Not Specified,Upadhyay
+2017-06-22,2,2,ORL,ORL,Mahadevan,Mahadevan
+2017-06-22,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-22,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-06-22,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-22,2,7,Ortho,Ortho,Nicol,Not Specified
+2017-06-23,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-06-23,2,2,ORL,Ortho,Neeff,Not Specified
+2017-06-23,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-23,2,4,OH,Paed Surg,Ramadas,Atkinson
+2017-06-23,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-23,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-23,2,7,Ortho,Ortho,Bidwell,Bidwell
+2017-06-26,2,1,Paed Surg,Onc,Morreau,Not Specified
+2017-06-26,2,2,ORL,ORL,Brown,Barber
+2017-06-26,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-26,2,4,Paed Surg,Paed Surg,Hamill,Hamill
+2017-06-26,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-06-26,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-26,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-27,2,1,Onc,Paed Surg,Lines-Hamill,Upadhyay
+2017-06-27,2,2,ORL,ORL,Mahadevan,Neeff
+2017-06-27,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-27,2,4,Paed Surg,Paed Surg,Price,Price
+2017-06-27,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-27,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-28,2,1,Onc,Gastro,Not Specified,Not Specified
+2017-06-28,2,2,ORL,ORL,Salkeld,Mills
+2017-06-28,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-28,2,4,Paed Surg,Paed Surg,Evans,Evans
+2017-06-28,2,5,Ortho,Ortho,Not Specified,Not Specified
+2017-06-28,2,6,Flex / Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-28,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-29,2,1,Onc,Paed Surg,Not Specified,Upadhyay
+2017-06-29,2,2,ORL,ORL,Mahadevan,Barber
+2017-06-29,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-29,2,4,Paed Surg,Paed Surg,Morreau,Morreau
+2017-06-29,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-29,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-06-30,2,1,Gastro,Resp,Not Specified,Not Specified
+2017-06-30,2,2,ORL,Paed Surg,Mahadevan,Atkinson
+2017-06-30,2,3,Acute,Acute,Not Specified,Not Specified
+2017-06-30,2,4,OH,OH,Ramadas,Ramadas
+2017-06-30,2,5,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-30,2,6,Cardiac,Cardiac,Not Specified,Not Specified
+2017-06-30,2,7,Ortho,Ortho,Not Specified,Not Specified
+2017-05-08,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-05-08,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-05-08,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-08,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-09,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-05-09,9,2,Gynae ,Gynae ,Curr,Curr
+2017-05-09,9,3,Gynae Onc,Gynae Onc,Harris,Harris
+2017-05-09,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-10,9,1,Gynae,Gynae,Dawson,Harilall
+2017-05-10,9,2,Gynae,Gynae,Wise,Wise
+2017-05-10,9,3,Obs,Obs,Not Specified,Not Specified
+2017-05-10,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-11,9,1,Gynae,Gynae,Sowter,Sowter
+2017-05-11,9,2,Gynae,Gynae,MacPherson,MacPherson
+2017-05-11,9,3,Obs,Obs,Not Specified,Not Specified
+2017-05-11,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-12,9,1,Gynae,Gynae,Haddad,Not Specified
+2017-05-12,9,2,Gynae,Gynae,Chiu,Chiu
+2017-05-12,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-05-12,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-15,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-05-15,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-05-15,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-15,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-16,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-05-16,9,2,Gynae ,Gynae ,Bilbrough,Bilbrough
+2017-05-16,9,3,Pvt Obs,Gynae Onc,Not Specified,Harris
+2017-05-16,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-17,9,1,Gynae,Gynae,Dawson,Harilall
+2017-05-17,9,2,Gynae,Gynae,McKenzie,Fellow
+2017-05-17,9,3,Obs,Obs,Not Specified,Not Specified
+2017-05-17,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-18,9,1,Gynae,Gynae,Budden,Budden
+2017-05-18,9,2,Gynae,Gynae,Aweidah,Aweidah
+2017-05-18,9,3,Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-18,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-19,9,1,Gen Surg,Gen Surg,Hsee,Hsee
+2017-05-19,9,2,Obs,Obs,Not Specified,Not Specified
+2017-05-19,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-05-19,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-22,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-05-22,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-05-22,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-22,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-23,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-05-23,9,2,Gynae Onc,Gynae Onc,Harris,Harris
+2017-05-23,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-23,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-24,9,1,Gynae,Gynae,Beattie,Beattie
+2017-05-24,9,2,Gynae,Gynae,Moeed,Harilall
+2017-05-24,9,3,Obs,Obs,Not Specified,Not Specified
+2017-05-24,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-25,9,1,Gynae,Gynae,Bilbrough,Bilbrough
+2017-05-25,9,2,Gynae,Gynae,Hunter,Hunter
+2017-05-25,9,3,Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-25,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-26,9,1,Gynae,Gynae,Haddad,Not Specified
+2017-05-26,9,2,Gynae,Gynae,Harris,Harris
+2017-05-26,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-05-26,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-29,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-05-29,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-05-29,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-29,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-30,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-05-30,9,2,Gynae Onc,Gynae Onc,Harris,Harris
+2017-05-30,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-05-30,9,4,Acute,Acute,Not Specified,Not Specified
+2017-05-31,9,1,Gynae,Gynae,McKenzie,Harilall
+2017-05-31,9,2,Gynae,Gynae,Chiu,Chiu
+2017-05-31,9,3,Obs,Obs,Not Specified,Not Specified
+2017-05-31,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-01,9,1,Gynae,Gynae,MacPherson,MacPherson
+2017-06-01,9,2,Gynae,Gynae,Ivanova,Ivanova
+2017-06-01,9,3,Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-01,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-02,9,1,Gynae,Gynae,Harris,Harris
+2017-06-02,9,2,Gynae,Gynae,Ooi,Ooi
+2017-06-02,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-06-02,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-05,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-06-05,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-06-05,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-05,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-06,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-06-06,9,2,Gynae ,Gynae ,Curr,Curr
+2017-06-06,9,3,Gynae Onc,Gynae Onc,Harris,Harris
+2017-06-06,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-07,9,1,Gynae,Gynae,Dawson,Harilall
+2017-06-07,9,2,Gynae,Gynae,Wise,Wise
+2017-06-07,9,3,Obs,Obs,Not Specified,Not Specified
+2017-06-07,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-08,9,1,Gynae,Gynae,Sowter,Sowter
+2017-06-08,9,2,Gynae,Gynae,MacPherson,MacPherson
+2017-06-08,9,3,Obs,Obs,Not Specified,Not Specified
+2017-06-08,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-09,9,1,Gynae,Gynae,Haddad,Not Specified
+2017-06-09,9,2,Gynae,Gynae,Chiu,Chiu
+2017-06-09,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-06-09,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-12,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-06-12,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-06-12,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-12,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-13,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-06-13,9,2,Gynae ,Gynae ,Bilbrough,Bilbrough
+2017-06-13,9,3,Pvt Obs,Gynae Onc,Not Specified,Harris
+2017-06-13,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-14,9,1,Gynae,Gynae,Dawson,Harilall
+2017-06-14,9,2,Gynae,Gynae,McKenzie,Fellow
+2017-06-14,9,3,Obs,Obs,Not Specified,Not Specified
+2017-06-14,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-15,9,1,Gynae,Gynae,Budden,Budden
+2017-06-15,9,2,Gynae,Gynae,Aweidah,Aweidah
+2017-06-15,9,3,Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-15,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-16,9,1,Gen Surg,Gen Surg,Hsee,Hsee
+2017-06-16,9,2,Obs,Obs,Not Specified,Not Specified
+2017-06-16,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-06-16,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-19,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-06-19,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-06-19,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-19,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-20,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-06-20,9,2,Gynae Onc,Gynae Onc,Harris,Harris
+2017-06-20,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-20,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-21,9,1,Gynae,Gynae,Beattie,Beattie
+2017-06-21,9,2,Gynae,Gynae,Moeed,Harilall
+2017-06-21,9,3,Obs,Obs,Not Specified,Not Specified
+2017-06-21,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-22,9,1,Gynae,Gynae,Bilbrough,Bilbrough
+2017-06-22,9,2,Gynae,Gynae,Hunter,Hunter
+2017-06-22,9,3,Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-22,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-23,9,1,Gynae,Gynae,Haddad,Not Specified
+2017-06-23,9,2,Gynae,Gynae,Harris,Harris
+2017-06-23,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-06-23,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-26,9,1,Gynae Onc,Gynae Onc,Whittaker,Whittaker
+2017-06-26,9,2,Gynae Onc,Gynae Onc,Tan,Tan
+2017-06-26,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-26,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-27,9,1,Gynae Onc,Gynae Onc,Eva,Eva
+2017-06-27,9,2,Gynae Onc,Gynae Onc,Harris,Harris
+2017-06-27,9,3,Pvt Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-27,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-28,9,1,Gynae,Gynae,McKenzie,Harilall
+2017-06-28,9,2,Gynae,Gynae,Chiu,Chiu
+2017-06-28,9,3,Obs,Obs,Not Specified,Not Specified
+2017-06-28,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-29,9,1,Gynae,Gynae,MacPherson,MacPherson
+2017-06-29,9,2,Gynae,Gynae,Ivanova,Ivanova
+2017-06-29,9,3,Obs,Pvt Obs,Not Specified,Not Specified
+2017-06-29,9,4,Acute,Acute,Not Specified,Not Specified
+2017-06-30,9,1,Gynae,Gynae,Harris,Harris
+2017-06-30,9,2,Gynae,Gynae,Ooi,Ooi
+2017-06-30,9,3,Pvt Obs,Obs,Not Specified,Not Specified
+2017-06-30,9,4,Acute,Acute,Not Specified,Not Specified
