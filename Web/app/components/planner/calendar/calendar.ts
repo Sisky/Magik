@@ -2,7 +2,7 @@
  * Created by Scott Mackenzie on 28/03/2017.
  */
 
-import {Component, Input} from '@angular/core';
+import {Component, Injectable, Input} from '@angular/core';
 import {Booking, BookingService} from '../../../services/BookingService';
 import {DateService} from "../../../services/DateService";
 import {Subscription} from "rxjs";
@@ -15,6 +15,7 @@ import {LevelService} from "../../../services/LevelService";
     styleUrls:['./node_modules/bootstrap/dist/css/bootstrap.css']
 })
 
+@Injectable()
 export default class CalendarComponent {
     level: number;
 
@@ -90,5 +91,7 @@ export default class CalendarComponent {
                     console.log(err);
                 });
     }
-}
+
+
+    }
 

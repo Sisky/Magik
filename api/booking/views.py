@@ -17,6 +17,8 @@ class BookingView(rest_viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = self.filter_queryset_on_get(self.queryset, 'date')
         queryset = self.filter_queryset_on_get(queryset, 'level')
+        queryset = self.filter_queryset_on_get(queryset, 'valid')
+        queryset = self.filter_queryset_on_get(queryset, 'room')
 
         return queryset
 

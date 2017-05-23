@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 import ApplicationComponent from './components/application/application';
 import HomeComponent from './components/home/home';
 import {AppRoutingModule} from "./modules/app.routing";
@@ -19,6 +20,10 @@ import {DropdownModule} from "ngx-dropdown";
 import {LevelService} from "./services/LevelService";
 import BookingComponent from "./components/planner/calendar/booking/booking";
 import {HttpModule} from "@angular/http";
+import {ModalModule} from "ngx-modal";
+
+
+
 
 @NgModule({
   imports: [
@@ -27,7 +32,8 @@ import {HttpModule} from "@angular/http";
       ReactiveFormsModule,
       AppRoutingModule,
       DropdownModule,
-      HttpModule
+      HttpModule,
+      ModalModule
       ],
   declarations: [
       ApplicationComponent,
@@ -36,8 +42,8 @@ import {HttpModule} from "@angular/http";
       SideNavComponent,
       HeaderComponent,
       CalendarComponent,
-      BookingComponent
-  ],
+      BookingComponent,
+       ],
   providers: [
             BookingService,
             DateService,

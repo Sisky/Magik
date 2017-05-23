@@ -7,6 +7,8 @@ System.config({
     '@angular': 'node_modules/@angular',
     'rxjs'    : 'node_modules/rxjs',
       'ngx-dropdown': 'node_modules/ngx-dropdown',
+      "ngx-modal": "node_modules/ngx-modal",
+
 
   },
   paths: {
@@ -29,6 +31,8 @@ System.config({
     '@angular/platform-browser'        : {main: 'platform-browser.umd.min.js'},
     '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'},
       'ngx-dropdown': { main: 'index.js', defaultExtension: 'js' },
+      "ngx-modal": { "main": "index.js", "defaultExtension": "js" }
+
 
 
   }

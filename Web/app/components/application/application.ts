@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
+
 declare var __moduleName: string;
 @Component({
   selector: 'app',

@@ -5076,18 +5076,7 @@ small {
   visibility: hidden;
 }
 
-.backdrop {
-  position: absolute;
-  opacity: 0;
-  height: 7px;
-  width: 14px;
-  border-radius: 0 0 50% 50%;
-  background-color: #323232;
-  z-index: -1;
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  visibility: hidden;
-}
+
 
 .btn, .btn-large,
 .btn-flat {
@@ -5574,20 +5563,7 @@ button.btn-floating {
   z-index: -1;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: #fafafa;
-  padding: 0;
-  max-height: 70%;
-  width: 55%;
-  margin: auto;
-  overflow-y: auto;
-  border-radius: 2px;
-  will-change: top, opacity;
-}
+
 
 @media only screen and (max-width: 992px) {
   .modal {

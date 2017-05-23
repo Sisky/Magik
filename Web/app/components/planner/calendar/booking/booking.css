@@ -1,0 +1,19 @@
+.booking-title {
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.booking-time {
+    font-weight: 600;
+}
+
+.card-title {
+    font-size: 16px;
+}
+.modal-title {
+    padding: 0px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+

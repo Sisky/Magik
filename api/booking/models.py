@@ -9,6 +9,8 @@ class Booking(models.Model):
     pm_dept = models.CharField(max_length=258)
     am_surg = models.CharField(max_length=258)
     pm_surg = models.CharField(max_length=258)
+    valid = models.IntegerField()
+    created = models.DateTimeField()
 
     def __str__(self):
         return f'{self.date}, L{self.level}, R{self.room}'

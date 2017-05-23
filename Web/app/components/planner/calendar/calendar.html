@@ -7,69 +7,66 @@
             <header></header>
         </div>
     </div>
-    <div class="col col-md-4" >
-        <div class="row">
-            <div class="col col-md-6"></div>
-            <div class="col col-md-6">
-                <h3 class="center">{{date | date:'EEE dd MMM'}}</h3>
-            </div>
-        </div>
-            <div *ngFor="let booking of mondayBookings">
-                <div class="col col-md-6">
-                    <div class="row" >
-                            <h3 class="center">OR {{booking.room}}</h3>
-                    </div>
-                </div>
-                <div class="col col-md-6" >
-                    <div class="row" >
-                        <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
-                    </div>
-                </div>
-            </div>
-    </div>
 
+    <div class="col col-md-1">
+
+    </div>
 
     <div class="col col-md-2">
         <div class="row">
-            <h3 class="center">{{tuesDate | date:'EEE dd MMM'}}</h3>
+            <h3 class="grey-text" style="padding-left: 10% ">{{date | date:'EEE dd MMM'}}</h3>
+        </div>
+        <div *ngFor="let booking of mondayBookings">
+            <div class="row">
+
+                <booking url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-2">
+        <div class="row">
+            <h3 class="grey-text" style="padding-left: 10% ">{{tuesDate | date:'EEE dd MMM'}}</h3>
         </div>
         <div *ngFor="let booking of tuesdayBookings">
             <div class="row">
-                <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
+                <booking url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
             </div>
         </div>
     </div>
 
     <div class="col col-md-2">
         <div class="row">
-            <h3 class="center">{{wedsDate | date:'EEE dd MMM'}}</h3>
+            <h3 class="grey-text" style="padding-left: 10% ">{{wedsDate | date:'EEE dd MMM'}}</h3>
         </div>
         <div *ngFor="let booking of wednesdayBookings">
             <div class="row">
-                <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
+                <booking url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
             </div>
         </div>
     </div>
 
     <div class="col col-md-2">
         <div class="row">
-            <h3 class="center">{{thursDate | date:'EEE dd MMM'}}</h3>
+            <h3 class="grey-text" style="padding-left: 10% ">{{thursDate | date:'EEE dd MMM'}}</h3>
         </div>
         <div *ngFor="let booking of thursdayBookings">
             <div class="row">
-                <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
+                <booking url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
             </div>
         </div>
     </div>
 
     <div class="col col-md-2">
         <div class="row">
-            <h3 class="center">{{friDate | date:'EEE dd MMM'}}</h3>
+            <h3 class="grey-text" style="padding-left: 10% ">{{friDate | date:'EEE dd MMM'}}</h3>
         </div>
         <div *ngFor="let booking of fridayBookings">
             <div class="row">
-                <booking deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
+                <booking url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </booking>
             </div>
         </div>
+    </div>
+    <div class="col col-md-1">
     </div>
 </div>

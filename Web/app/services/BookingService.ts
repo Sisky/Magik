@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from "@angular/http";
+import {Http, RequestOptions, Response, Headers} from "@angular/http";
 import {Observable} from "rxjs/Observable";
 
 declare var moment: any;
@@ -29,19 +29,55 @@ export class BookingService {
     private url: string;
 
     constructor(private http: Http) {
+
     }
 
     getLevelBooking(date: Date, level: number): Observable<Object[]> {
-        this.urlMaker(date, level);
+
+        let formattedDate = moment(date).format('YYYY-MM-DD');
+        this.url = "?date=" + formattedDate + "&level=" + level + "&valid=1";
+
         return this.http.get(`${this.baseUrl}${this.url}`)
             .map((res:Response) => res.json())
             .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
     }
 
-    urlMaker(date: Date, level: number): void {
+    getRoomHistoryBooking(date: Date, level: number, room: number ): Observable<Object[]> {
         let formattedDate = moment(date).format('YYYY-MM-DD');
-        this.url = "?date=" + formattedDate + "&level=" + level;
+        this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&valid=0";
+
+        return this.http.get(`${this.baseUrl}${this.url}`)
+            .map((res:Response) => res.json())
+            .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
     }
+
+    updateLevelBooking(date: Date, Level: number, room: number) {
+        let formattedDate = moment(date).format('YYYY-MM-DD');
+
+    }
+
+    postNewBooking(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number): Observable<Response> {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let formattedDate = moment(date).format('YYYY-MM-DD');
+        let newDate = moment(new Date()).format('YYYY-MM-DDThh:mm');
+        return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate}), {
+            headers: headers
+        });
+    }
+
+    updateRoomBooking(url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number) {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let formattedDate = moment(date).format('YYYY-MM-DD');
+        let newDate = moment(new Date()).format('YYYY-MM-DDThh:mm');
+        return this.http.put(url, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate}), {
+            headers: headers
+        });
+    }
+
 }
 
 
