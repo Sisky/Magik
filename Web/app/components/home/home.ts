@@ -1,11 +1,18 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'auction-home-page',
+  selector: 'home',
   styleUrls: ['app/components/home/home.css'],
   template: `
-      <h1>Home</h1>
-      <h4><a [routerLink]="['/calendar']"> beep </a></h4>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col col-md-1"></div>
+              <div class="col col-md-10">
+                <h1>Home Page coming soon....</h1>
+              </div>
+              <div class="col col-md-1"></div>
+        </div>
+      </div>
   `
 })
 export default class HomeComponent {

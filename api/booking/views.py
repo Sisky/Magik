@@ -6,9 +6,11 @@ import booking.permissions as booking_permissions
 import booking.serializers as booking_serializers
 
 
+
 class BookingView(rest_viewsets.ModelViewSet):
     queryset = booking_models.Booking.objects.all()
     serializer_class = booking_serializers.BookingSerializer
+
     permissions = [
         booking_permissions.CanBook,
         booking_permissions.Whatever,
@@ -20,7 +22,7 @@ class BookingView(rest_viewsets.ModelViewSet):
         queryset = self.filter_queryset_on_get(queryset, 'valid')
         queryset = self.filter_queryset_on_get(queryset, 'room')
 
-        return queryset
+        return queryset.order_by('-created')
 
     def filter_queryset_on_get(self, queryset, key):
         value = self.request.query_params.get(key, None)

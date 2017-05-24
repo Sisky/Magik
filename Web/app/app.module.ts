@@ -11,7 +11,6 @@ import ApplicationComponent from './components/application/application';
 import HomeComponent from './components/home/home';
 import {AppRoutingModule} from "./modules/app.routing";
 import DisclaimerComponent from "./components/disclaimer/disclaimer";
-import SideNavComponent from "./components/side-nav/side-nav";
 import HeaderComponent from "./components/planner/header/header";
 import CalendarComponent from "./components/planner/calendar/calendar";
 import {BookingService} from "./services/BookingService";
@@ -21,6 +20,8 @@ import {LevelService} from "./services/LevelService";
 import BookingComponent from "./components/planner/calendar/booking/booking";
 import {HttpModule} from "@angular/http";
 import {ModalModule} from "ngx-modal";
+import {PermissionService} from "./services/PermissionService";
+import NavBarComponent from "./components/nav-bar/nav-bar";
 
 
 
@@ -39,7 +40,7 @@ import {ModalModule} from "ngx-modal";
       ApplicationComponent,
       HomeComponent,
       DisclaimerComponent,
-      SideNavComponent,
+      NavBarComponent,
       HeaderComponent,
       CalendarComponent,
       BookingComponent,
@@ -48,6 +49,7 @@ import {ModalModule} from "ngx-modal";
             BookingService,
             DateService,
             LevelService,
+            PermissionService,
             {provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [ ApplicationComponent ]

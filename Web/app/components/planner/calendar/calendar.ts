@@ -7,6 +7,7 @@ import {Booking, BookingService} from '../../../services/BookingService';
 import {DateService} from "../../../services/DateService";
 import {Subscription} from "rxjs";
 import {LevelService} from "../../../services/LevelService";
+import {PermissionService} from "../../../services/PermissionService";
 
 
 @Component({
@@ -17,6 +18,7 @@ import {LevelService} from "../../../services/LevelService";
 
 @Injectable()
 export default class CalendarComponent {
+    private permission: number;
     level: number;
 
     date: Date;
@@ -31,9 +33,12 @@ export default class CalendarComponent {
     thursdayBookings:Object[];
     fridayBookings:Object[];
 
-    constructor(private bookingService: BookingService, private dateService: DateService, private levelService: LevelService) {
+
+
+    constructor(private bookingService: BookingService, private dateService: DateService, private levelService: LevelService, private permissionService: PermissionService) {
         //hard coded for testing
         this.level = levelService.getLevel();
+        this.permission = permissionService.getPermission();
         this.populate();
 
         //re render with new date

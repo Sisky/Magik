@@ -44,36 +44,43 @@ export class BookingService {
 
     getRoomHistoryBooking(date: Date, level: number, room: number ): Observable<Object[]> {
         let formattedDate = moment(date).format('YYYY-MM-DD');
-        this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&valid=0";
+        this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&valid=0" + "&ordering=created";
 
         return this.http.get(`${this.baseUrl}${this.url}`)
             .map((res:Response) => res.json())
             .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
     }
 
-    updateLevelBooking(date: Date, Level: number, room: number) {
-        let formattedDate = moment(date).format('YYYY-MM-DD');
-
-    }
-
-    postNewBooking(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number): Observable<Response> {
+    postNewBooking(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number): Observable<Response> {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-
+        var status;
+        if(confirmed == 1){
+            status = 2;
+        } else {
+            status = 1;
+        }
         let formattedDate = moment(date).format('YYYY-MM-DD');
-        let newDate = moment(new Date()).format('YYYY-MM-DDThh:mm');
-        return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate}), {
+        let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
+
+        return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, confirmed: confirmed}), {
             headers: headers
         });
     }
 
-    updateRoomBooking(url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number) {
+    updateRoomBooking(url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number): Observable<Response> {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
+        var status;
+        if(confirmed == 1){
+            status = 2;
+        } else {
+            status = 1;
+        }
 
         let formattedDate = moment(date).format('YYYY-MM-DD');
-        let newDate = moment(new Date()).format('YYYY-MM-DDThh:mm');
-        return this.http.put(url, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate}), {
+        let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
+        return this.http.put(url, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, confirmed: confirmed}), {
             headers: headers
         });
     }

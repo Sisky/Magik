@@ -1,15 +1,20 @@
 <!--Modal Trigger-->
 <div class="col m11" (click)="changeLog(); myModal.open();" >
     <div class="card white">
+
+
+        <div *ngIf="status == 0" class="colorstripGreen"></div>
+        <div *ngIf="status == 1" class="colorstripOrange"></div>
+        <div *ngIf="status == 2" class="colorstripYellow"></div>
         <div class="card-content grey-text">
-            <span class="booking-title">Operating Room {{room}}</span><br><br>
             <p>
+                <b class="booking-title">Operating Room {{room}}</b><br><br>
                 <b class="booking-time">AM Session</b><br>
-                Department: {{deptAM}}<br>
-                Surgeon: {{surgAM}}<br><br>
+                Surgeon: {{surgAM}}<br>
+                Department: {{deptAM}}<br><br>
                 <b class="booking-time">PM Session</b><br>
-                Department: {{deptPM}}<br>
-                Surgeon: {{surgPM}}
+                Surgeon: {{surgPM}}<br>
+                Department: {{deptPM}}<br><br>
             </p>
         </div>
     </div>
@@ -21,8 +26,7 @@
         <h1 class="modal-title">{{date | date:'EEEE dd MMM'}}<br> Operating Room {{room}} Level {{level}}</h1>
     </modal-header>
     <modal-content>
-
-        <form [formGroup]="formModel" (ngSubmit)="save()" novalidate>
+        <form [formGroup]="formModel" id="formModel"  novalidate>
             <div class="col m12">
                 <label style="font-weight: 400; font-size: 125%">Morning Session</label><br>
             </div>
@@ -57,10 +61,32 @@
                     </div>
                 </div>
             </div>
+            <div class="col m12 no-pad-top">
+                <label style="font-weight: 400; font-size: 125%">Admin Panel</label><br>
+            </div>
+            <div class="row">
+                <div class="col m6">
+                    <label for="f_deptPM">Confirmed</label>
+                    <div class="switch">
+                        <label>
+                            No
+                            <input id="f_confirmed" type="checkbox" value="checked"  formControlName="f_confirmed">
+                            <span class="lever"></span>
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="col m6">
+                </div>
+            </div>
+
+
             <div class="col m6"></div>
             <div class="col m6">
-                <button type="submit" class="waves-effect waves-light btn left ">Save</button>
-                <button class="waves-effect waves-light btn right ">Close</button>
+                <button [disabled]="!formModel.dirty"(click)="save()" class="waves-effect waves-light btn left ">Save</button>
+
+                <button *ngIf="!formModel.dirty" class="waves-effect waves-light btn right"(click)="myModal.close();">Close</button>
+                <button *ngIf="formModel.dirty" class="waves-effect waves-light btn right"(click)="checkModal.open()">Close</button>
             </div>
 
         </form>
@@ -70,7 +96,7 @@
         <div *ngFor="let c of changedBookings">
             <div class="row">
                 <div class="row">
-                    <label>Changed on {{c.created | date:'dd MMM hh:mm'}}</label>
+                    <label>Changed on {{c.created | date: 'd MMM H:m'}}</label>
                 </div>
                 <div class="col m6">
                     <label>Morning</label><br>
@@ -87,9 +113,25 @@
         </div>
     </modal-footer>
     </modal-content>
-
 </modal>
 </div>
-
-
+<div>
+    <modal #checkModal [closeOnEscape]="false" [closeOnOutsideClick]="false">
+        <modal-header>
+            <h1 class="modal-title">Changes detected</h1>
+        </modal-header>
+        <modal-content>
+            Are you sure you want to close without saving?
+        </modal-content>
+        <modal-footer>
+            <div class="row">
+                <div class="col m6"></div>
+                <div class="col m6">
+                    <button class="waves-effect waves-light btn left"(click)="save(); checkModal.close(); myModal.close();">Save</button>
+                    <button class="waves-effect waves-light btn right"(click)=" checkModal.close(); myModal.close(); formModel.markAsPristine(); refresh();">Close</button>
+                </div>
+            </div>
+        </modal-footer>
+    </modal>
+</div>
 

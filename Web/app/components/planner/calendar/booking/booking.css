@@ -16,4 +16,25 @@
     font-weight: 600;
     font-family: "Roboto", sans-serif;
 }
+.colorstripGreen{
+    padding: 0px;
+    width: 100%; height: 30px;
+    border-style: solid;
+    border-color: #228b22;
+    background-color: #228b22;
+}
+.colorstripYellow{
+    padding: 0px;
+    width: 100%; height: 30px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: yellow;
+}
+.colorstripOrange{
+    padding: 0px;
+    width: 100%; height: 30px;
+    border-style: solid;
+    border-color: darkorange;
+    background-color: darkorange;
+}
 
