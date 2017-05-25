@@ -4,13 +4,13 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import HomeComponent from "../components/home/home";
-import DisclaimerComponent from "../components/disclaimer/disclaimer";
 import CalendarComponent from "../components/planner/calendar/calendar";
+import RequestsComponent from "../components/requests/requests";
 
 const routes: Routes = [
     {path: '',           component: HomeComponent},
-    {path: 'disclaimer', component: DisclaimerComponent},
     {path: 'calendar', component: CalendarComponent},
+    {path: 'requests', component: RequestsComponent},
 
 ];
 

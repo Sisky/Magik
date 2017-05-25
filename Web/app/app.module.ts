@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import ApplicationComponent from './components/application/application';
 import HomeComponent from './components/home/home';
 import {AppRoutingModule} from "./modules/app.routing";
-import DisclaimerComponent from "./components/disclaimer/disclaimer";
 import HeaderComponent from "./components/planner/header/header";
 import CalendarComponent from "./components/planner/calendar/calendar";
 import {BookingService} from "./services/BookingService";
@@ -22,6 +21,7 @@ import {HttpModule} from "@angular/http";
 import {ModalModule} from "ngx-modal";
 import {PermissionService} from "./services/PermissionService";
 import NavBarComponent from "./components/nav-bar/nav-bar";
+import RequestsComponent from "./components/requests/requests";
 
 
 
@@ -35,16 +35,16 @@ import NavBarComponent from "./components/nav-bar/nav-bar";
       DropdownModule,
       HttpModule,
       ModalModule
-      ],
+  ],
   declarations: [
       ApplicationComponent,
       HomeComponent,
-      DisclaimerComponent,
       NavBarComponent,
       HeaderComponent,
       CalendarComponent,
       BookingComponent,
-       ],
+      RequestsComponent
+  ],
   providers: [
             BookingService,
             DateService,

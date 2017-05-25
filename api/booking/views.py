@@ -22,7 +22,7 @@ class BookingView(rest_viewsets.ModelViewSet):
         queryset = self.filter_queryset_on_get(queryset, 'valid')
         queryset = self.filter_queryset_on_get(queryset, 'room')
 
-        return queryset.order_by('-created')
+        return queryset.order_by('room','-created')
 
     def filter_queryset_on_get(self, queryset, key):
         value = self.request.query_params.get(key, None)

@@ -9,7 +9,6 @@ import {Subscription} from "rxjs";
 import {LevelService} from "../../../services/LevelService";
 import {PermissionService} from "../../../services/PermissionService";
 
-
 @Component({
     selector: 'calendar',
     templateUrl:'./app/components/planner/calendar/calendar.html',
@@ -27,20 +26,16 @@ export default class CalendarComponent {
     thursDate: Date;
     friDate: Date;
 
-    mondayBookings:Object[];
-    tuesdayBookings:Object[];
-    wednesdayBookings:Object[];
-    thursdayBookings:Object[];
-    fridayBookings:Object[];
-
-
+    mondayBookings:Booking[];
+    tuesdayBookings:Booking[];
+    wednesdayBookings:Booking[];
+    thursdayBookings:Booking[];
+    fridayBookings:Booking[];
 
     constructor(private bookingService: BookingService, private dateService: DateService, private levelService: LevelService, private permissionService: PermissionService) {
         //hard coded for testing
         this.level = levelService.getLevel();
         this.permission = permissionService.getPermission();
-        this.populate();
-
         //re render with new date
         let _subscription = dateService.dateChange$.subscribe((value) => {
             this.populate()
@@ -49,6 +44,11 @@ export default class CalendarComponent {
         let _subscriptionL = levelService.levelChange$.subscribe((value) => {
             this.populate();
         });
+    }
+
+    ngOnInit() {
+        this.populate();
+
     }
 
     populate() {
@@ -96,7 +96,5 @@ export default class CalendarComponent {
                     console.log(err);
                 });
     }
-
-
-    }
+}
 

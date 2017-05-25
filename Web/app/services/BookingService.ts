@@ -7,15 +7,20 @@ declare var moment: any;
 export class Booking {
 
     constructor(
+        public url: string,
         public date: Date,
         public level: number,
         public room: number,
         public am_dept: string,
-        public pm_dept: string,
         public am_surg: string,
+        public pm_dept: string,
         public pm_surg: string,
+        public valid: number,
+        public confirmed: number
         ) {
 
+
+        // url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number
     }
 }
 
@@ -32,7 +37,7 @@ export class BookingService {
 
     }
 
-    getLevelBooking(date: Date, level: number): Observable<Object[]> {
+    getLevelBooking(date: Date, level: number): Observable<Booking[]> {
 
         let formattedDate = moment(date).format('YYYY-MM-DD');
         this.url = "?date=" + formattedDate + "&level=" + level + "&valid=1";

@@ -58,8 +58,6 @@ export default class BookingComponent {
         }
     }
 
-
-
     changeLog() {
         // //Get change log
         this.bookingService.getRoomHistoryBooking(this.date,this.level,this.room)
