@@ -8,6 +8,8 @@ import {DateService} from "../../../services/DateService";
 import {Subscription} from "rxjs";
 import {LevelService} from "../../../services/LevelService";
 import {PermissionService} from "../../../services/PermissionService";
+import {AuthService} from "../../../services/AuthService";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'calendar',
@@ -32,22 +34,28 @@ export default class CalendarComponent {
     thursdayBookings:Booking[];
     fridayBookings:Booking[];
 
-    constructor(private bookingService: BookingService, private dateService: DateService, private levelService: LevelService, private permissionService: PermissionService) {
-        //hard coded for testing
-        this.level = levelService.getLevel();
-        this.permission = permissionService.getPermission();
-        //re render with new date
-        let _subscription = dateService.dateChange$.subscribe((value) => {
-            this.populate()
-        });
-        //re render with new level
-        let _subscriptionL = levelService.levelChange$.subscribe((value) => {
-            this.populate();
-        });
+    constructor(public router: Router, private auth: AuthService, private bookingService: BookingService, private dateService: DateService, private levelService: LevelService, private permissionService: PermissionService) {
+        //
+        if(!auth.isAuthenticated()) {
+            //cannot be on this page
+            this.auth.login();
+        }
     }
 
     ngOnInit() {
-        this.populate();
+        if(this.auth.isAuthenticated()) {
+            this.level = this.levelService.getLevel();
+            this.permission = this.permissionService.getPermission();
+            this.populate();
+
+            let _subscription = this.dateService.dateChange$.subscribe((value) => {
+                this.populate()
+            });
+            //re render with new level
+            let _subscriptionL = this.levelService.levelChange$.subscribe((value) => {
+                this.populate();
+            });
+        }
 
     }
 

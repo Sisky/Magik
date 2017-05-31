@@ -22,6 +22,8 @@ import {ModalModule} from "ngx-modal";
 import {PermissionService} from "./services/PermissionService";
 import NavBarComponent from "./components/nav-bar/nav-bar";
 import RequestsComponent from "./components/requests/requests";
+import {AuthService} from "./services/AuthService";
+import {CallbackComponent} from "./components/callback/callback";
 
 
 
@@ -43,13 +45,15 @@ import RequestsComponent from "./components/requests/requests";
       HeaderComponent,
       CalendarComponent,
       BookingComponent,
-      RequestsComponent
+      RequestsComponent,
+      CallbackComponent
   ],
   providers: [
             BookingService,
             DateService,
             LevelService,
             PermissionService,
+            AuthService,
             {provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [ ApplicationComponent ]

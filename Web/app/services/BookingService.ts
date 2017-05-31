@@ -18,9 +18,6 @@ export class Booking {
         public valid: number,
         public confirmed: number
         ) {
-
-
-        // url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number
     }
 }
 
@@ -89,13 +86,4 @@ export class BookingService {
             headers: headers
         });
     }
-
 }
-
-
-
-
-
-
-
-

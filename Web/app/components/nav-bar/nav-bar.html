@@ -1,8 +1,16 @@
 
 <div class="topnav" id="myTopnav">
-    <a [routerLink]="['']">Home</a>
-    <a [routerLink]="['/calendar']">Planner</a>
-    <a [routerLink]="['/requests']">Requests</a>
+  <a [routerLink]="['']">Home</a>
+  <a [routerLink]="['/calendar']">Planner</a>
+  <a [routerLink]="['/requests']">Requests</a>
+  <a style="float:right" *ngIf="!auth.isAuthenticated()"
+    (click)="auth.login()">
+    Log In
+  </a>
+  <a style="float:right" *ngIf="auth.isAuthenticated()"
+    (click)="auth.logout()">
+    Log Out
+  </a>
 </div>
 
 

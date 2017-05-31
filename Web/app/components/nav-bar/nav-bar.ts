@@ -3,6 +3,7 @@
  */
 
 import {Component} from '@angular/core';
+import {AuthService} from "../../services/AuthService";
 
 //declare var __moduleName: string;
 
@@ -15,7 +16,7 @@ import {Component} from '@angular/core';
 
 export default class NavBarComponent {
 
-    constructor() {
+    constructor(private auth: AuthService) {
     }
 
 }
