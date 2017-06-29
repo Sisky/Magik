@@ -1,24 +1,125 @@
-<!--Modal Trigger-->
-<div class="col m11" (click)="changeLog(); myModal.open();" >
-    <div class="card white">
-
-
-        <div *ngIf="status == 0" class="colorstripGreen"></div>
-        <div *ngIf="status == 1" class="colorstripOrange"></div>
-        <div *ngIf="status == 2" class="colorstripYellow"></div>
+<!--hacky dont like it for width-->
+<div *ngIf="level == '1'">
+  <div class="w3-col" style="width: 12.5%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
+    <div (click)="changeLog(); myModal.open();">
+      <div class="card white">
         <div class="card-content grey-text">
-            <p>
-                <b class="booking-title">Operating Room {{room}}</b><br><br>
-                <b class="booking-time">AM Session</b><br>
-                Surgeon: {{surgAM}}<br>
-                Department: {{deptAM}}<br><br>
-                <b class="booking-time">PM Session</b><br>
-                Surgeon: {{surgPM}}<br>
-                Department: {{deptPM}}<br><br>
-            </p>
+          <div *ngIf="confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="confirmed == 0">
+            <div class="colorstripYellow">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgPM}}<br>{{deptPM}}</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
+<div *ngIf="level == '2'">
+  <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
+    <div (click)="changeLog(); myModal.open();">
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgAM}}<br>{{deptAM}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgPM}}<br>{{deptPM}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="level == '4'">
+  <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
+    <div (click)="changeLog(); myModal.open();">
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgAM}}<br>{{deptAM}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgPM}}<br>{{deptPM}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="level == '8'">
+  <div class="w3-col" style="width: 7%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
+    <div (click)="changeLog(); myModal.open();">
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgAM}}<br>{{deptAM}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgPM}}<br>{{deptPM}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="level == '9'">
+  <div class="w3-col" style="width: 25%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
+    <div (click)="changeLog(); myModal.open();">
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgAM}}<br>{{deptAM}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card white">
+        <div class="card-content grey-text">
+          <div class="colorstripGreen">
+            <p>{{surgPM}}<br>{{deptPM}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 <!--Modal Structure-->
 <div>
     <modal #myModal [closeOnEscape]="false" [closeOnOutsideClick]="false">

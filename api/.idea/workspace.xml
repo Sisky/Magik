@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79857428-bcb0-4873-b1d1-ca71fdffc39f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Web/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Web/app/components/callback/callback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Web/app/components/callback/callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Web/app/components/callback/callback.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Web/app/services/AuthService.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../npm-debug.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../Web/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Web/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/app.module.ts" afterPath="$PROJECT_DIR$/../Web/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/application/application.ts" afterPath="$PROJECT_DIR$/../Web/app/components/application/application.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/home/home.ts" afterPath="$PROJECT_DIR$/../Web/app/components/home/home.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/nav-bar/nav-bar.html" afterPath="$PROJECT_DIR$/../Web/app/components/nav-bar/nav-bar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/nav-bar/nav-bar.ts" afterPath="$PROJECT_DIR$/../Web/app/components/nav-bar/nav-bar.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/modules/app.routing.ts" afterPath="$PROJECT_DIR$/../Web/app/modules/app.routing.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/services/BookingService.ts" afterPath="$PROJECT_DIR$/../Web/app/services/BookingService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/planner/calendar/booking/booking.css" afterPath="$PROJECT_DIR$/../Web/app/components/planner/calendar/booking/booking.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/planner/calendar/booking/booking.html" afterPath="$PROJECT_DIR$/../Web/app/components/planner/calendar/booking/booking.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/planner/calendar/booking/booking.ts" afterPath="$PROJECT_DIR$/../Web/app/components/planner/calendar/booking/booking.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/app/components/planner/calendar/calendar.html" afterPath="$PROJECT_DIR$/../Web/app/components/planner/calendar/calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/index.html" afterPath="$PROJECT_DIR$/../Web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/package.json" afterPath="$PROJECT_DIR$/../Web/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/systemjs.config.js" afterPath="$PROJECT_DIR$/../Web/systemjs.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/api.iml" afterPath="$PROJECT_DIR$/.idea/api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/materialize/css/materialize.css" afterPath="$PROJECT_DIR$/../Web/materialize/css/materialize.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/booking/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -428,9 +417,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="819" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="819" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081545" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22532189" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -814,14 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/booking/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -830,10 +811,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/booking/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/booking/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>

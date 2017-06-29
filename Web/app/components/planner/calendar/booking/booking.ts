@@ -28,7 +28,7 @@ export default class BookingComponent {
     @Input() date: Date;
     @Input() room: number;
     @Input() status: number;
-    @Input() confirmed: number
+    @Input() confirmed: number;
     @Input() permission: number;
 
     changedBookings: Object[];
