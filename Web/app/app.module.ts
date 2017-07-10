@@ -24,6 +24,7 @@ import NavBarComponent from "./components/nav-bar/nav-bar";
 import RequestsComponent from "./components/requests/requests";
 import {AuthService} from "./services/AuthService";
 import {CallbackComponent} from "./components/callback/callback";
+import ProfileComponent from "./components/profile/profile";
 
 
 
@@ -46,7 +47,8 @@ import {CallbackComponent} from "./components/callback/callback";
       CalendarComponent,
       BookingComponent,
       RequestsComponent,
-      CallbackComponent
+      CallbackComponent,
+      ProfileComponent
   ],
   providers: [
             BookingService,

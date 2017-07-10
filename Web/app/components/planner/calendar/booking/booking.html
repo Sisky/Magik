@@ -162,25 +162,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col m12 no-pad-top">
-                <label style="font-weight: 400; font-size: 125%">Admin Panel</label><br>
-            </div>
-            <div class="row">
-                <div class="col m6">
-                    <label for="f_deptPM">Confirmed</label>
-                    <div class="switch">
-                        <label>
-                            No
-                            <input id="f_confirmed" type="checkbox" value="checked"  formControlName="f_confirmed">
-                            <span class="lever"></span>
-                            Yes
-                        </label>
-                    </div>
-                </div>
-                <div class="col m6">
-                </div>
-            </div>
-
+          <div>Perm:{{permission}}</div>
+          <div *ngIf="permission == 1" class="admin-panel">
+              <div class="col m12 no-pad-top">
+                  <label style="font-weight: 400; font-size: 125%">Admin Panel</label><br>
+              </div>
+              <div class="row">
+                  <div class="col m6">
+                      <label for="f_deptPM">Confirmed</label>
+                      <div class="switch">
+                          <label>
+                              No
+                              <input id="f_confirmed" type="checkbox" value="checked"  formControlName="f_confirmed">
+                              <span class="lever"></span>
+                              Yes
+                          </label>
+                      </div>
+                  </div>
+                  <div class="col m6">
+                  </div>
+              </div>
+          </div>
 
             <div class="col m6"></div>
             <div class="col m6">

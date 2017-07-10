@@ -19,7 +19,6 @@ import {Router} from "@angular/router";
 
 @Injectable()
 export default class CalendarComponent {
-    private permission: number;
     level: number;
 
     date: Date;
@@ -35,17 +34,18 @@ export default class CalendarComponent {
     fridayBookings:Booking[];
 
     constructor(public router: Router, private auth: AuthService, private bookingService: BookingService, private dateService: DateService, private levelService: LevelService, private permissionService: PermissionService) {
-        //
+
         if(!auth.isAuthenticated()) {
             //cannot be on this page
             this.auth.login();
         }
+
     }
 
     ngOnInit() {
         if(this.auth.isAuthenticated()) {
             this.level = this.levelService.getLevel();
-            this.permission = this.permissionService.getPermission();
+
             this.populate();
 
             let _subscription = this.dateService.dateChange$.subscribe((value) => {
@@ -55,9 +55,15 @@ export default class CalendarComponent {
             let _subscriptionL = this.levelService.levelChange$.subscribe((value) => {
                 this.populate();
             });
+
+
+        } else {
+            console.log("beep");
         }
 
     }
+
+
 
     populate() {
         this.level = this.levelService.getLevel();
@@ -67,6 +73,9 @@ export default class CalendarComponent {
         this.wedsDate = this.dateService.getWednesday();
         this.thursDate = this.dateService.getThursday();
         this.friDate = this.dateService.getFriday();
+
+        //refreshes permission
+        this.permissionService.getPermission();
 
         //Monday
         this.bookingService.getLevelBooking(this.date, this.level)

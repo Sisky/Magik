@@ -16,7 +16,7 @@ export class DateService {
         this.dateChange.next(this.date);
     }
     getDate(): Date {
-        return new Date();
+        return new Date('2017-06-10');
     }
     getMonday(): Date {
         let monday = moment(this.date).startOf('isoweek').format('YYYY, MM, DD');

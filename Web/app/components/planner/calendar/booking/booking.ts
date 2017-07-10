@@ -3,6 +3,7 @@ import {ModalModule} from "ngx-modal";
 import {BookingService} from "../../../../services/BookingService";
 import CalendarComponent from "../calendar";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {PermissionService} from "../../../../services/PermissionService";
 
 /**
  * Created by Scott Mackenzie on 26/04/2017.
@@ -18,6 +19,7 @@ declare var $: any;
 export default class BookingComponent {
 
     formModel: FormGroup;
+    permission: number;
 
     @Input() url: string;
     @Input() deptAM: string;
@@ -29,12 +31,11 @@ export default class BookingComponent {
     @Input() room: number;
     @Input() status: number;
     @Input() confirmed: number;
-    @Input() permission: number;
 
     changedBookings: Object[];
 
-    constructor(private bookingService: BookingService, private calendar: CalendarComponent) {
-
+    constructor(private bookingService: BookingService, private calendar: CalendarComponent, private permissionService: PermissionService) {
+        this.permission = this.permissionService.getPermission();
     }
 
     ngOnInit() {
@@ -56,6 +57,10 @@ export default class BookingComponent {
                 'f_confirmed': [false]
             })
         }
+
+        this.permission = this.permissionService.getPermission();
+
+
     }
 
     changeLog() {
@@ -70,6 +75,8 @@ export default class BookingComponent {
     refresh() {
         this.calendar.populate();
     }
+
+
 
     save() {
         if(this.formModel.dirty) {
