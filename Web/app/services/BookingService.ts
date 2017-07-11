@@ -53,6 +53,15 @@ export class BookingService {
             .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
     }
 
+    getRoomRequestBooking(date: Date, level: number, room: number ): Observable<Object[]> {
+        let formattedDate = moment(date).format('YYYY-MM-DD');
+        this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&status=5" +"&ordering=created";
+
+        return this.http.get(`${this.baseUrl}${this.url}`)
+            .map((res:Response) => res.json())
+            .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+    }
+
     postNewBooking(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number): Observable<Response> {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -83,6 +92,19 @@ export class BookingService {
         let formattedDate = moment(date).format('YYYY-MM-DD');
         let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
         return this.http.put(url, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, confirmed: confirmed}), {
+            headers: headers
+        });
+    }
+
+    postNewRequest(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number): Observable<Response> {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        var status = 5;
+
+        let formattedDate = moment(date).format('YYYY-MM-DD');
+        let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
+
+        return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, confirmed: confirmed}), {
             headers: headers
         });
     }

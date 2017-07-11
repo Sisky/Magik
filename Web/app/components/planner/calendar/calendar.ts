@@ -75,7 +75,7 @@ export default class CalendarComponent {
         this.friDate = this.dateService.getFriday();
 
         //refreshes permission
-        this.permissionService.getPermission();
+        // this.permissionService.getPermission();
 
         //Monday
         this.bookingService.getLevelBooking(this.date, this.level)

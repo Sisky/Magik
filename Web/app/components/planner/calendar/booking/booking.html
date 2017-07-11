@@ -1,7 +1,7 @@
 <!--hacky dont like it for width-->
 <div *ngIf="level == '1'">
   <div class="w3-col" style="width: 12.5%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div *ngIf="confirmed == 1">
@@ -29,7 +29,7 @@
 
 <div *ngIf="level == '2'">
   <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -51,7 +51,7 @@
 
 <div *ngIf="level == '4'">
   <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -72,7 +72,7 @@
 
 <div *ngIf="level == '8'">
   <div class="w3-col" style="width: 7%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -93,7 +93,7 @@
 
 <div *ngIf="level == '9'">
   <div class="w3-col" style="width: 25%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-          <div>Perm:{{permission}}</div>
+          <!--only admin can have this panel-->
           <div *ngIf="permission == 1" class="admin-panel">
               <div class="col m12 no-pad-top">
                   <label style="font-weight: 400; font-size: 125%">Admin Panel</label><br>
@@ -184,36 +184,61 @@
               </div>
           </div>
 
-            <div class="col m6"></div>
-            <div class="col m6">
-                <button [disabled]="!formModel.dirty"(click)="save()" class="waves-effect waves-light btn left ">Save</button>
 
-                <button *ngIf="!formModel.dirty" class="waves-effect waves-light btn right"(click)="myModal.close();">Close</button>
-                <button *ngIf="formModel.dirty" class="waves-effect waves-light btn right"(click)="checkModal.open()">Close</button>
+            <div class="col m12">
+
+              <button [disabled]="!formModel.dirty"  (click)="request()" class="waves-effect waves-light btn left ">Request</button>
+
+              <button *ngIf="!formModel.dirty" class="waves-effect waves-light btn right"(click)="myModal.close();">Close</button>
+              <button *ngIf="formModel.dirty" class="waves-effect waves-light btn right"(click)="checkModal.open()">Close</button>
+              <button style="margin-right: 5%" [disabled]="!formModel.dirty" *ngIf="permission == 1" (click)="save()" class="waves-effect waves-light btn right ">Save</button>
+
             </div>
 
         </form>
     <modal-footer>
-        <label style="font-weight: 400; font-size: 125%">Change Log</label>
-        <hr>
-        <div *ngFor="let c of changedBookings">
-            <div class="row">
-                <div class="row">
-                    <label>Changed on {{c.created | date: 'd MMM H:mm'}}</label>
-                </div>
-                <div class="col m6">
-                    <label>Morning</label><br>
-                    Surgeon: {{c.am_surg}}<br>
-                    Department: {{c.am_dept}}
-                </div>
-                <div class="col m6">
-                    <label>Afternoon</label><br>
-                    Surgeon: {{c.pm_surg}}<br>
-                    Department: {{c.pm_dept}}
-                </div>
-            </div>
-            <hr>
+      <label style="font-weight: 400; font-size: 125%">Open Request Log</label>
+      <hr>
+      <div *ngFor="let r of requestedBookings">
+        <div class="row">
+          <div class="row">
+            <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
+          </div>
+          <div class="col m6">
+            <label>Morning</label><br>
+            Surgeon: {{r.am_surg}}<br>
+            Department: {{r.am_dept}}
+          </div>
+          <div class="col m6">
+            <label>Afternoon</label><br>
+            Surgeon: {{r.pm_surg}}<br>
+            Department: {{r.pm_dept}}
+          </div>
         </div>
+        <hr>
+      </div>
+
+
+      <label style="font-weight: 400; font-size: 125%">Change Log</label>
+      <hr>
+      <div *ngFor="let c of changedBookings">
+          <div class="row" *ngIf="c.status != 5">
+              <div class="row">
+                <label >Changed on {{c.created | date: 'd MMM H:mm'}}</label>
+              </div>
+              <div class="col m6">
+                  <label>Morning</label><br>
+                  Surgeon: {{c.am_surg}}<br>
+                  Department: {{c.am_dept}}
+              </div>
+              <div class="col m6">
+                  <label>Afternoon</label><br>
+                  Surgeon: {{c.pm_surg}}<br>
+                  Department: {{c.pm_dept}}
+              </div>
+          </div>
+          <hr>
+      </div>
     </modal-footer>
     </modal-content>
 </modal>

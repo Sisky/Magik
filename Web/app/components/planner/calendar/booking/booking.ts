@@ -33,6 +33,7 @@ export default class BookingComponent {
     @Input() confirmed: number;
 
     changedBookings: Object[];
+    requestedBookings: Object[];
 
     constructor(private bookingService: BookingService, private calendar: CalendarComponent, private permissionService: PermissionService) {
         this.permission = this.permissionService.getPermission();
@@ -72,6 +73,18 @@ export default class BookingComponent {
                     console.log(err);
                 });
     }
+
+    requestLog() {
+        //Get request log
+        this.bookingService.getRoomRequestBooking(this.date,this.level,this.room)
+            .subscribe(data => this.requestedBookings = (data as any).results,
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                });
+    }
+
+
     refresh() {
         this.calendar.populate();
     }
@@ -105,7 +118,24 @@ export default class BookingComponent {
             this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 1, this.confirmed).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
             //update Calendar
         }
+    }
 
+    request() {
+        // Fill in request details
+        if(this.formModel.get("f_deptAM").dirty) {
+            this.deptAM = this.formModel.get("f_deptAM").value;
+        }
+        if(this.formModel.get("f_deptPM").dirty) {
+            this.deptPM = this.formModel.get("f_deptPM").value;
+        }
+        if(this.formModel.get("f_surgAM").dirty) {
+            this.surgAM = this.formModel.get("f_surgAM").value;
+        }
+        if(this.formModel.get("f_surgPM").dirty) {
+            this.surgPM = this.formModel.get("f_surgPM").value;
+        }
 
+        this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+        //update Calendar
     }
 }
