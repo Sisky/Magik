@@ -5,6 +5,8 @@ import CalendarComponent from "../calendar";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {PermissionService} from "../../../../services/PermissionService";
 
+import { surgeons, services } from 'app/data-models.ts'
+
 /**
  * Created by Scott Mackenzie on 26/04/2017.
  */
@@ -20,6 +22,8 @@ export default class BookingComponent {
 
     formModel: FormGroup;
     permission: number;
+    surgeons = surgeons;
+    services = services;
 
     @Input() url: string;
     @Input() deptAM: string;
@@ -43,7 +47,7 @@ export default class BookingComponent {
         const fb = new FormBuilder();
         if(this.confirmed == 1) {
             this.formModel = fb.group({
-                'f_deptAM': [],
+                'f_deptAM': [this.deptAM],
                 'f_surgAM': [],
                 'f_deptPM': [],
                 'f_surgPM': [],
@@ -51,7 +55,7 @@ export default class BookingComponent {
             })
         } else {
             this.formModel = fb.group({
-                'f_deptAM': [],
+                'f_deptAM': [this.deptAM],
                 'f_surgAM': [],
                 'f_deptPM': [],
                 'f_surgPM': [],
@@ -82,7 +86,12 @@ export default class BookingComponent {
                     // Log errors if any
                     console.log(err);
                 });
+
+
+
     }
+
+    //
 
 
     refresh() {
@@ -135,7 +144,14 @@ export default class BookingComponent {
             this.surgPM = this.formModel.get("f_surgPM").value;
         }
 
-        this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+        this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 3, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
         //update Calendar
+    }
+
+    acceptRequest(url: string, date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number ) {
+        //add original booking to history
+        this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1).subscribe();
+        //update request to current booking
+        this.bookingService.updateRoomBooking(url, date, level, room, am_dept, am_surg, pm_dept, pm_surg, 1, confirmed).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
     }
 }

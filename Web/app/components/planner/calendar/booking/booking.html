@@ -132,35 +132,58 @@
                 <label style="font-weight: 400; font-size: 125%">Morning Session</label><br>
             </div>
             <div class="row no-pad-bot">
-                <div class="col m6">
-                    <div class="form-group">
-                        <label for="f_surgAM">Surgeon</label>
-                        <input id="f_surgAM" value="{{surgAM}}" type="text" formControlName="f_surgAM">
-                    </div>
+              <div class="col m6">
+                <div class="form-group">
+                  <label for="f_surgAM">Surgeon</label>
+                  <select formControlName="f_surgAM" class="form-control input-md" id="f_surgAM" >
+                    <option [selected]="surgAM">{{surgAM}}</option>
+                    <option *ngFor="let s of surgeons" [value]="s">
+                      {{s}}
+                    </option>
+                  </select>
                 </div>
-                <div class="col m6">
-                    <div class="form-group">
-                        <label for="f_deptAM">Department</label>
-                        <input id="f_deptAM" value="{{deptAM}}" type="text" formControlName="f_deptAM">
-                    </div>
-                </div>
+              </div>
 
-            <div class="col m12 no-pad-top">
-                <label style="font-weight: 400; font-size: 125%">Afternoon Session</label><br>
-            </div>
+              <div class="col m6">
+                <div class="form-group">
+                  <label for="f_deptAM">Department</label>
+                  <select formControlName="f_deptAM" class="form-control input-md" id="f_deptAM" >
+                    <option [selected]="deptAM">{{deptAM}}</option>
+                    <option *ngFor="let s of services" [value]="s">
+                      {{s}}
+                    </option>
+                  </select>
+                </div>
+              </div>
 
-                <div class="col m6">
-                    <div class="form-group">
-                        <label for="f_surgPM">Surgeon</label>
-                        <input id="f_surgPM" value="{{surgPM}}" type="text" formControlName="f_surgPM">
-                    </div>
+              <div class="col m12 no-pad-top">
+                  <label style="font-weight: 400; font-size: 125%">Afternoon Session</label><br>
+              </div>
+
+              <div class="col m6">
+                <div class="form-group">
+                  <label for="f_surgPM">Surgeon</label>
+                  <select formControlName="f_surgPM" class="form-control input-md" id="f_surgPM" >
+                    <option [selected]="surgPM">{{surgPM}}</option>
+                    <option *ngFor="let s of surgeons" [value]="s">
+                      {{s}}
+                    </option>
+                  </select>
                 </div>
-                <div class="col m6">
-                    <div class="form-group">
-                        <label for="f_deptPM">Department</label>
-                        <input id="f_deptPM" value="{{deptPM}}" type="text" formControlName="f_deptPM">
-                    </div>
+              </div>
+
+              <div class="col m6">
+                <div class="form-group">
+                  <label for="f_deptAM">Department</label>
+                  <select formControlName="f_deptPM" class="form-control input-md" id="f_deptPM" >
+                    <option [selected]="deptPM">{{deptPM}}</option>
+                    <option *ngFor="let s of services" [value]="s">
+                      {{s}}
+                    </option>
+                  </select>
                 </div>
+              </div>
+
             </div>
           <!--only admin can have this panel-->
           <div *ngIf="permission == 1" class="admin-panel">
@@ -197,29 +220,58 @@
 
         </form>
     <modal-footer>
-      <label style="font-weight: 400; font-size: 125%">Open Request Log</label>
+      <!--admin request panel with accept/reject-->
+      <label *ngIf="requestedBookings?.length > 0" style="font-weight: 400; font-size: 125%">Open Request Log</label>
       <hr>
-      <div *ngFor="let r of requestedBookings">
-        <div class="row">
+      <div *ngIf="permission == 1">
+        <div *ngFor="let r of requestedBookings">
           <div class="row">
-            <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
+            <div class="row">
+              <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
+            </div>
+            <div class="col m4">
+              <label>Morning</label><br>
+              Surgeon: {{r.am_surg}}<br>
+              Department: {{r.am_dept}}
+            </div>
+            <div class="col m4">
+              <label>Afternoon</label><br>
+              Surgeon: {{r.pm_surg}}<br>
+              Department: {{r.pm_dept}}
+            </div>
+            <div class="col m4">
+              <button (click)="acceptRequest(r.url, r.date, r.level, r.room,  r.am_dept, r.am_surg, r.pm_dept, r.pm_surg, 1, 1)">Accept</button>
+              <button>Reject</button>
+            </div>
           </div>
-          <div class="col m6">
-            <label>Morning</label><br>
-            Surgeon: {{r.am_surg}}<br>
-            Department: {{r.am_dept}}
-          </div>
-          <div class="col m6">
-            <label>Afternoon</label><br>
-            Surgeon: {{r.pm_surg}}<br>
-            Department: {{r.pm_dept}}
-          </div>
+          <hr>
         </div>
-        <hr>
+      </div>
+      <!--read only request panel-->
+      <div *ngIf="permission != 1">
+        <div *ngFor="let r of requestedBookings">
+          <div class="row">
+            <div class="row">
+              <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
+            </div>
+            <div class="col m6">
+              <label>Morning</label><br>
+              Surgeon: {{r.am_surg}}<br>
+              Department: {{r.am_dept}}
+            </div>
+            <div class="col m6">
+              <label>Afternoon</label><br>
+              Surgeon: {{r.pm_surg}}<br>
+              Department: {{r.pm_dept}}
+            </div>
+          </div>
+          <hr>
+        </div>
+
       </div>
 
 
-      <label style="font-weight: 400; font-size: 125%">Change Log</label>
+      <label *ngIf="changedBookings?.length > 0  "style="font-weight: 400; font-size: 125%">Change Log</label>
       <hr>
       <div *ngFor="let c of changedBookings">
           <div class="row" *ngIf="c.status != 5">
