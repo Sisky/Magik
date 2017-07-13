@@ -1,7 +1,7 @@
 <!--hacky dont like it for width-->
 <div *ngIf="level == '1'">
   <div class="w3-col" style="width: 12.5%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); requestLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); populate(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div *ngIf="confirmed == 1">
@@ -29,7 +29,7 @@
 
 <div *ngIf="level == '2'">
   <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); requestLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); populate(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -51,7 +51,7 @@
 
 <div *ngIf="level == '4'">
   <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); requestLog(); myModal.open();">
+    <div (click)="populate(); changeLog(); requestLog();  myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -72,7 +72,7 @@
 
 <div *ngIf="level == '8'">
   <div class="w3-col" style="width: 7%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); requestLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); populate(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
@@ -93,7 +93,7 @@
 
 <div *ngIf="level == '9'">
   <div class="w3-col" style="width: 25%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 1%;">
-    <div (click)="changeLog(); requestLog(); myModal.open();">
+    <div (click)="changeLog(); requestLog(); populate(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">

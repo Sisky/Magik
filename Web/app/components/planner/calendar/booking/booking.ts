@@ -4,13 +4,14 @@ import {BookingService} from "../../../../services/BookingService";
 import CalendarComponent from "../calendar";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {PermissionService} from "../../../../services/PermissionService";
+import {DataService} from "../../../../services/DataService";
 
-import { surgeons, services } from 'app/data-models.ts'
 
 /**
  * Created by Scott Mackenzie on 26/04/2017.
  */
 declare var $: any;
+
 
 @Component({
     selector: 'booking',
@@ -22,12 +23,12 @@ export default class BookingComponent {
 
     formModel: FormGroup;
     permission: number;
-    surgeons = surgeons;
-    services = services;
+    surgeons: String[];
+    services: String[];
 
     @Input() url: string;
-    @Input() deptAM: string;
     @Input() surgAM: string;
+    @Input() deptAM: string;
     @Input() deptPM: string;
     @Input() surgPM: string;
     @Input() level: number;
@@ -39,8 +40,9 @@ export default class BookingComponent {
     changedBookings: Object[];
     requestedBookings: Object[];
 
-    constructor(private bookingService: BookingService, private calendar: CalendarComponent, private permissionService: PermissionService) {
+    constructor(private dataService: DataService, private bookingService: BookingService, private calendar: CalendarComponent, private permissionService: PermissionService) {
         this.permission = this.permissionService.getPermission();
+
     }
 
     ngOnInit() {
@@ -48,17 +50,17 @@ export default class BookingComponent {
         if(this.confirmed == 1) {
             this.formModel = fb.group({
                 'f_deptAM': [this.deptAM],
-                'f_surgAM': [],
-                'f_deptPM': [],
-                'f_surgPM': [],
+                'f_surgAM': [this.surgAM],
+                'f_deptPM': [this.deptPM],
+                'f_surgPM': [this.surgPM],
                 'f_confirmed': [true]
             })
         } else {
             this.formModel = fb.group({
                 'f_deptAM': [this.deptAM],
-                'f_surgAM': [],
-                'f_deptPM': [],
-                'f_surgPM': [],
+                'f_surgAM': [this.surgAM],
+                'f_deptPM': [this.deptPM],
+                'f_surgPM': [this.surgPM],
                 'f_confirmed': [false]
             })
         }
@@ -66,6 +68,11 @@ export default class BookingComponent {
         this.permission = this.permissionService.getPermission();
 
 
+    }
+
+    populate() {
+        this.surgeons = this.dataService.getSurgeons();
+        this.services = this.dataService.getServices();
     }
 
     changeLog() {

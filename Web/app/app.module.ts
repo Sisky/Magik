@@ -25,6 +25,7 @@ import RequestsComponent from "./components/requests/requests";
 import {AuthService} from "./services/AuthService";
 import {CallbackComponent} from "./components/callback/callback";
 import ProfileComponent from "./components/profile/profile";
+import {DataService} from "./services/DataService";
 
 
 
@@ -56,6 +57,7 @@ import ProfileComponent from "./components/profile/profile";
             LevelService,
             PermissionService,
             AuthService,
+            DataService,
             {provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [ ApplicationComponent ]
