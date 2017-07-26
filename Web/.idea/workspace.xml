@@ -3,22 +3,13 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/components/application/application.html" line="7" />
     <bookmark url="file://$PROJECT_DIR$/app/services/BookingService.ts" line="67" />
-    <bookmark url="file://$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html" line="124" />
+    <bookmark url="file://$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html" line="137" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="879ecf85-e8ec-46ef-86c1-5a0748b9e8da" name="Default" comment="calender&#10;header controls&#10;dateService&#10;bookingService">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/db.sqlite3" afterPath="$PROJECT_DIR$/../api/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.ts" afterPath="$PROJECT_DIR$/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.css" afterPath="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html" afterPath="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.ts" afterPath="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/planner/calendar/calendar.ts" afterPath="$PROJECT_DIR$/app/components/planner/calendar/calendar.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/planner/header/header.ts" afterPath="$PROJECT_DIR$/app/components/planner/header/header.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/profile/profile.ts" afterPath="$PROJECT_DIR$/app/components/profile/profile.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/app.routing.ts" afterPath="$PROJECT_DIR$/app/modules/app.routing.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/AuthService.ts" afterPath="$PROJECT_DIR$/app/services/AuthService.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/PermissionService.ts" afterPath="$PROJECT_DIR$/app/services/PermissionService.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../api/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,8 +30,8 @@
       <file leaf-file-name="BookingService.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/BookingService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="900">
+              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -63,7 +54,7 @@
       <file leaf-file-name="calendar.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/planner/calendar/calendar.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
+            <state relative-caret-position="1290">
               <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -76,8 +67,8 @@
       <file leaf-file-name="PermissionService.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/PermissionService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -88,7 +79,7 @@
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="465">
               <caret line="58" column="12" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
               <folding />
             </state>
@@ -98,7 +89,7 @@
       <file leaf-file-name="AuthService.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/AuthService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="720">
               <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -110,8 +101,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+            <state relative-caret-position="229">
+              <caret line="58" column="105" lean-forward="false" selection-start-line="58" selection-start-column="105" selection-end-line="58" selection-end-column="105" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#form#0;n#modal-content#0;n#modal#0;n#div#5;n#!!top" expanded="true" />
@@ -122,10 +113,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="booking.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/planner/calendar/booking/booking.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="270">
               <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -196,7 +197,6 @@
         <option value="$PROJECT_DIR$/app/components/side-nav/side-nav.html" />
         <option value="$PROJECT_DIR$/app/components/planner/header/header.html" />
         <option value="$PROJECT_DIR$/app/services/LevelService.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/components/modal.component.ts" />
         <option value="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/node_modules/bootstrap/less/modals.less" />
@@ -234,6 +234,7 @@
         <option value="$PROJECT_DIR$/app/components/planner/calendar/calendar.ts" />
         <option value="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.css" />
         <option value="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html" />
       </list>
     </option>
@@ -610,7 +611,8 @@
       <workItem from="1499820893940" duration="12864000" />
       <workItem from="1499904590193" duration="6610000" />
       <workItem from="1499989033887" duration="686000" />
-      <workItem from="1500864838779" duration="20390000" />
+      <workItem from="1500864838779" duration="20558000" />
+      <workItem from="1501106183269" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="Calender component + injection">
       <created>1490771240149</created>
@@ -623,7 +625,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297258000" />
+    <option name="totallyTimeSpent" value="299249000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -638,7 +640,6 @@
     <frame x="0" y="23" width="1440" height="819" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19943622" sideWeight="0.4923077" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3397524" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26241136" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
@@ -654,6 +655,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19943622" sideWeight="0.50769234" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599726" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -715,7 +717,6 @@
     <entry file="file://$PROJECT_DIR$/materialize/js/materialize.min.js" />
     <entry file="file://$PROJECT_DIR$/materialize/js/materialize.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/auth0-js/src/index.js" />
-    <entry file="file://$PROJECT_DIR$/package.json" />
     <entry file="file://$PROJECT_DIR$/app/components/planner/header/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -804,9 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,9 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,9 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-219">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,12 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <marker date="1500864709000" expanded="true" signature="257:601" ph="..." />
-            <marker date="1500864709000" expanded="true" signature="287:586" ph="..." />
-            <marker date="1500864709000" expanded="true" signature="380:518" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,9 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -873,28 +854,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#a#5;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AuthenticationCallbackActivateGuard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AuthenticationCallbackActivateGuard.ts" />
     <entry file="file://$PROJECT_DIR$/app/modules/app.routing.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#53#92#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2424">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,9 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -928,13 +891,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/planner/calendar/calendar.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
+        <state relative-caret-position="1290">
           <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -945,7 +907,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="465">
           <caret line="58" column="12" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
           <folding />
         </state>
@@ -953,7 +915,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/AuthService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="720">
           <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -963,18 +925,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/PermissionService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/LevelService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -983,8 +935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/BookingService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="900">
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1003,13 +955,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="81" column="62" lean-forward="false" selection-start-line="81" selection-start-column="62" selection-end-line="81" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/planner/calendar/booking/booking.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="270">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1018,10 +969,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/LevelService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/planner/calendar/booking/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        <state relative-caret-position="229">
+          <caret line="58" column="105" lean-forward="false" selection-start-line="58" selection-start-column="105" selection-end-line="58" selection-end-column="105" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#2;n#div#1;n#form#0;n#modal-content#0;n#modal#0;n#div#5;n#!!top" expanded="true" />

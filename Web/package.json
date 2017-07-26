@@ -9,14 +9,17 @@
     "npm": ">=2.14.x"
   },
   "dependencies": {
-    "@angular/common": "~2.3.0",
-    "@angular/compiler": "~2.3.0",
-    "@angular/core": "~2.3.0",
-    "@angular/forms": "~2.3.0",
-    "@angular/http": "~2.3.0",
-    "@angular/platform-browser": "~2.3.0",
-    "@angular/platform-browser-dynamic": "~2.3.0",
-    "@angular/router": "~3.3.0",
+    "@angular/animations": "^4.3.1",
+    "@angular/common": "^4.3.1",
+    "@angular/compiler": "^4.3.1",
+    "@angular/compiler-cli": "^4.3.1",
+    "@angular/core": "^4.3.1",
+    "@angular/forms": "^4.3.1",
+    "@angular/http": "^4.3.1",
+    "@angular/platform-browser": "^4.3.1",
+    "@angular/platform-browser-dynamic": "^4.3.1",
+    "@angular/platform-server": "^4.3.1",
+    "@angular/router": "^4.3.1",
     "auth0-js": "^8.7.0",
     "bootstrap": "^3.3.6",
     "core-js": "^2.4.1",
@@ -27,6 +30,7 @@
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-rc.4",
     "systemjs": "0.19.40",
+    "typescript": "^2.4.2",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {

@@ -55,7 +55,20 @@
       <div class="card white">
         <div class="card-content grey-text">
           <div class="colorstripGreen">
-            <span>{{requestNumbers}}</span>{{surgAM}}<br><span class="spaceSave">1</span>{{deptAM}}
+
+            <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
+            <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
+
+
+
+            <span class="spaceSave">{{requestNumbers}}</span>{{deptAM}}
+            <!--<ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>-->
+
+            <!--<div *ngIf="requestNumbers != 0;else other_content">-->
+              <!--<span>{{requestNumbers}}</span>-->
+            <!--</div>-->
+
+            <!--<ng-template #other_content><span class="spaceSave">1</span></ng-template>-->
           </div>
         </div>
       </div>
