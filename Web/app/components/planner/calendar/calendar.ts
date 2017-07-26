@@ -2,14 +2,15 @@
  * Created by Scott Mackenzie on 28/03/2017.
  */
 
-import {Component, Injectable, Input} from '@angular/core';
+import {Component, Injectable} from '@angular/core';
+import {Router} from "@angular/router";
+
 import {Booking, BookingService} from '../../../services/BookingService';
 import {DateService} from "../../../services/DateService";
-import {Subscription} from "rxjs";
 import {LevelService} from "../../../services/LevelService";
 import {PermissionService} from "../../../services/PermissionService";
 import {AuthService} from "../../../services/AuthService";
-import {Router} from "@angular/router";
+
 
 @Component({
     selector: 'calendar',
@@ -19,13 +20,15 @@ import {Router} from "@angular/router";
 
 @Injectable()
 export default class CalendarComponent {
-    level: number;
 
-    date: Date;
-    tuesDate: Date;
-    wedsDate: Date;
-    thursDate: Date;
-    friDate: Date;
+    level: number;
+    permission: number;
+
+    mondayDate: Date;
+    tuesdayDate: Date;
+    wednesdayDate: Date;
+    thursdayDate: Date;
+    fridayDate: Date;
 
     mondayBookings:Booking[];
     tuesdayBookings:Booking[];
@@ -36,82 +39,97 @@ export default class CalendarComponent {
     constructor(public router: Router, private auth: AuthService, private bookingService: BookingService, private dateService: DateService, private levelService: LevelService, private permissionService: PermissionService) {
 
         if(!auth.isAuthenticated()) {
-            //cannot be on this page
+
             this.auth.login();
+
         }
 
     }
 
     ngOnInit() {
-        if(this.auth.isAuthenticated()) {
-            this.level = this.levelService.getLevel();
 
+        if(this.auth.isAuthenticated()) {
+
+            this.getLevel();
+            this.getDates();
             this.populate();
 
+            //Use local storage so it is consistant even on page refresh
+            if(!localStorage.getItem("permission")) {
+                this.permissionService.setPermission();
+            }
+
             let _subscription = this.dateService.dateChange$.subscribe((value) => {
-                this.populate()
-            });
-            //re render with new level
-            let _subscriptionL = this.levelService.levelChange$.subscribe((value) => {
+                this.getDates();
                 this.populate();
             });
 
+            let _subscriptionL = this.levelService.levelChange$.subscribe((value) => {
+                this.getLevel();
+                this.populate();
+            });
 
-        } else {
-            console.log("beep");
         }
 
     }
 
+    public getPermission(): string {
+        return this.permissionService.getPermission();
+    }
 
+    private getDates() {
 
-    populate() {
+        this.mondayDate = this.dateService.getMonday();
+        this.tuesdayDate = this.dateService.getTuesday();
+        this.wednesdayDate = this.dateService.getWednesday();
+        this.thursdayDate = this.dateService.getThursday();
+        this.fridayDate = this.dateService.getFriday();
+
+    }
+
+    private getLevel() {
+
         this.level = this.levelService.getLevel();
 
-        this.date = this.dateService.getMonday();
-        this.tuesDate = this.dateService.getTuesday();
-        this.wedsDate = this.dateService.getWednesday();
-        this.thursDate = this.dateService.getThursday();
-        this.friDate = this.dateService.getFriday();
+    }
 
-        //refreshes permission
-        // this.permissionService.getPermission();
+    public populate() {
 
-        //Monday
-        this.bookingService.getLevelBooking(this.date, this.level)
+        this.bookingService.getLevelBooking(this.mondayDate, this.level)
             .subscribe(data => this.mondayBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
-        //Tuesday
-        this.bookingService.getLevelBooking(this.tuesDate, this.level)
+
+        this.bookingService.getLevelBooking(this.tuesdayDate, this.level)
             .subscribe(data => this.tuesdayBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
-        //Wednesday
-        this.bookingService.getLevelBooking(this.wedsDate, this.level)
+
+        this.bookingService.getLevelBooking(this.wednesdayDate, this.level)
             .subscribe(data => this.wednesdayBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
-        //Thursday
-        this.bookingService.getLevelBooking(this.thursDate, this.level)
+
+        this.bookingService.getLevelBooking(this.thursdayDate, this.level)
             .subscribe(data => this.thursdayBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
-        //Friday
-        this.bookingService.getLevelBooking(this.friDate, this.level)
+
+        this.bookingService.getLevelBooking(this.fridayDate, this.level)
             .subscribe(data => this.fridayBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
-    }
-}
 
+    }
+
+}

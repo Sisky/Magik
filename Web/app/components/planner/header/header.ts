@@ -1,5 +1,5 @@
-import {Component, Output} from '@angular/core';
-import {EventEmitter} from "@angular/common/src/facade/async";
+import {Component} from '@angular/core';
+
 import {DateService} from "../../../services/DateService";
 import {LevelService} from "../../../services/LevelService";
 
@@ -13,6 +13,7 @@ declare var moment: any;
         './app/components/planner/header/header.css'
     ]
 })
+
 export default class HeaderComponent {
 
     today: string;
@@ -21,34 +22,43 @@ export default class HeaderComponent {
 
     constructor(private dateService: DateService, private levelService: LevelService) {
 
-        this.level = levelService.getLevel();
-
-        let _subscription = levelService.levelChange$.subscribe((value) => {
-            this.level = value;
-        });
     }
 
     ngOnInit() {
+
+        this.level = this.levelService.getLevel();
+
+        let _subscription = this.levelService.levelChange$.subscribe((value) => {
+            this.level = value;
+        });
+
         this.todayDate = this.dateService.getDate();
         this.today = moment(this.todayDate).startOf('isoweek').format('dddd MMMM Do YYYY');
         this.dateService.setDate(this.todayDate);
+
     }
 
     //gets the previous monday formats 'Monday January 2nd 2017' style
-    backWeek() {
-        this.todayDate.setDate(this.todayDate.getDate()-7);
+    private backWeek() {
+
+        this.todayDate.setDate(this.todayDate.getDate() - 7);
         this.today = moment(this.todayDate).startOf('isoweek').format('dddd MMMM Do YYYY');
         this.dateService.setDate(this.todayDate);
 
     }
     //gets the next monday
-    forwardWeek() {
-        this.todayDate.setDate(this.todayDate.getDate()+7);
+    private forwardWeek() {
+
+        this.todayDate.setDate(this.todayDate.getDate() + 7);
         this.today = moment(this.todayDate).startOf('isoweek').format('dddd MMMM Do YYYY');
         this.dateService.setDate(this.todayDate);
 
     }
-    changeLevel(level: number) {
+
+    private changeLevel(level: number) {
+
         this.levelService.setLevel(level);
+
     }
+
 }

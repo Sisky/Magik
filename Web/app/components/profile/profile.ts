@@ -4,6 +4,7 @@
 
 import {Component} from "@angular/core";
 import {AuthService} from "../../services/AuthService";
+import {iterableDiff} from "@angular/core/src/change_detection/change_detection";
 
 @Component({
     selector: 'profile',
@@ -16,6 +17,11 @@ export default class ProfileComponent {
     profile: any;
 
     constructor(private auth: AuthService) {
+
+    }
+
+    ngOnInit() {
+
 
         if(this.auth.isAuthenticated()) {
 
@@ -32,4 +38,5 @@ export default class ProfileComponent {
         }
 
     }
+
 }

@@ -1,17 +1,19 @@
-import {Component, Input } from "@angular/core";
-import {ModalModule} from "ngx-modal";
-import {BookingService} from "../../../../services/BookingService";
-import CalendarComponent from "../calendar";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {PermissionService} from "../../../../services/PermissionService";
-import {DataService} from "../../../../services/DataService";
-
-
 /**
  * Created by Scott Mackenzie on 26/04/2017.
  */
-declare var $: any;
 
+import {Component, Input } from "@angular/core";
+import {FormBuilder, FormGroup} from "@angular/forms";
+
+import CalendarComponent from "../calendar";
+import {BookingService} from "../../../../services/BookingService";
+import {PermissionService} from "../../../../services/PermissionService";
+import {DataService} from "../../../../services/DataService";
+import {Observable, Subscribable} from "rxjs/Observable";
+import {Subscription} from "rxjs/Subscription";
+import {debounceTime} from "rxjs/operator/debounceTime";
+
+declare var $: any;
 
 @Component({
     selector: 'booking',
@@ -25,6 +27,7 @@ export default class BookingComponent {
     permission: number;
     surgeons: String[];
     services: String[];
+    requestNumbers: number;
 
     @Input() url: string;
     @Input() surgAM: string;
@@ -38,15 +41,16 @@ export default class BookingComponent {
     @Input() confirmed: number;
 
     changedBookings: Object[];
-    requestedBookings: Object[];
+    requestedBookings: Object[] = [];
 
     constructor(private dataService: DataService, private bookingService: BookingService, private calendar: CalendarComponent, private permissionService: PermissionService) {
-        this.permission = this.permissionService.getPermission();
 
     }
 
     ngOnInit() {
+
         const fb = new FormBuilder();
+
         if(this.confirmed == 1) {
             this.formModel = fb.group({
                 'f_deptAM': [this.deptAM],
@@ -65,66 +69,66 @@ export default class BookingComponent {
             })
         }
 
-        this.permission = this.permissionService.getPermission();
+        this.permission = Number(this.permissionService.getPermission());
+        // this.setRequestNumbers();
+        this.getRequestLog();
+        // console.log(this.requestedBookings.length);
+
 
 
     }
 
-    populate() {
+    private populateDropDowns() {
+
         this.surgeons = this.dataService.getSurgeons();
         this.services = this.dataService.getServices();
+
     }
 
-    changeLog() {
-        // //Get change log
+    private getChangeLog() {
         this.bookingService.getRoomHistoryBooking(this.date,this.level,this.room)
             .subscribe(data => this.changedBookings = (data as any).results,
                 err => {
                     // Log errors if any
                     console.log(err);
                 });
+
+
+
     }
 
-    requestLog() {
-        //Get request log
-        this.bookingService.getRoomRequestBooking(this.date,this.level,this.room)
-            .subscribe(data => this.requestedBookings = (data as any).results,
+    private getRequestLog() {
+
+        this.bookingService.getRoomRequestBooking(this.date, this.level, this.room)
+            .subscribe(
+                data => this.requestedBookings = (data as any).results,
                 err => {
-                    // Log errors if any
                     console.log(err);
-                });
-
-
+                },
+                () => this.requestNumbers = this.requestedBookings.length);
 
     }
 
-    //
 
+    private saveBooking() {
 
-    refresh() {
-        this.calendar.populate();
-    }
-
-
-
-    save() {
         if(this.formModel.dirty) {
             // POST original booking
             this.bookingService.postNewBooking(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1).subscribe();
 
             // Update orginal to new
-            if(this.formModel.get("f_deptAM").dirty) {
+            if(this.formModel.get("f_deptAM").dirty)
                 this.deptAM = this.formModel.get("f_deptAM").value;
-            }
-            if(this.formModel.get("f_deptPM").dirty) {
+
+            if(this.formModel.get("f_deptPM").dirty)
                 this.deptPM = this.formModel.get("f_deptPM").value;
-            }
-            if(this.formModel.get("f_surgAM").dirty) {
+
+            if(this.formModel.get("f_surgAM").dirty)
                 this.surgAM = this.formModel.get("f_surgAM").value;
-            }
-            if(this.formModel.get("f_surgPM").dirty) {
+
+            if(this.formModel.get("f_surgPM").dirty)
                 this.surgPM = this.formModel.get("f_surgPM").value;
-            }
+
             if((this.formModel).get("f_confirmed").value) {
                 this.confirmed = 1;
             } else {
@@ -132,33 +136,34 @@ export default class BookingComponent {
             }
 
             this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 1, this.confirmed).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
-            //update Calendar
+
         }
+
     }
 
-    request() {
-        // Fill in request details
-        if(this.formModel.get("f_deptAM").dirty) {
+    private request() {
+
+        if(this.formModel.get("f_deptAM").dirty)
             this.deptAM = this.formModel.get("f_deptAM").value;
-        }
-        if(this.formModel.get("f_deptPM").dirty) {
+
+        if(this.formModel.get("f_deptPM").dirty)
             this.deptPM = this.formModel.get("f_deptPM").value;
-        }
-        if(this.formModel.get("f_surgAM").dirty) {
+
+        if(this.formModel.get("f_surgAM").dirty)
             this.surgAM = this.formModel.get("f_surgAM").value;
-        }
-        if(this.formModel.get("f_surgPM").dirty) {
+
+        if(this.formModel.get("f_surgPM").dirty)
             this.surgPM = this.formModel.get("f_surgPM").value;
-        }
 
         this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 3, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
-        //update Calendar
+
     }
 
-    acceptRequest(url: string, date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number ) {
-        //add original booking to history
+    private acceptRequest(url: string, date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, confirmed: number ) {
+
         this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1).subscribe();
-        //update request to current booking
         this.bookingService.updateRoomBooking(url, date, level, room, am_dept, am_surg, pm_dept, pm_surg, 1, confirmed).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+
     }
+
 }
