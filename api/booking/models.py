@@ -12,7 +12,9 @@ class Booking(models.Model):
     valid = models.IntegerField()
     created = models.DateTimeField()
     status = models.IntegerField()
-    confirmed = models.IntegerField()
+    am_confirmed = models.IntegerField()
+    pm_confirmed = models.IntegerField()
+
 
     def __str__(self):
         return f'{self.date}, L{self.level}, R{self.room}'

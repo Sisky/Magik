@@ -1,9 +1,4 @@
 import {Component} from '@angular/core';
-import {AuthService} from "../../services/AuthService";
-
-
-
-
 
 @Component({
   selector: 'home',

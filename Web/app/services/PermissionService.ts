@@ -24,7 +24,6 @@ export class PermissionService {
 
             if (this.auth.isAuthenticated()) {
                 if (this.auth.userProfile) {
-                    console.log("b");
                     this.profile = this.auth.userProfile;
                     this.permission = (this.profile ? this.profile['http://test.com/roles'] : '');
                 } else {

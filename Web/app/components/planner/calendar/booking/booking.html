@@ -4,13 +4,18 @@
     <div (click)="getChangeLog(); getRequestLog(); populateDropDowns(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
-          <div *ngIf="confirmed == 1">
+          <div *ngIf="(status == 0 || status == 2) && am_confirmed == 1">
             <div class="colorstripGreen">
               <p>{{surgAM}}<br>{{deptAM}}</p>
             </div>
           </div>
-          <div *ngIf="confirmed == 0">
+          <div *ngIf="(status == 1 || status == 3) && am_confirmed == 1">
             <div class="colorstripYellow">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="am_confirmed == 0">
+            <div class="colorstripOrange">
               <p>{{surgAM}}<br>{{deptAM}}</p>
             </div>
           </div>
@@ -18,8 +23,20 @@
       </div>
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgPM}}<br>{{deptPM}}</p>
+          <div *ngIf="(status == 0 || status == 1) && pm_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 2 || status == 3) && pm_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="pm_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -32,15 +49,39 @@
     <div (click)="getChangeLog(); getRequestLog(); populateDropDowns(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgAM}}<br>{{deptAM}}</p>
+          <div *ngIf="(status == 0 || status == 2) && am_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 1 || status == 3) && am_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="am_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgPM}}<br>{{deptPM}}</p>
+          <div *ngIf="(status == 0 || status == 1) && pm_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 2 || status == 3) && pm_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="pm_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -54,28 +95,39 @@
     <div (click)="populateDropDowns(); getChangeLog(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-
-            <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-            <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-
-
-
-            <span class="spaceSave">{{requestNumbers}}</span>{{deptAM}}
-            <!--<ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>-->
-
-            <!--<div *ngIf="requestNumbers != 0;else other_content">-->
-              <!--<span>{{requestNumbers}}</span>-->
-            <!--</div>-->
-
-            <!--<ng-template #other_content><span class="spaceSave">1</span></ng-template>-->
+          <div *ngIf="(status == 0 || status == 2) && am_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 1 || status == 3) && am_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="am_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgPM}}<br>{{deptPM}}</p>
+          <div *ngIf="(status == 0 || status == 1) && pm_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 2 || status == 3) && pm_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="pm_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -88,15 +140,39 @@
     <div (click)="getChangeLog(); getRequestLog(); populateDropDowns(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgAM}}<br>{{deptAM}}</p>
+          <div *ngIf="(status == 0 || status == 2) && am_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 1 || status == 3) && am_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="am_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgPM}}<br>{{deptPM}}</p>
+          <div *ngIf="(status == 0 || status == 1) && pm_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 2 || status == 3) && pm_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="pm_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -109,29 +185,45 @@
     <div (click)="getChangeLog(); getRequestLog(); populateDropDowns(); myModal.open();">
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgAM}}<br>{{deptAM}}</p>
+          <div *ngIf="(status == 0 || status == 2) && am_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 1 || status == 3) && am_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
+          </div>
+          <div *ngIf="am_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgAM}}<br>{{deptAM}}</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="card white">
         <div class="card-content grey-text">
-          <div class="colorstripGreen">
-            <p>{{surgPM}}<br>{{deptPM}}</p>
+          <div *ngIf="(status == 0 || status == 1) && pm_confirmed == 1">
+            <div class="colorstripGreen">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="(status == 2 || status == 3) && pm_confirmed == 1">
+            <div class="colorstripYellow">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
+          </div>
+          <div *ngIf="pm_confirmed == 0">
+            <div class="colorstripOrange">
+              <p>{{surgPM}}<br>{{deptPM}}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
 
 <!--Modal Structure-->
 <div>
@@ -205,15 +297,24 @@
               </div>
               <div class="row">
                   <div class="col m6">
-                      <label for="f_deptPM">Confirmed</label>
+                      <label for="f_deptPM">Confirmed AM</label>
                       <div class="switch">
-                          <label>
-                              No
-                              <input id="f_confirmed" type="checkbox" value="checked"  formControlName="f_confirmed">
-                              <span class="lever"></span>
-                              Yes
-                          </label>
+                        <label>
+                            No
+                            <input id="f_am_confirmed" type="checkbox" value="checked"  formControlName="f_am_confirmed">
+                            <span class="lever"></span>
+                            Yes
+                        </label>
                       </div>
+                    <label for="f_deptPM">Confirmed PM</label>
+                    <div class="switch">
+                      <label>
+                        No
+                        <input id="f_pm_confirmed" type="checkbox" value="checked"  formControlName="f_pm_confirmed">
+                        <span class="lever"></span>
+                        Yes
+                      </label>
+                    </div>
                   </div>
                   <div class="col m6">
                   </div>

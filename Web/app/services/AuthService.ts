@@ -24,9 +24,9 @@ export class AuthService {
     constructor(public router: Router) {}
 
     public login(): void {
-
+        //clear to stop old tokens creating errors
+        localStorage.clear();
         this.auth0.authorize();
-
 
     }
 
