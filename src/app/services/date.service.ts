@@ -12,7 +12,7 @@ export class DateService {
   dateChange$ = this.dateChange.asObservable();
 
   constructor() {
-    this.date = new Date(2017,06,06);
+    this.date = new Date();
   }
 
   setDate(date: Date) {
@@ -21,7 +21,7 @@ export class DateService {
   }
 
   getDate(): Date {
-    return new Date();
+    return new Date('2017-06-10');
   }
 
   getMonday(): Date {
