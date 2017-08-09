@@ -1,0 +1,105 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col col-md-1"></div>
+
+    <div class="col col-md-11">
+      <app-header></app-header>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+      <!--OR Numbering-->
+      <div *ngIf="level == 4">
+        <div *ngFor="let booking of mondayBookings; let i = index">
+          <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; padding-left: 1%;">
+            OR {{i+1}}
+          </div>
+        </div>
+      </div>
+
+
+      <div *ngIf="level == 8">
+        <div *ngFor="let booking of mondayBookings; let i = index">
+          <div class="w3-col" style="width: 7%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; padding-left: 1%;">
+            OR {{i+1}}
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="level == 9">
+        <div *ngFor="let booking of mondayBookings; let i = index">
+          <div class="w3-col" style="width: 25%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; padding-left: 1%;">
+            OR {{i+1}}
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="level == 1">
+        <div *ngFor="let booking of mondayBookings; let i = index">
+          <div class="w3-col" style="width: 12.5%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; padding-left: 1%;">
+            OR {{i+1}}
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="level == 2">
+        <div *ngFor="let booking of mondayBookings; let i = index">
+          <div class="w3-col" style="width: 14%; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; padding-left: 1%;">
+            OR {{i+1}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-1">Monday</div>
+      <div class="col-md-11">
+        <div *ngFor="let booking of mondayBookings">
+          <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">Tuesday</div>
+      <div class="col-md-11">
+        <div *ngFor="let booking of tuesdayBookings">
+          <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">Wednesday</div>
+      <div class="col-md-11">
+        <div *ngFor="let booking of wednesdayBookings">
+          <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">Thursday</div>
+      <div class="col-md-11">
+        <div *ngFor="let booking of thursdayBookings">
+          <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">Friday</div>
+      <div class="col-md-11">
+        <div *ngFor="let booking of fridayBookings">
+          <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
