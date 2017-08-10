@@ -5,7 +5,8 @@ import {AuthService} from "../../../services/auth.service";
 import {LevelService} from "../../../services/level.service";
 import {PermissionService} from "../../../services/permission.service";
 import {DateService} from "../../../services/date.service";
-
+var moment = require('moment');
+moment().format();
 
 @Component({
   selector: 'app-calendar',
@@ -73,7 +74,8 @@ export class CalendarComponent implements OnInit {
 
   private getDates() {
 
-    this.mondayDate = this.dateService.getMonday();
+    this.mondayDate = moment(this.dateService.getMonday());
+
     this.tuesdayDate = this.dateService.getTuesday();
     this.wednesdayDate = this.dateService.getWednesday();
     this.thursdayDate = this.dateService.getThursday();
