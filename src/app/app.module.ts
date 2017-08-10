@@ -24,6 +24,7 @@ import {DropdownModule} from "ngx-dropdown";
 import {ModalModule} from "ngx-modal";
 import {DatexPipe} from "./datex.pipe";
 
+
 @NgModule({
   declarations: [
     ApplicationComponent,
@@ -35,7 +36,7 @@ import {DatexPipe} from "./datex.pipe";
     HeaderComponent,
     BookingComponent,
     NavBarComponent,
-      DatexPipe
+      DatexPipe,
   ],
   imports: [
     BrowserModule,
