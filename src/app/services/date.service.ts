@@ -45,7 +45,7 @@ export class DateService {
   }
 
   getFriday() {
-    let friday = moment(this.date).startOf('isoweek').add(4, 'days').format('YYYY-MMDD');
+    let friday = moment(this.date).startOf('isoweek').add(4, 'days').format('YYYY-MM-DD');
     console.log(friday);
     return new Date(friday);
   }
