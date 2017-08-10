@@ -74,7 +74,7 @@ export class CalendarComponent implements OnInit {
 
   private getDates() {
 
-    this.mondayDate = moment(this.dateService.getMonday());
+    this.mondayDate = moment(this.dateService.getMonday()).format();
 
     this.tuesdayDate = this.dateService.getTuesday();
     this.wednesdayDate = this.dateService.getWednesday();
