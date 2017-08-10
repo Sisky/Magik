@@ -22,6 +22,7 @@ import {DataService} from "./services/data.service";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {DropdownModule} from "ngx-dropdown";
 import {ModalModule} from "ngx-modal";
+import {DatexPipe} from "./datex.pipe";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {ModalModule} from "ngx-modal";
     CalendarComponent,
     HeaderComponent,
     BookingComponent,
-    NavBarComponent
+    NavBarComponent,
+      DatexPipe
   ],
   imports: [
     BrowserModule,
