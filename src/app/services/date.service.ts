@@ -21,7 +21,7 @@ export class DateService {
   }
 
   getDate(): Date {
-    return new Date('2017-06-10');
+    return new Date();
   }
 
   getMonday(): Date {
