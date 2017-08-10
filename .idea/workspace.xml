@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="359867e0-daa9-4da6-b27f-625cbac044e8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/components/planner/calendar/calendar.component.ts" afterPath="$PROJECT_DIR$/src/app/components/planner/calendar/calendar.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/auth.service.ts" afterPath="$PROJECT_DIR$/src/app/services/auth.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/date.service.ts" afterPath="$PROJECT_DIR$/src/app/services/date.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/auth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -110,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="date.service.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="date.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/services/date.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="420">
+              <caret line="47" column="85" lean-forward="false" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -149,7 +148,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/app/components/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/services/date.service.ts" />
         <option value="$PROJECT_DIR$/src/datexPipe.ts" />
         <option value="$PROJECT_DIR$/src/polyfills.ts" />
         <option value="$PROJECT_DIR$/src/index.html" />
@@ -159,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/app/components/planner/calendar/calendar.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/planner/calendar/calendar.component.ts" />
         <option value="$PROJECT_DIR$/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/date.service.ts" />
       </list>
     </option>
   </component>
@@ -284,12 +283,12 @@
       <workItem from="1502239729085" duration="610000" />
       <workItem from="1502252029700" duration="614000" />
       <workItem from="1502321544337" duration="2999000" />
-      <workItem from="1502401730823" duration="4714000" />
+      <workItem from="1502401730823" duration="5182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26732000" />
+    <option name="totallyTimeSpent" value="27200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -460,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/date.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/planner/header/header.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170">
@@ -556,10 +545,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="203">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/date.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="47" column="85" lean-forward="false" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
