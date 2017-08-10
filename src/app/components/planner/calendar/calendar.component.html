@@ -57,7 +57,7 @@
 
 
     <div class="row">
-      <div class="col-md-1">{{mondayDate | date:'EEEE dd MMMM'}}</div>
+      <div class="col-md-1">{{setDate(mondayDate) | date:'EEEE dd MMMM'}}</div>
       <div class="col-md-11">
         <div *ngFor="let booking of mondayBookings">
           <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
@@ -66,7 +66,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-1">{{tuesdayDate | date:'EEEE dd MMMM'}}</div>
+      <div class="col-md-1">{{setDate(tuesdayDate) | date:'EEEE dd MMMM'}}</div>
       <div class="col-md-11">
         <div *ngFor="let booking of tuesdayBookings">
           <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
@@ -75,7 +75,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-1">{{wednesdayDate | date:'EEEE dd MMMM'}}</div>
+      <div class="col-md-1">{{setDate(wednesdayDate) | date:'EEEE dd MMMM'}}</div>
       <div class="col-md-11">
         <div *ngFor="let booking of wednesdayBookings">
           <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
@@ -84,7 +84,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-1">{{thursdayDate | date:'EEEE dd MMMM'}}</div>
+      <div class="col-md-1">{{setDate(thursdayDate) | date:'EEEE dd MMMM'}}</div>
       <div class="col-md-11">
         <div *ngFor="let booking of thursdayBookings">
           <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
@@ -93,7 +93,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-1">{{fridayDate | date:'EEEE dd MMMM'}}</div>
+      <div class="col-md-1">{{setDate(fridayDate) | date:'EEEE dd MMMM'}}</div>
       <div class="col-md-11">
         <div *ngFor="let booking of fridayBookings">
           <app-booking am_confirmed="{{booking.am_confirmed}}" pm_confirmed="{{booking.pm_confirmed}}" status="{{booking.status}}" url="{{booking.url}}" deptAM="{{booking.am_dept}}" surgAM="{{booking.am_surg}}" deptPM="{{booking.pm_dept}}" surgPM="{{booking.pm_surg}}" room="{{booking.room}}" level = "{{booking.level}}" date="{{booking.date}}"> </app-booking>
