@@ -7,7 +7,7 @@ import { ApplicationComponent } from './components/application/application.compo
 import { CallbackComponent } from './components/callback/callback.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { RequestsComponent } from './components/requests/requests.component';
+import { RequestsComponent } from './components/requests/requestsHome.component';
 import { CalendarComponent } from './components/planner/calendar/calendar.component';
 import { HeaderComponent } from './components/planner/header/header.component';
 import { BookingComponent } from './components/planner/calendar/booking/booking.component';
@@ -23,6 +23,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {DropdownModule} from "ngx-dropdown";
 import {ModalModule} from "ngx-modal";
 import {DatexPipe} from "./datex.pipe";
+import { RequestComponent } from './components/requests/request/request.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {DatexPipe} from "./datex.pipe";
     BookingComponent,
     NavBarComponent,
       DatexPipe,
+      RequestComponent,
   ],
   imports: [
     BrowserModule,

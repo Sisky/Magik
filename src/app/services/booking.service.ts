@@ -18,6 +18,14 @@ export class BookingService {
 
   }
 
+  getAllRequests() {
+    this.url = '?valid=3&ordering=created';
+
+    return this.http.get(`${this.baseUrl}${this.url}`)
+        .map((res:Response) => res.json())
+        .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+
+  }
   getLevelBooking(date: Date, level: number): Observable<Booking[]> {
 
     let formattedDate = moment(date).format('YYYY-MM-DD');
@@ -26,6 +34,15 @@ export class BookingService {
     return this.http.get(`${this.baseUrl}${this.url}`)
       .map((res:Response) => res.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
+
+  getRoomBooking(date: Date, level: number, room: number): Observable<Booking[]> {
+      let formattedDate = moment(date).format('YYYY-MM-DD');
+      this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&valid=1";
+
+      return this.http.get(`${this.baseUrl}${this.url}`)
+          .map((res:Response) => res.json())
+          .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
   getRoomHistoryBooking(date: Date, level: number, room: number ): Observable<Object[]> {
@@ -39,7 +56,7 @@ export class BookingService {
 
   getRoomRequestBooking(date: Date, level: number, room: number ): Observable<Object[]> {
     let formattedDate = moment(date).format('YYYY-MM-DD');
-    this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&status=5" +"&ordering=created";
+    this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&valid=3" +"&ordering=created";
 
     return this.http.get(`${this.baseUrl}${this.url}`)
       .map((res:Response) => res.json())
@@ -59,7 +76,7 @@ export class BookingService {
   }
 
   updateRoomBooking(url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number,status: number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
-    var headers = new Headers();
+    let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
     let formattedDate = moment(date).format('YYYY-MM-DD');
@@ -70,14 +87,13 @@ export class BookingService {
   }
 
   postNewRequest(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, status:number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
-    var headers = new Headers();
+    let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    var status = 5;
 
     let formattedDate = moment(date).format('YYYY-MM-DD');
-    let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
+    let newDate = moment(new Date()).format('YYYY-MM-DDTHH:mm');
 
-    return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
+    return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, created: newDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, status: status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
       headers: headers
     });
   }
@@ -96,9 +112,9 @@ export class Booking {
     public pm_dept: string,
     public pm_surg: string,
     public valid: number,
+    public status: number,
     public am_confirmed: number,
     public pm_confirmed: number
   ) {
   }
 }
-

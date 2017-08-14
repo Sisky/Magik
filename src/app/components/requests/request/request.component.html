@@ -1,0 +1,60 @@
+<div class="row">
+
+
+  <div class="col m5">
+
+    <div class="card white" style="padding: 20px">
+      <div class="card-content grey-text">
+        <label>Requested on {{created | datex:'MMMM Do YYYY, HH:mm'}}</label>
+        <hr>
+        <label>{{date | datex:'dddd MMMM Do YYYY'}}  Level {{level}}  OR {{room}}</label><br>
+
+        <div *ngIf="status == 4 || status == 6">
+          <label style="font-weight: 400; font-size: 125%">Morning Session</label><br>
+          <label>Department:</label> {{deptAM}}<br>
+          <label>Surgeon:</label> {{surgAM}}<br>
+
+        </div>
+<hr>
+        <div *ngIf="status == 5 || status == 6">
+          <label style="font-weight: 400; font-size: 125%">Afternoon Session</label><br>
+          <label>Department:</label> {{deptPM}}<br>
+          <label>Surgeon:</label> {{surgPM}}<br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col m2">
+  </div>
+
+  <div class="col m5">
+
+    <div *ngFor="let r of originalBooking">
+      <div class="card white" style="padding: 20px">
+        <div class="card-content grey-text">
+          <label>Orginal Booking Created on {{r.created | datex:'MMMM Do YYYY, HH:mm'}}</label>
+          <hr>
+          <label>{{date | datex:'dddd MMMM Do YYYY'}}  Level {{level}}  OR {{room}}</label><br>
+
+          <div *ngIf="status == 4 || status == 6">
+            <label style="font-weight: 400; font-size: 125%">Morning Session</label><br>
+            <label>Department:</label> {{r.am_dept}}<br>
+            <label>Surgeon:</label> {{r.am_surg}}<br>
+
+          </div>
+          <hr>
+          <div *ngIf="status == 5 || status == 6">
+            <label style="font-weight: 400; font-size: 125%">Afternoon Session</label><br>
+            <label>Department:</label> {{r.pm_dept}}<br>
+            <label>Surgeon:</label> {{r.pm_surg}}<br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+</div>

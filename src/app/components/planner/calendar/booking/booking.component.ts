@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {DataService} from "../../../../services/data.service";
-import {BookingService} from "../../../../services/booking.service";
+import {Booking, BookingService} from "../../../../services/booking.service";
 import {CalendarComponent} from "../calendar.component";
 import {PermissionService} from "../../../../services/permission.service";
 
@@ -17,10 +17,10 @@ export class BookingComponent implements OnInit {
   permission: number;
   surgeons: String[];
   services: String[];
-  requestNumbers: number;
+  requestsAM: number;
+  requestsPM: number;
   is_am_confirmed: boolean;
   is_pm_confirmed: boolean;
-
 
   @Input() url: string;
   @Input() surgAM: string;
@@ -35,7 +35,7 @@ export class BookingComponent implements OnInit {
   @Input() pm_confirmed: number;
 
   changedBookings: Object[];
-  requestedBookings: Object[] = [];
+  requestedBookings: Booking[] = [];
 
   constructor(
     private dataService: DataService,
@@ -86,16 +86,31 @@ export class BookingComponent implements OnInit {
 
   private getRequestLog() {
 
+    this.requestsAM = 0;
+    this.requestsPM = 0;
+
     this.bookingService.getRoomRequestBooking(this.date, this.level, this.room)
       .subscribe(
         data => this.requestedBookings = (data as any).results,
         err => {
           console.log(err);
         },
-        () => this.requestNumbers = this.requestedBookings.length);
+        () => {
+
+          for(let i of this.requestedBookings) {
+            if(i.status === 4)
+              this.requestsAM += 1;
+            if(i.status === 5)
+                this.requestsPM += 1;
+            if(i.status === 6) {
+                this.requestsAM += 1;
+                this.requestsPM += 1;
+            }
+          }
+
+        });
 
   }
-
 
   private saveBooking() {
 
@@ -146,20 +161,37 @@ export class BookingComponent implements OnInit {
   }
 
   private request() {
+    // 4 = morning only request. 5 = afternoon only request. 6 = full day request
+    let temp_status = 0;
 
-    if(this.formModel.get("f_deptAM").dirty)
-      this.deptAM = this.formModel.get("f_deptAM").value;
+    if(this.formModel.get("f_deptAM").dirty) {
+        this.deptAM = this.formModel.get("f_deptAM").value;
+        temp_status = 4;
+    }
+    if(this.formModel.get("f_surgAM").dirty) {
+        this.surgAM = this.formModel.get("f_surgAM").value;
+        temp_status = 4;
+    }
 
-    if(this.formModel.get("f_deptPM").dirty)
-      this.deptPM = this.formModel.get("f_deptPM").value;
+    if(this.formModel.get("f_deptPM").dirty) {
+        this.deptPM = this.formModel.get("f_deptPM").value;
+        if(temp_status === 4) {
+          temp_status = 6;
+        } else {
+          temp_status = 5;
+        }
+    }
 
-    if(this.formModel.get("f_surgAM").dirty)
-      this.surgAM = this.formModel.get("f_surgAM").value;
+    if(this.formModel.get("f_surgPM").dirty) {
+        this.surgPM = this.formModel.get("f_surgPM").value;
+        if(temp_status === 4) {
+            temp_status = 6;
+        } else {
+            temp_status = 5;
+        }
+    }
 
-    if(this.formModel.get("f_surgPM").dirty)
-      this.surgPM = this.formModel.get("f_surgPM").value;
-
-    this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 3, 1, 1, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+    this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 3, temp_status, 1, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
 
   }
 

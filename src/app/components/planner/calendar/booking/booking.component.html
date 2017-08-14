@@ -6,23 +6,17 @@
         <div class="card-content grey-text">
           <div *ngIf="(status == 0 || status == 2) && am_confirmed == 1">
             <div class="colorstripGreen">
-              <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-              <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-              {{deptAM}}
+              <span *ngIf="requestsAM != 0">{{requestsAM}}</span>{{deptAM}}<br>{{surgAM}}
             </div>
           </div>
           <div *ngIf="(status == 1 || status == 3) && am_confirmed == 1">
             <div class="colorstripYellow">
-              <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-              <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-              {{deptAM}}
+              <span *ngIf="requestsAM != 0">{{requestsAM}}</span>{{deptAM}}<br>{{surgAM}}
             </div>
           </div>
           <div *ngIf="am_confirmed == 0">
             <div class="colorstripOrange">
-              <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-              <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-              {{deptAM}}
+              <span *ngIf="requestsAM != 0">{{requestsAM}}</span>{{deptAM}}<br>{{surgAM}}
             </div>
           </div>
         </div>
@@ -31,23 +25,17 @@
         <div class="card-content grey-text">
           <div *ngIf="(status == 0 || status == 1) && pm_confirmed == 1">
             <div class="colorstripGreen">
-              <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-              <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-              {{deptAM}}
+              <span *ngIf="requestsPM != 0">{{requestsPM}}</span>{{deptPM}}<br>{{surgPM}}
             </div>
           </div>
           <div *ngIf="(status == 2 || status == 3) && pm_confirmed == 1">
             <div class="colorstripYellow">
-              <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-              <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-              {{deptAM}}
+              <span *ngIf="requestsPM != 0">{{requestsPM}}</span>{{deptPM}}<br>{{surgPM}}
             </div>
           </div>
           <div *ngIf="pm_confirmed == 0">
             <div class="colorstripOrange">
-              <span *ngIf="requestNumbers != 0; else other_content">{{requestNumbers}}</span>{{surgAM}}<br>
-              <ng-template #other_content><span class="spaceSave">{{requestNumbers}}</span></ng-template>
-              {{deptAM}}
+              <span *ngIf="requestsPM != 0">{{requestsPM}}</span>{{deptPM}}<br>{{surgPM}}
             </div>
           </div>
         </div>
@@ -400,21 +388,23 @@
         <div *ngIf="permission == 1">
           <div *ngFor="let r of requestedBookings">
             <div class="row">
-              <div class="row">
-                <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
+              <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
+            </div>
+            <div class="row">
+              <div class="col m8">
+                <div *ngIf="r.status === 4 || r.status === 6">
+                  <label>Morning</label><br>
+                  Surgeon: {{r.am_surg}}<br>
+                  Department: {{r.am_dept}}
+                </div>
+                <div *ngIf="r.status === 5 || r.status === 6">
+                  <label>Afternoon</label><br>
+                  Surgeon: {{r.pm_surg}}<br>
+                  Department: {{r.pm_dept}}
+                </div>
               </div>
               <div class="col m4">
-                <label>Morning</label><br>
-                Surgeon: {{r.am_surg}}<br>
-                Department: {{r.am_dept}}
-              </div>
-              <div class="col m4">
-                <label>Afternoon</label><br>
-                Surgeon: {{r.pm_surg}}<br>
-                Department: {{r.pm_dept}}
-              </div>
-              <div class="col m4">
-                <button (click)="acceptRequest(r.url, r.date, r.level, r.room,  r.am_dept, r.am_surg, r.pm_dept, r.pm_surg, 1, 1)">Accept</button>
+                <button (click)="acceptRequest(r.url, r.date, r.level, r.room,  r.am_dept, r.am_surg, r.pm_dept, r.pm_surg, 1, 1)">Accept</button><br>
                 <button>Reject</button>
               </div>
             </div>
@@ -425,20 +415,20 @@
         <div *ngIf="permission != 1">
           <div *ngFor="let r of requestedBookings">
             <div class="row">
-              <div class="row">
-                <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
-              </div>
-              <div class="col m6">
-                <label>Morning</label><br>
-                Surgeon: {{r.am_surg}}<br>
-                Department: {{r.am_dept}}
-              </div>
-              <div class="col m6">
-                <label>Afternoon</label><br>
-                Surgeon: {{r.pm_surg}}<br>
-                Department: {{r.pm_dept}}
-              </div>
+              <label>Requested on {{r.created | date: 'd MMM H:mm'}}</label>
             </div>
+            <div class="row">
+                <div *ngIf="r.status === 4 || r.status === 6">
+                  <label>Morning</label><br>
+                  Surgeon: {{r.am_surg}}<br>
+                  Department: {{r.am_dept}}
+                </div>
+                <div *ngIf="r.status === 5 || r.status === 6">
+                  <label>Afternoon</label><br>
+                  Surgeon: {{r.pm_surg}}<br>
+                  Department: {{r.pm_dept}}
+                </div>
+              </div>
             <hr>
           </div>
 

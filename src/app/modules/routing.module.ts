@@ -1,6 +1,6 @@
 import {HomeComponent} from "../components/home/home.component";
 import {CalendarComponent} from "../components/planner/calendar/calendar.component";
-import {RequestsComponent} from "../components/requests/requests.component";
+import {RequestsComponent} from "../components/requests/requestsHome.component";
 import {CallbackComponent} from "../components/callback/callback.component";
 import {ProfileComponent} from "../components/profile/profile.component";
 

@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-md-1"></div>
+    <div class="col col-md-10">
+      <div *ngFor="let r of requestedBookings">
+        <app-request url="{{r.url}}" surgAM="{{r.am_surg}}" deptAM="{{r.am_dept}}" deptPM="{{r.pm_dept}}" surgPM="{{r.pm_surg}}" level="{{r.level}}" date="{{r.date}}" room="{{r.room}}" status="{{r.status}}" am_confirmed="{{r.am_confirmed}}" pm_confirmed="{{r.pm_confirmed}}" created="{{r.created}}"></app-request>
+      </div>
+    </div>
+    <div class="col col-md-1"></div>
+  </div>
+</div>
+
+
+
