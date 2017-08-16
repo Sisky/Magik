@@ -23,6 +23,8 @@ export class BookingComponent implements OnInit {
   is_pm_confirmed: boolean;
   is_am_shutdown: boolean = false;
   is_pm_shutdown: boolean = false;
+  is_am_leave: boolean = false;
+  is_pm_leave: boolean = false;
 
   @Input() url: string;
   @Input() surgAM: string;
@@ -55,7 +57,8 @@ export class BookingComponent implements OnInit {
     this.is_am_shutdown = this.am_status == 3;
     this.is_pm_shutdown = this.pm_status == 3;
 
-
+    this.is_am_leave = this.am_status == 4;
+    this.is_pm_leave = this.pm_status == 4;
 
     const fb = new FormBuilder();
 
@@ -66,8 +69,10 @@ export class BookingComponent implements OnInit {
       'f_surgPM': [this.surgPM],
       'f_am_confirmed': [this.is_am_confirmed],
       'f_pm_confirmed': [this.is_pm_confirmed],
-        'f_am_shut': [this.is_am_shutdown],
-        'f_pm_shut': [this.is_pm_shutdown],
+      'f_am_shut': [this.is_am_shutdown],
+      'f_pm_shut': [this.is_pm_shutdown],
+      'f_am_leave': [this.is_am_leave],
+      'f_pm_leave': [this.is_pm_leave],
 
     });
 
@@ -155,18 +160,44 @@ export class BookingComponent implements OnInit {
         this.pm_status = 1;
       }
 
+      //Leave
+      if ((this.formModel).get("f_am_leave").value) {
+          this.am_status = 4;
+      } else {
+          if(this.am_status == 4) {
+              this.am_status = 1;
+          }
+      }
+
+      if ((this.formModel).get("f_pm_leave").value) {
+          this.pm_status = 4;
+      } else {
+          if(this.pm_status == 4) {
+              this.pm_status = 1;
+          }
+      }
+
       // Shutdown
       if ((this.formModel).get("f_am_shut").value) {
         this.am_status = 3;
         this.deptAM = 'SHUTDOWN';
         this.surgAM = 'SHUTDOWN';
+      } else {
+        if(this.am_status == 3) {
+          this.am_status = 1;
+        }
       }
 
       if ((this.formModel).get("f_pm_shut").value) {
         this.pm_status = 3;
         this.deptPM = 'SHUTDOWN';
         this.surgPM = 'SHUTDOWN';
+      }else {
+          if(this.pm_status == 3) {
+              this.pm_status = 1;
+          }
       }
+
 
       this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 1, this.am_status, this.pm_status, this.am_confirmed, this.pm_confirmed).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
 
