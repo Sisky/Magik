@@ -18,7 +18,9 @@
     </div>
     <div class="col col-md-4">
       <div class="dropdown" dropdown [dropdownToggle]="false" style="padding: 0px">
-        <button dropdown-open>level {{level}}</button>
+        <button dropdown-open *ngIf="level == 4 || level == 8 || level == 9">level {{level}}</button>
+        <button dropdown-open *ngIf="level == 1">GSU</button>
+        <button dropdown-open *ngIf="level == 2">SSOR</button>
         <ul class="dropdown-menu">
           <li (click)="changeLevel(4)">Level 4</li>
           <li (click)="changeLevel(8)">Level 8</li>

@@ -63,37 +63,37 @@ export class BookingService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
-  postNewBooking(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, status:number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
+  postNewBooking(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, am_status:number, pm_status: number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
     let formattedDate = moment(date).format('YYYY-MM-DD');
     let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
 
-    return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
+    return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, am_status: am_status,pm_status: pm_status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
       headers: headers
     });
   }
 
-  updateRoomBooking(url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number,status: number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
+  updateRoomBooking(url: string ,date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, am_status: number, pm_status: number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
     let formattedDate = moment(date).format('YYYY-MM-DD');
     let newDate = moment.utc(new Date()).format('YYYY-MM-DDTHH:mm');
-    return this.http.put(url, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, status: status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
+    return this.http.put(url, JSON.stringify({date: formattedDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, created: newDate, am_status: am_status, pm_status: pm_status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
       headers: headers
     });
   }
 
-  postNewRequest(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, status:number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
+  postNewRequest(date: Date, level: number, room: number, am_dept: string, am_surg: string, pm_dept: string, pm_surg: string, valid: number, am_status:number, pm_status:number, am_confirmed: number, pm_confirmed: number): Observable<Response> {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
     let formattedDate = moment(date).format('YYYY-MM-DD');
     let newDate = moment(new Date()).format('YYYY-MM-DDTHH:mm');
 
-    return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, created: newDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, status: status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
+    return this.http.post(this.baseUrl, JSON.stringify({date: formattedDate, created: newDate, level: level, room: room, am_dept: am_dept, am_surg:am_surg, pm_dept: pm_dept, pm_surg: pm_surg, valid: valid, am_status: am_status, pm_status: pm_status, am_confirmed: am_confirmed, pm_confirmed: pm_confirmed}), {
       headers: headers
     });
   }
@@ -112,7 +112,8 @@ export class Booking {
     public pm_dept: string,
     public pm_surg: string,
     public valid: number,
-    public status: number,
+    public am_status: number,
+    public pm_status: number,
     public am_confirmed: number,
     public pm_confirmed: number
   ) {

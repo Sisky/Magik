@@ -61,6 +61,21 @@
   color: white;
 }
 
+.colorstripGray{
+  padding: 0px;
+  width: 100%; height: 100%;
+  border-left: solid;
+  border-width: 15px;
+  border-color: gray;
+}
+
+.colorstripGray span{
+  position:relative;
+  left:-13px;
+  bottom:-100%;
+  color: white;
+}
+
 .spaceSave {
   opacity: 0.0;
 }
