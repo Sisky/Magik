@@ -1,7 +1,9 @@
 <div class="topnav" id="myTopnav">
   <a [routerLink]="['']">Home</a>
   <a *ngIf="auth.isAuthenticated()" [routerLink]="['/calendar']">Planner</a>
-  <a *ngIf="auth.isAuthenticated()" [routerLink]="['/requests']">Requests</a>
+  <a *ngIf="auth.isAuthenticated()" [routerLink]="['/reports']">Reporting</a>
+  <a *ngIf="auth.isAuthenticated()" (click)="test()">Requests</a>
+
 
 
   <a style="float:right" *ngIf="!auth.isAuthenticated()"

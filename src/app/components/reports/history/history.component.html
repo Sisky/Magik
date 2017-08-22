@@ -1,0 +1,16 @@
+<div *ngIf="isDataAvailable">
+
+  <div class="row">
+
+    <div *ngFor="let booking of changedBookings">
+      {{booking.date}}
+    </div>
+  <br>
+    <!--This one never shows-->
+    <div *ngFor="let booking of currentBookings">
+      {{booking.date}}
+    </div>
+
+  </div>
+
+</div>

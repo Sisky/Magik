@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PermissionService} from "../../services/permission.service";
-import {Booking, BookingService} from "../../services/booking.service";
+import {PermissionService} from "../../../services/permission.service";
+import {Booking, BookingService} from "../../../services/booking.service";
 
 @Component({
   selector: 'app-requests',
