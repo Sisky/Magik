@@ -8,17 +8,31 @@ export class DataService {
   surgeonData: String[];
   serviceData: String[];
 
+
   constructor() {
-    this.surgeonData = surgeons;
-    this.serviceData = services;
+      this.surgeonData = surgeons;
+      this.serviceData = services;
+
+
   }
 
   getSurgeons(): String[] {
-    return this.surgeonData;
+      // console.log(this.surgeonDataFix);
+    return this.surgeonData.sort();
   }
 
   getServices(): String[] {
     return this.serviceData;
   }
 
+}
+
+
+export class Name {
+
+    constructor(
+        public first: string,
+        public last: string,
+    ) {
+    }
 }
