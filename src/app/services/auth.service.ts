@@ -15,9 +15,9 @@ export class AuthService {
     clientID: '0ps70T4l4azYesIxFni2njK2R1Nutzt2',
     domain: 'sisky.au.auth0.com',
     responseType: 'token id_token',
-    // audience: 'https://sisky.au.auth0.com/userinfo',
+    audience: 'https://sisky.au.auth0.com/userinfo',
     redirectUri: 'https://cryptic-fjord-46997.herokuapp.com/#/callback',
-    redirectUri: 'http://localhost:4200/#/callback',
+    // redirectUri: 'http://localhost:4200/#/callback',
     scope: 'openid profile app_metadata'
   });
 
