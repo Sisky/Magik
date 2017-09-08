@@ -28,6 +28,7 @@
     "@angular/platform-browser-dynamic": "^4.3.5",
     "@angular/platform-server": "^4.3.5",
     "@angular/router": "^4.3.5",
+    "alasql": "^0.4.2",
     "auth0-js": "^8.9.2",
     "bootstrap": "^4.0.0-beta",
     "classlist": "^1.0.1",

@@ -1,65 +1,85 @@
+<Button (click)="exportCSV()">Export as CSV</Button>
 
-<table class="w3-table w3-striped">
-  <tbody>
-  <tr>
-    <th>Level</th>
-    <th>Session Date</th>
-    <th>Operating Room</th>
-    <th>Session</th>
-    <th>Service</th>
-    <th>Surgeon</th>
-    <th>Proposed Service</th>
-    <th>Proposed Surgeon</th>
-    <th>Confirmed?</th>
-  </tr>
+<ng-container *ngIf="finished">
+
+  <table id="history_report" class="w3-table w3-striped">
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>Session Date</th>
+        <th>Operating Room</th>
+        <th>Session</th>
+        <th>Service</th>
+        <th>Surgeon</th>
+        <th>Proposed Service</th>
+        <th>Proposed Surgeon</th>
+        <th>Confirmed?</th>
+      </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let booking of bookingHistory; index as i">
+          <!--Morning-->
+          <tr *ngIf="currentBookings[i][0].am_status !== 0">
+            <!--Levels-->
+            <td *ngIf="booking.level === 1">GSU</td>
+            <td *ngIf="booking.level === 2">SSOR</td>
+            <td *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
+            <!--Session Date-->
+            <td>{{booking.date}}</td>
+            <!--Operating room-->
+            <td>{{booking.room}}</td>
+            <!--Session-->
+            <td>AM</td>
+            <!--Service-->
+            <td>{{booking.am_dept}}</td>
+            <!--Surgeon-->
+            <td>{{booking.am_surg}}</td>
+            <!--Proposed Service-->
+
+              <td>{{currentBookings[i][0]?.am_dept}}</td>
+              <!--Proposed Surgeon-->
+              <td>{{currentBookings[i][0]?.am_surg}}</td>
+              <!--Confirmed-->
+              <td *ngIf="currentBookings[i][0]?.am_confirmed === 1">Yes</td>
+              <td *ngIf="currentBookings[i][0]?.am_confirmed !== 1">No</td>
+
+        </tr>
+
+          <!--Afternoon-->
+          <tr *ngIf="currentBookings[i][0].pm_status !== 0">
+            <!--Levels-->
+            <td *ngIf="booking.level === 1">GSU</td>
+            <td *ngIf="booking.level === 2">SSOR</td>
+            <td *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
+            <!--Session Date-->
+            <td>{{booking.date}}</td>
+            <!--Operating room-->
+            <td>{{booking.room}}</td>
+            <!--Session-->
+            <td>PM</td>
+            <!--Service-->
+            <td>{{booking.pm_dept}}</td>
+            <!--Surgeon-->
+            <td>{{booking.pm_surg}}</td>
+            <!--Proposed Service-->
+
+            <td>{{currentBookings[i][0]?.pm_dept}}</td>
+            <!--Proposed Surgeon-->
+            <td>{{currentBookings[i][0]?.pm_surg}}</td>
+            <!--Confirmed-->
+            <td *ngIf="currentBookings[i][0]?.pm_confirmed === 1">Yes</td>
+            <td *ngIf="currentBookings[i][0]?.pm_confirmed !== 1">No</td>
+
+        </tr>
+    </ng-container>
 
 
-  <tr *ngFor="let booking of bookingHistory; index as i">
 
-    <!--Morning-->
-    <div *ngIf="booking.am_status !== 0">
-      <!--Levels-->
-      <td ng *ngIf="booking.level === 1">GSU</td>
-      <td ng *ngIf="booking.level === 2">SSOR</td>
-      <td ng *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
-      <!--Session Date-->
-      <td>{{booking.date}}</td>
-      <!--Operating room-->
-      <td>{{booking.room}}</td>
-      <!--Session-->
-      <td>AM</td>
-      <!--Service-->
-      <td>{{booking.am_dept}}</td>
-      <!--Surgeon-->
-      <td>{{booking.am_surg}}</td>
-      <!--Proposed Service-->
-      <td>{{currentBookings[i][0]?.am_dept}}</td>
-      <!--Proposed Surgeon-->
-      <td>{{currentBookings[i][0]?.am_surg}}</td>
-      <!--Confirmed-->
-      <td *ngIf="currentBookings[i][0]?.confirmed === 1">Yes</td>
+    </tbody>
+  </table>
 
 
-    </div>
-
-
-    <td>AM</td>
-    <td>{{booking.am_dept}}</td>
-    <td>{{booking.am_surg}}</td>
-
-    <td>{{currentBookings[i][0]?.level}}</td>
-    <td>{{currentBookings[i][0]?.date}}</td>
-    <td>{{currentBookings[i][0]?.room}}</td>
-    <td>AM</td>
-    <td>{{currentBookings[i][0]?.am_dept}}</td>
-    <td>{{currentBookings[i][0]?.am_surg}}</td>
-
-  </tr>
-
-
-
-  </tbody>
-</table>
+</ng-container>
 
 
 

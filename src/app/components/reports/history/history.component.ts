@@ -2,6 +2,8 @@ import {Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy, NgZone} f
 import {Booking, BookingService} from "../../../services/booking.service";
 import {Observable} from "rxjs/Observable";
 
+var alasql = require('alasql');
+
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
@@ -10,7 +12,9 @@ import {Observable} from "rxjs/Observable";
 export class HistoryComponent implements OnInit {
 
     bookingHistory: Booking[] = [];
-    currentBookings: any[][] = [[]];
+    currentBookings: any[] = [];
+    finished: boolean = false;
+    hello: string = 'world';
 
     constructor(private bookingService: BookingService) {}
 
@@ -36,18 +40,27 @@ export class HistoryComponent implements OnInit {
     }
 
     populateCurrent(): void {
+        let counter = 0;
         for(let i of this.bookingHistory) {
             this.bookingService.getRoomBooking(i.date,i.level,i.room)
                 .subscribe(
                     data => this.currentBookings.push((data as any).results),
                     err => console.log(err),
                     () => {
-                        console.log(this.bookingHistory.length);
-                        console.log(this.currentBookings.length);
+                        counter++;
+                        if(counter === this.bookingHistory.length ) {
+                            this.finished = true;
+                        }
 
                     }
                 )
         }
+
+    }
+
+    exportCSV():void {
+        let data = alasql('SELECT * FROM HTML("#history_report",{headers:true})');
+        alasql('SELECT * INTO CSV("history_report.csv",{headers:true}) FROM ?', [data]);
     }
 
 
