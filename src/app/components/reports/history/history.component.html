@@ -1,16 +1,66 @@
-<div *ngIf="isDataAvailable">
 
-  <div class="row">
+<table class="w3-table w3-striped">
+  <tbody>
+  <tr>
+    <th>Level</th>
+    <th>Session Date</th>
+    <th>Operating Room</th>
+    <th>Session</th>
+    <th>Service</th>
+    <th>Surgeon</th>
+    <th>Proposed Service</th>
+    <th>Proposed Surgeon</th>
+    <th>Confirmed?</th>
+  </tr>
 
-    <div *ngFor="let booking of changedBookings">
-      {{booking.date}}
+
+  <tr *ngFor="let booking of bookingHistory; index as i">
+
+    <!--Morning-->
+    <div *ngIf="booking.am_status !== 0">
+      <!--Levels-->
+      <td ng *ngIf="booking.level === 1">GSU</td>
+      <td ng *ngIf="booking.level === 2">SSOR</td>
+      <td ng *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
+      <!--Session Date-->
+      <td>{{booking.date}}</td>
+      <!--Operating room-->
+      <td>{{booking.room}}</td>
+      <!--Session-->
+      <td>AM</td>
+      <!--Service-->
+      <td>{{booking.am_dept}}</td>
+      <!--Surgeon-->
+      <td>{{booking.am_surg}}</td>
+      <!--Proposed Service-->
+      <td>{{currentBookings[i][0]?.am_dept}}</td>
+      <!--Proposed Surgeon-->
+      <td>{{currentBookings[i][0]?.am_surg}}</td>
+      <!--Confirmed-->
+      <td *ngIf="currentBookings[i][0]?.confirmed === 1">Yes</td>
+
+
     </div>
-  <br>
-    <!--This one never shows-->
-    <div *ngFor="let booking of currentBookings">
-      {{booking.date}}
-    </div>
 
-  </div>
 
-</div>
+    <td>AM</td>
+    <td>{{booking.am_dept}}</td>
+    <td>{{booking.am_surg}}</td>
+
+    <td>{{currentBookings[i][0]?.level}}</td>
+    <td>{{currentBookings[i][0]?.date}}</td>
+    <td>{{currentBookings[i][0]?.room}}</td>
+    <td>AM</td>
+    <td>{{currentBookings[i][0]?.am_dept}}</td>
+    <td>{{currentBookings[i][0]?.am_surg}}</td>
+
+  </tr>
+
+
+
+  </tbody>
+</table>
+
+
+
+

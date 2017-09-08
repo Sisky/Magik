@@ -8,8 +8,8 @@ moment().format();
 @Injectable()
 export class BookingService {
 
-  // private baseUrl = 'http://127.0.0.1:8000/booking/';
-  private baseUrl = 'https://young-shore-98037.herokuapp.com/booking/';
+  private baseUrl = 'http://127.0.0.1:8000/booking/';
+  // private baseUrl = 'https://young-shore-98037.herokuapp.com/booking/';
   private date: Date;
   private level: number;
   private url: string;
@@ -44,7 +44,7 @@ export class BookingService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
-  getRoomBooking(date: Date, level: number, room: number): Observable<Booking[]> {
+  getRoomBooking(date: Date, level: number, room: number): Observable<Booking> {
       let formattedDate = moment(date).format('YYYY-MM-DD');
       this.url = "?date=" + formattedDate + "&level=" + level + "&room=" + room + "&valid=1";
 

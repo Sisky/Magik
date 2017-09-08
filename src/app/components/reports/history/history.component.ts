@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy, NgZone} from '@angular/core';
 import {Booking, BookingService} from "../../../services/booking.service";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-history',
@@ -8,46 +9,48 @@ import {Booking, BookingService} from "../../../services/booking.service";
 })
 export class HistoryComponent implements OnInit {
 
-  isDataAvailable: boolean = false;
-  changedBookings: Booking[] = [];
-  currentBookings: Booking[] = [];
+    bookingHistory: Booking[] = [];
+    currentBookings: any[][] = [[]];
 
-  constructor(private bookingService: BookingService) { }
+    constructor(private bookingService: BookingService) {}
 
-  ngOnInit() {
+    ngOnInit(): void {
+        console.log('test' + this.currentBookings.length);
 
-    this.isDataAvailable = false;
-    //Get all changes then filter
-    this.bookingService.getAllHistory()
-        .subscribe(
-            data => {
-                this.changedBookings = (data as any).results;
-            },
-            err => {
-                console.log(err);
-            },
-            () => {
-                this.getCurrentBookings();
-            })
-  }
+        this.bookingService.getAllHistory()
+            .subscribe(
+                data => {
+                    this.bookingHistory = (data as any).results;
+                },
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                },
+                () => {
+                    this.populateCurrent()
 
-  getCurrentBookings() {
+                }
 
-      for(let i  = 0; i < this.changedBookings.length; i++) {
-          this.bookingService.getRoomBooking(this.changedBookings[i].date, this.changedBookings[i].level, this.changedBookings[i].room)
-              .subscribe(
-                  data => this.currentBookings.push((data as any).results),
-                  err => console.log(err),
-                  () => {
-                    // console.log(this.isDataAvailable);
-                    if(i == this.changedBookings.length - 1) {
-                        this.isDataAvailable = true;
-                        console.log(this.currentBookings);
+            );
+
+    }
+
+    populateCurrent(): void {
+        for(let i of this.bookingHistory) {
+            this.bookingService.getRoomBooking(i.date,i.level,i.room)
+                .subscribe(
+                    data => this.currentBookings.push((data as any).results),
+                    err => console.log(err),
+                    () => {
+                        console.log(this.bookingHistory.length);
+                        console.log(this.currentBookings.length);
+
                     }
-                  }
-              )
-      }
-  }
+                )
+        }
+    }
+
+
 
 
 }
