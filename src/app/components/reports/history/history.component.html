@@ -1,6 +1,19 @@
-<Button (click)="exportCSV()">Export as CSV</Button>
+<div *ngIf="!finished">
+
+  Proposed and Confirmed Session Reallocations
+  <button (click)="generate()">Generate</button>
+
+</div>
+
+
+
+
+
+
 
 <ng-container *ngIf="finished">
+
+<Button (click)="exportCSV()">Export as CSV</Button>
 
   <table id="history_report" class="w3-table w3-striped">
     <thead>
@@ -17,7 +30,7 @@
       </tr>
     </thead>
     <tbody>
-    <ng-container *ngFor="let booking of bookingHistory; index as i">
+    <ng-container *ngFor="let booking of filteredBookingHistory; index as i">
           <!--Morning-->
           <tr *ngIf="currentBookings[i][0].am_status !== 0">
             <!--Levels-->
@@ -33,12 +46,12 @@
             <!--Service-->
             <td>{{booking.am_dept}}</td>
             <!--Surgeon-->
-            <td>{{booking.am_surg}}</td>
+            <td>{{booking.am_surg.replace(',', ' ')}}</td>
             <!--Proposed Service-->
 
               <td>{{currentBookings[i][0]?.am_dept}}</td>
               <!--Proposed Surgeon-->
-              <td>{{currentBookings[i][0]?.am_surg}}</td>
+              <td>{{currentBookings[i][0]?.am_surg.replace(',', ' ')}}</td>
               <!--Confirmed-->
               <td *ngIf="currentBookings[i][0]?.am_confirmed === 1">Yes</td>
               <td *ngIf="currentBookings[i][0]?.am_confirmed !== 1">No</td>
@@ -60,12 +73,12 @@
             <!--Service-->
             <td>{{booking.pm_dept}}</td>
             <!--Surgeon-->
-            <td>{{booking.pm_surg}}</td>
+            <td>{{booking.pm_surg.replace(',', ' ')}}</td>
             <!--Proposed Service-->
 
             <td>{{currentBookings[i][0]?.pm_dept}}</td>
             <!--Proposed Surgeon-->
-            <td>{{currentBookings[i][0]?.pm_surg}}</td>
+            <td>{{currentBookings[i][0]?.pm_surg.replace(',', ' ')}}</td>
             <!--Confirmed-->
             <td *ngIf="currentBookings[i][0]?.pm_confirmed === 1">Yes</td>
             <td *ngIf="currentBookings[i][0]?.pm_confirmed !== 1">No</td>

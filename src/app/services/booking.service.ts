@@ -27,7 +27,7 @@ export class BookingService {
 
   }
   getAllHistory() {
-      this.url = '?valid=0&ordering=created';
+      this.url = '?valid=0&ordering=date';
 
       return this.http.get(`${this.baseUrl}${this.url}`)
           .map((res:Response) => res.json())

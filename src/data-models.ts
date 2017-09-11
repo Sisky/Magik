@@ -344,7 +344,6 @@ export const surgeons =
       'Welch, Sarah',
       'El-Jack, Seif',
       'Stefanelli, Sergio',
-      'Acute Session',
       'Subbiah, Shanu',
       'Dai, Shaun',
       'Reilly, Shelley',
