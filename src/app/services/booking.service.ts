@@ -8,8 +8,8 @@ moment().format();
 @Injectable()
 export class BookingService {
 
-  private baseUrl = 'http://127.0.0.1:8000/booking/';
-  // private baseUrl = 'https://young-shore-98037.herokuapp.com/booking/';
+  // private baseUrl = 'http://127.0.0.1:8000/booking/';
+  private baseUrl = 'https://young-shore-98037.herokuapp.com/booking/';
   private date: Date;
   private level: number;
   private url: string;
@@ -27,7 +27,7 @@ export class BookingService {
 
   }
   getAllHistory() {
-      this.url = '?valid=0&ordering=created';
+      this.url = '?valid=0&ordering=date';
 
       return this.http.get(`${this.baseUrl}${this.url}`)
           .map((res:Response) => res.json())
