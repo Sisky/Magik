@@ -2,11 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.use(function(req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
-});
 
 
 
