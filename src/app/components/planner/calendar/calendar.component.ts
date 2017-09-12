@@ -39,6 +39,9 @@ export class CalendarComponent implements OnInit {
 
     }
 
+    let test = dateService.getWeekLetter(this.dateService.getMonday());
+
+
   }
 
   ngOnInit() {
@@ -75,7 +78,6 @@ export class CalendarComponent implements OnInit {
   private getDates() {
 
     this.mondayDate = this.dateService.getMonday();
-
     this.tuesdayDate = this.dateService.getTuesday();
     this.wednesdayDate = this.dateService.getWednesday();
     this.thursdayDate = this.dateService.getThursday();

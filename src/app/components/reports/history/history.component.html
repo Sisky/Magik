@@ -59,7 +59,7 @@ Proposed and Confirmed Session Reallocations
             <td *ngIf="booking.level === 2">SSOR</td>
             <td *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
             <!--Session Date-->
-            <td>{{booking.date}}</td>
+            <td>{{booking.date | datex:'dddd D MMMM'}}</td>
             <!--Operating room-->
             <td>{{booking.room}}</td>
             <!--Session-->
@@ -86,7 +86,7 @@ Proposed and Confirmed Session Reallocations
             <td *ngIf="booking.level === 2">SSOR</td>
             <td *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
             <!--Session Date-->
-            <td>{{booking.date}}</td>
+            <td>{{booking.date | datex:'dddd D MMMM'}}</td>
             <!--Operating room-->
             <td>{{booking.room}}</td>
             <!--Session-->

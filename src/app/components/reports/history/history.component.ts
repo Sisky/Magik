@@ -63,6 +63,7 @@ export class HistoryComponent implements OnInit {
                             this.finished = true;
                             this.loading = false;
                         }
+                        this.filteredBookingHistory.sort(this.compare);
                     })
         }
 
@@ -143,6 +144,20 @@ export class HistoryComponent implements OnInit {
     exportCSV():void {
         let data = alasql('SELECT * FROM HTML("#history_report",{headers:true})');
         alasql('SELECT * INTO CSV("history_report.csv",{headers:true}) FROM ?', [data]);
+    }
+
+    compare(a: any, b: any) {
+
+        let comparison = 0;
+
+        if (a.date > b.date) {
+            comparison = 1;
+        } else if (b.date > a.date) {
+            comparison = -1;
+        }
+
+        return comparison;
+
     }
 
 }

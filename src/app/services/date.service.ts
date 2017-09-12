@@ -12,7 +12,27 @@ export class DateService {
   dateChange$ = this.dateChange.asObservable();
 
   constructor() {
-    this.date = new Date();
+
+  }
+
+  getWeekLetter(monday: Date) {
+
+    if(moment(new Date(monday)).week() % 4 === 3) {
+      return 'A';
+    }
+
+    if(moment(new Date(monday)).week() % 4 === 0) {
+      return 'B';
+    }
+
+    if(moment(new Date(monday)).week() % 4 === 1) {
+        return 'C';
+    }
+
+    if(moment(new Date(monday)).week() % 4 === 2) {
+        return 'D';
+    }
+
   }
 
   setDate(date: Date) {
