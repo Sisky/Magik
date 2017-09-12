@@ -180,15 +180,12 @@ export class HistoryComponent implements OnInit {
 
         if(a.date > b.date) {
             comparison = 1;
-        }
-        else if(a.level > b.level) {
+        } else if(a.level > b.level) {
             comparison = 1;
         } else if(a.room > b.room) {
             comparison = 1;
         } else if(a.created > b.created) {
             comparison = 1;
-        } else {
-            comparison = -1;
         }
 
         return comparison;
