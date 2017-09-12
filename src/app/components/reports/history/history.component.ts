@@ -62,8 +62,10 @@ export class HistoryComponent implements OnInit {
                         if(counter === this.filteredBookingHistory.length ) {
                             this.finished = true;
                             this.loading = false;
+                            // this.currentBookings.sort(this.compare);
+                            // this.filteredBookingHistory.sort(this.compare);
                         }
-                        this.filteredBookingHistory.sort(this.compare);
+
                     })
         }
 
