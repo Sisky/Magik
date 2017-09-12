@@ -2,6 +2,7 @@ import {Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy, NgZone} f
 import {Booking, BookingService} from "../../../services/booking.service";
 import {Observable} from "rxjs/Observable";
 import {DateService} from "../../../services/date.service";
+import {IMyDpOptions} from "mydatepicker";
 
 var moment = require('moment');
 moment().format();
@@ -20,10 +21,18 @@ export class HistoryComponent implements OnInit {
     currentBookings: any[] = [];
 
     finished: boolean = false;
-    startDate: Date;
+    loading: boolean = false;
+
+    // Initialized to specific date (09.10.2018).
+    private model: string =  null;
+
+    private myDatePickerOptions: IMyDpOptions = {
+        // other options...
+        dateFormat: 'dd-mm-yyyy',
+    };
 
     constructor(private bookingService: BookingService, private dateService: DateService) {
-
+        let startDate = moment(this.dateService.getTuesday()).subtract(7,'days').format('DD-MM-YYYY');
     }
 
     ngOnInit(): void {
@@ -36,12 +45,8 @@ export class HistoryComponent implements OnInit {
                     // Log errors if any
                     console.log(err);
                 },
-                () => {
-
-                }
-
+                () => {}
             );
-
     }
 
     populateCurrent(): void {
@@ -52,46 +57,93 @@ export class HistoryComponent implements OnInit {
                     data => this.currentBookings.push((data as any).results),
                     err => console.log(err),
                     () => {
+
                         counter++;
                         if(counter === this.filteredBookingHistory.length ) {
                             this.finished = true;
+                            this.loading = false;
+                        }
+                    })
+        }
+
+
+    }
+
+    generate(date?: Date): void {
+
+        this.bookingHistory = [];
+        this.filteredBookingHistory = [];
+        this.finished = false;
+
+        this.bookingService.getAllHistory()
+            .subscribe(
+                data => {
+                    this.bookingHistory = (data as any).results;
+                },
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                },
+                () => {
+                    if(date) {
+                        //show loading
+                        this.loading = true;
+                        this.filter(date);
+                        if(this.filteredBookingHistory.length === 0) {
+                            this.populateCurrent();
+                            this.finished = true;
+                            this.loading = false;
+                        } else {
+                            this.populateCurrent();
 
                         }
 
+                    } else {
+                        //show loading
+                        this.loading = true;
+                        this.filter();
+                        if(this.filteredBookingHistory.length === 0) {
+                            this.populateCurrent();
+                            this.finished = true;
+                            this.loading = false;
+                        } else {
+                            this.populateCurrent();
+                        }
                     }
-                )
-        }
+                }
+            );
+
+
 
     }
 
+    filter(date?: any): void {
 
-    generate(): void {
-        this.filter();
+        if(date) {
+            //date to check from
+            let startDate = moment(new Date(date.date.year, date.date.month-1, date.date.day)).format('YYYY-MM-DD');
 
-        this.populateCurrent();
+            for (let i = 0; i < this.bookingHistory.length; i++) {
+                if (this.bookingHistory[i].created >= startDate) {
+                    this.filteredBookingHistory.push(this.bookingHistory[i]);
+                }
+            }
 
-    }
+        } else {
+            let all = moment(this.dateService.getDate()).format('YYYY-MM-DD');
 
-    filter(): void {
-        let date =  moment(this.dateService.getDate()).format('YYYY-MM-DD');
-
-        for(let i = 0; i < this.bookingHistory.length; i++) {
-            if(this.bookingHistory[i].date >= date) {
-                this.filteredBookingHistory.push(this.bookingHistory[i]);
+            for (let i = 0; i < this.bookingHistory.length; i++) {
+                if (this.bookingHistory[i].date >= all) {
+                    this.filteredBookingHistory.push(this.bookingHistory[i]);
+                }
             }
         }
     }
-
-
-
 
     exportCSV():void {
         let data = alasql('SELECT * FROM HTML("#history_report",{headers:true})');
         alasql('SELECT * INTO CSV("history_report.csv",{headers:true}) FROM ?', [data]);
     }
-
-
-
 
 }
 

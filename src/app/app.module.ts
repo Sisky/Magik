@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MyDatePickerModule } from 'mydatepicker';
+
 
 import { ApplicationComponent } from './components/application/application.component';
 import { CallbackComponent } from './components/callback/callback.component';
@@ -51,7 +53,8 @@ import { HistoryComponent } from './components/reports/history/history.component
     RoutingModule,
     HttpModule,
     DropdownModule,
-    ModalModule
+    ModalModule,
+    MyDatePickerModule,
   ],
   providers: [
     BookingService,

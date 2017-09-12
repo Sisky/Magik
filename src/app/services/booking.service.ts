@@ -123,7 +123,9 @@ export class Booking {
     public am_status: number,
     public pm_status: number,
     public am_confirmed: number,
-    public pm_confirmed: number
+    public pm_confirmed: number,
+    public created: Date,
+
   ) {
   }
 }

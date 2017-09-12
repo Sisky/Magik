@@ -1,8 +1,25 @@
+Proposed and Confirmed Session Reallocations
+<form #myForm="ngForm" novalidate>
+  <my-date-picker name="mydate" [options]="myDatePickerOptions"
+      [(ngModel)]="model" required>
+  </my-date-picker>
+</form>
+
+
+
 <div *ngIf="!finished">
+  <button (click)="generate()">Generate ALL</button>
+  <button *ngIf="myForm.form.dirty" (click)="generate(model)">Generate FROM</button>
 
-  Proposed and Confirmed Session Reallocations
-  <button (click)="generate()">Generate</button>
+</div>
+<div class="row">
+  <div class="col-md-5"></div>
 
+  <div class="col-md-2">
+    <div *ngIf="loading" style="margin: 0 auto"><img src="../../../../assets/loading.svg"> </div>
+  </div>
+
+  <div class="col-md-5"></div>
 </div>
 
 
@@ -12,6 +29,9 @@
 
 
 <ng-container *ngIf="finished">
+
+<button (click)="generate()">Generate ALL</button>
+<button *ngIf="myForm.form.dirty" (click)="generate(model)">Generate FROM</button>
 
 <Button (click)="exportCSV()">Export as CSV</Button>
 
@@ -32,6 +52,7 @@
     <tbody>
     <ng-container *ngFor="let booking of filteredBookingHistory; index as i">
           <!--Morning-->
+
           <tr *ngIf="currentBookings[i][0].am_status !== 0">
             <!--Levels-->
             <td *ngIf="booking.level === 1">GSU</td>
