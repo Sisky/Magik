@@ -17,6 +17,8 @@ var alasql = require('alasql');
 export class HistoryComponent implements OnInit {
 
     bookingHistory: Booking[] = [];
+    test: Booking[] = [];
+
     filteredBookingHistory: Booking[] = [];
     currentBookings: any[] = [];
 
@@ -36,6 +38,23 @@ export class HistoryComponent implements OnInit {
     }
 
     ngOnInit(): void {
+
+        // this.bookingService.getAllHistory()
+        //     .subscribe(
+        //         data => {
+        //             this.test = (data as any).results;
+        //         },
+        //         err => {
+        //             // Log errors if any
+        //             console.log(err);
+        //         },
+        //         () => {
+        //             this.test.sort(this.compare);
+        //             this.removeDuplicates(this.test);
+        //         }
+        //     );
+
+
         this.bookingService.getAllHistory()
             .subscribe(
                 data => {
@@ -45,7 +64,10 @@ export class HistoryComponent implements OnInit {
                     // Log errors if any
                     console.log(err);
                 },
-                () => {}
+                () => {
+                    this.test.sort(this.compare);
+                    this.removeDuplicates(this.test);
+                }
             );
     }
 
@@ -88,6 +110,10 @@ export class HistoryComponent implements OnInit {
                     console.log(err);
                 },
                 () => {
+                    this.bookingHistory.sort(this.compare);
+                    this.removeDuplicates(this.bookingHistory);
+
+
                     if(date) {
                         //show loading
                         this.loading = true;
@@ -152,15 +178,43 @@ export class HistoryComponent implements OnInit {
 
         let comparison = 0;
 
-        if (a.date > b.date) {
+        if(a.date > b.date) {
             comparison = 1;
-        } else if (b.date > a.date) {
+        }
+        else if(a.level > b.level) {
+            comparison = 1;
+        } else if(a.room > b.room) {
+            comparison = 1;
+        } else if(a.created > b.created) {
+            comparison = 1;
+        } else {
             comparison = -1;
         }
 
         return comparison;
-
     }
+
+    removeDuplicates(arr: any) {
+
+        for(let i = arr.length-1; i > 0; i--) {
+            console.log(i);
+            console.log(arr[i-1].date);
+
+
+            if(arr[i].date == arr[i-1].date && arr[i].level == arr[i-1].level && arr[i].room == arr[i-1].room) {
+                arr.pop()
+            }
+
+        }
+
+        return arr;
+    }
+
+
+    //if level <
+
+
+
 
 }
 
