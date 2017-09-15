@@ -39,22 +39,6 @@ export class HistoryComponent implements OnInit {
 
     ngOnInit(): void {
 
-        // this.bookingService.getAllHistory()
-        //     .subscribe(
-        //         data => {
-        //             this.test = (data as any).results;
-        //         },
-        //         err => {
-        //             // Log errors if any
-        //             console.log(err);
-        //         },
-        //         () => {
-        //             this.test.sort(this.compare);
-        //             this.removeDuplicates(this.test);
-        //         }
-        //     );
-
-
         this.bookingService.getAllHistory()
             .subscribe(
                 data => {
@@ -65,18 +49,27 @@ export class HistoryComponent implements OnInit {
                     console.log(err);
                 },
                 () => {
-                    this.test.sort(this.compare);
-                    this.removeDuplicates(this.test);
+
                 }
             );
     }
 
     populateCurrent(): void {
+        for(let i = 0; i < this.filteredBookingHistory.length; i++) {
+            this.currentBookings[i] = [];
+        }
+
         let counter = 0;
-        for(let i of this.filteredBookingHistory) {
-            this.bookingService.getRoomBooking(i.date,i.level,i.room)
+
+
+        for(let i = 0; i < this.filteredBookingHistory.length; i++) {
+            this.bookingService.getRoomBooking(this.filteredBookingHistory[i].date, this.filteredBookingHistory[i].level, this.filteredBookingHistory[i].room)
                 .subscribe(
-                    data => this.currentBookings.push((data as any).results),
+                    data => {
+                        // this.currentBookings.push((data as any).results);
+                        this.currentBookings[i] = (data as any).results;
+
+                    },
                     err => console.log(err),
                     () => {
 
@@ -84,8 +77,7 @@ export class HistoryComponent implements OnInit {
                         if(counter === this.filteredBookingHistory.length ) {
                             this.finished = true;
                             this.loading = false;
-                            // this.currentBookings.sort(this.compare);
-                            // this.filteredBookingHistory.sort(this.compare);
+
                         }
 
                     })
@@ -100,6 +92,7 @@ export class HistoryComponent implements OnInit {
         this.filteredBookingHistory = [];
         this.finished = false;
 
+
         this.bookingService.getAllHistory()
             .subscribe(
                 data => {
@@ -110,35 +103,44 @@ export class HistoryComponent implements OnInit {
                     console.log(err);
                 },
                 () => {
+                    //sort in to
                     this.bookingHistory.sort(this.compare);
-                    this.removeDuplicates(this.bookingHistory);
+                    this.filteredBookingHistory = this.removeDuplicates(this.bookingHistory);
 
 
                     if(date) {
                         //show loading
                         this.loading = true;
-                        this.filter(date);
+                        this.filteredBookingHistory = this.filter(date);
                         if(this.filteredBookingHistory.length === 0) {
                             this.populateCurrent();
+
                             this.finished = true;
                             this.loading = false;
                         } else {
                             this.populateCurrent();
+                            console.log(this.filteredBookingHistory);
+                            console.log(this.currentBookings);
 
                         }
 
                     } else {
                         //show loading
                         this.loading = true;
-                        this.filter();
+                        this.filteredBookingHistory = this.filter();
                         if(this.filteredBookingHistory.length === 0) {
                             this.populateCurrent();
+                            console.log(this.filteredBookingHistory);
+                            console.log(this.currentBookings);
+
                             this.finished = true;
                             this.loading = false;
                         } else {
                             this.populateCurrent();
+                            console.log(this.filteredBookingHistory);
+                            console.log(this.currentBookings);
                         }
-                    }
+                     }
                 }
             );
 
@@ -146,27 +148,29 @@ export class HistoryComponent implements OnInit {
 
     }
 
-    filter(date?: any): void {
+    filter(date?: any) {
+        let tempBooking = [];
 
         if(date) {
             //date to check from
             let startDate = moment(new Date(date.date.year, date.date.month-1, date.date.day)).format('YYYY-MM-DD');
 
-            for (let i = 0; i < this.bookingHistory.length; i++) {
-                if (this.bookingHistory[i].created >= startDate) {
-                    this.filteredBookingHistory.push(this.bookingHistory[i]);
+            for (let i = 0; i < this.filteredBookingHistory.length; i++) {
+                if (this.filteredBookingHistory[i].created >= startDate) {
+                    tempBooking.push(this.filteredBookingHistory[i]);
                 }
             }
-
         } else {
             let all = moment(this.dateService.getDate()).format('YYYY-MM-DD');
 
-            for (let i = 0; i < this.bookingHistory.length; i++) {
-                if (this.bookingHistory[i].date >= all) {
-                    this.filteredBookingHistory.push(this.bookingHistory[i]);
+            for (let i = 0; i < this.filteredBookingHistory.length; i++) {
+                if (this.filteredBookingHistory[i].date >= all) {
+                    tempBooking.push(this.filteredBookingHistory[i]);
                 }
             }
         }
+
+        return tempBooking;
     }
 
     exportCSV():void {
@@ -178,13 +182,9 @@ export class HistoryComponent implements OnInit {
 
         let comparison = 0;
 
-        if(a.date > b.date) {
-            comparison = 1;
-        } else if(a.level > b.level) {
-            comparison = 1;
-        } else if(a.room > b.room) {
-            comparison = 1;
-        } else if(a.created > b.created) {
+        if(a.created > b.created) {
+            comparison = -1;
+        } else {
             comparison = 1;
         }
 
@@ -193,19 +193,25 @@ export class HistoryComponent implements OnInit {
 
     removeDuplicates(arr: any) {
 
-        for(let i = arr.length-1; i > 0; i--) {
-            console.log(i);
-            console.log(arr[i-1].date);
+        let uniqueArr = [];
 
-
-            if(arr[i].date == arr[i-1].date && arr[i].level == arr[i-1].level && arr[i].room == arr[i-1].room) {
-                arr.pop()
+        for(let i = 0; i < arr.length; i++) {
+            let unique = true;
+            for(let j = 0; j < uniqueArr.length; j++) {
+                if(uniqueArr[j].date === arr[i].date && uniqueArr[j].level === arr[i].level && uniqueArr[j].room === arr[i].room) {
+                    unique = false;
+                }
+            }
+            if (unique) {
+                uniqueArr.push(arr[i]);
             }
 
         }
 
-        return arr;
+        return uniqueArr;
     }
+
+
 
 
     //if level <

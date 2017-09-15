@@ -59,7 +59,7 @@ Proposed and Confirmed Session Reallocations
             <td *ngIf="booking.level === 2">SSOR</td>
             <td *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
             <!--Session Date-->
-            <td>{{booking.date | datex:'dddd D MMMM'}}</td>
+            <td>{{booking.date | datex:'DD-MM-YYYY'}}</td>
             <!--Operating room-->
             <td>{{booking.room}}</td>
             <!--Session-->
@@ -72,7 +72,8 @@ Proposed and Confirmed Session Reallocations
 
               <td>{{currentBookings[i][0]?.am_dept}}</td>
               <!--Proposed Surgeon-->
-              <td>{{currentBookings[i][0]?.am_surg.replace(',', ' ')}}</td>
+              <td *ngIf="currentBookings[i][0]?.am_status === 4">{{currentBookings[i][0]?.am_surg.replace(',', ' ') +  ' (Leave)'}}</td>
+              <td *ngIf="currentBookings[i][0]?.am_status !== 4">{{currentBookings[i][0]?.am_surg.replace(',', ' ')}}</td>
               <!--Confirmed-->
               <td *ngIf="currentBookings[i][0]?.am_confirmed === 1">Yes</td>
               <td *ngIf="currentBookings[i][0]?.am_confirmed !== 1">No</td>
@@ -86,7 +87,7 @@ Proposed and Confirmed Session Reallocations
             <td *ngIf="booking.level === 2">SSOR</td>
             <td *ngIf="booking.level !== 1 && booking.level !== 2">Level {{booking.level}}</td>
             <!--Session Date-->
-            <td>{{booking.date | datex:'dddd D MMMM'}}</td>
+            <td>{{booking.date | datex:'DD-MM-YYYY'}}</td>
             <!--Operating room-->
             <td>{{booking.room}}</td>
             <!--Session-->
@@ -99,7 +100,8 @@ Proposed and Confirmed Session Reallocations
 
             <td>{{currentBookings[i][0]?.pm_dept}}</td>
             <!--Proposed Surgeon-->
-            <td>{{currentBookings[i][0]?.pm_surg.replace(',', ' ')}}</td>
+            <td *ngIf="currentBookings[i][0]?.pm_status === 4">{{currentBookings[i][0]?.pm_surg.replace(',', ' ') +  ' (Leave)'}}</td>
+            <td *ngIf="currentBookings[i][0]?.pm_status !== 4">{{currentBookings[i][0]?.pm_surg.replace(',', ' ')}}</td>
             <!--Confirmed-->
             <td *ngIf="currentBookings[i][0]?.pm_confirmed === 1">Yes</td>
             <td *ngIf="currentBookings[i][0]?.pm_confirmed !== 1">No</td>

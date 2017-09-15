@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Subject} from "rxjs/Subject";
+import {DateService} from "./date.service";
 
 @Injectable()
 export class LevelService {
@@ -8,7 +9,7 @@ export class LevelService {
   private levelChange = new Subject<any>();
   levelChange$ = this.levelChange.asObservable();
 
-  constructor() {
+  constructor(private dateService: DateService) {
     this.level = 4;
   }
 
@@ -19,6 +20,7 @@ export class LevelService {
   setLevel(level: number) {
     this.level = level;
     this.levelChange.next(this.level);
+    this.dateService.setDate(new Date());
   }
 
 }

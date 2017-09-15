@@ -64,6 +64,7 @@ export class CalendarComponent implements OnInit {
 
       let _subscriptionL = this.levelService.levelChange$.subscribe((value) => {
         this.getLevel();
+        this.dateService.setDate(new Date());
         this.populate();
       });
 

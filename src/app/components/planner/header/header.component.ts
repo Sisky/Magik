@@ -27,7 +27,14 @@ export class HeaderComponent implements OnInit {
 
     let _subscription = this.levelService.levelChange$.subscribe((value) => {
       this.level = value;
+
     });
+
+      let _subscriptionDate = this.dateService.dateChange$.subscribe((value) => {
+          this.todayDate = value;
+          this.today = moment(this.todayDate).startOf('isoweek').format('dddd MMMM Do YYYY');
+
+      });
 
     this.todayDate = this.dateService.getDate();
     this.today = moment(this.todayDate).startOf('isoweek').format('dddd MMMM Do YYYY');
