@@ -144,8 +144,6 @@ export class HistoryComponent implements OnInit {
                 }
             );
 
-
-
     }
 
     filter(date?: any) {
@@ -210,14 +208,6 @@ export class HistoryComponent implements OnInit {
 
         return uniqueArr;
     }
-
-
-
-
-    //if level <
-
-
-
 
 }
 

@@ -34,6 +34,14 @@ export class BookingService {
           .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
+  getAllHistoryCreated() {
+      this.url = '?valid=0&ordering=created';
+
+      return this.http.get(`${this.baseUrl}${this.url}`)
+          .map((res:Response) => res.json())
+          .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
+
   getLevelBooking(date: Date, level: number): Observable<Booking[]> {
 
     let formattedDate = moment(date).format('YYYY-MM-DD');

@@ -28,6 +28,9 @@ import {DatexPipe} from "./datex.pipe";
 import { RequestComponent } from './components/reports/requests/request/request.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { HistoryComponent } from './components/reports/history/history.component';
+import {SixWeekComponent} from "./components/reports/six-week/six-week.component";
+
+
 
 
 @NgModule({
@@ -41,10 +44,11 @@ import { HistoryComponent } from './components/reports/history/history.component
     HeaderComponent,
     BookingComponent,
     NavBarComponent,
-      DatexPipe,
-      RequestComponent,
-      ReportsComponent,
-      HistoryComponent,
+    DatexPipe,
+    RequestComponent,
+    ReportsComponent,
+    HistoryComponent,
+    SixWeekComponent,
   ],
   imports: [
     BrowserModule,

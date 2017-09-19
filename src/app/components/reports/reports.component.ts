@@ -19,4 +19,10 @@ export class ReportsComponent implements OnInit {
     this.router.navigate(['reports/history']);
 
   }
+
+  sixWeekReport() {
+
+    this.router.navigate(['reports/six-week']);
+
+  }
 }
