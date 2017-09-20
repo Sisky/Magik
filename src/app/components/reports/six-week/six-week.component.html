@@ -1,4 +1,68 @@
-<p>
-  six-week works!
+
   <button (click)="generate()">Generate</button>
-</p>
+
+
+<div *ngIf="loading">
+  <div class="row">
+    <div class="col-md-5"></div>
+
+    <div class="col-md-2">
+      <div style="margin: 0 auto"><img src="../../../../assets/loading.svg"> </div>
+    </div>
+
+    <div class="col-md-5"></div>
+  </div>
+</div>
+
+<div id="tableWrapper" *ngIf="finished">
+
+  <Button (click)="exportCSV()">Export as CSV</Button>
+
+  <table id="six_week_report" class="w3-table w3-striped">
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>Level</th>
+      <th>Operating Room</th>
+      <th>Session</th>
+      <th>6 Week Service</th>
+      <th>6 Week Surgeon</th>
+      <th>5 Week Service</th>
+      <th>5 Week Surgeon</th>
+      <th>4 Week Service</th>
+      <th>4 Week Surgeon</th>
+      <th>3 Week Service</th>
+      <th>3 Week Surgeon</th>
+      <th>2 Week Service</th>
+      <th>2 Week Surgeon</th>
+      <th>1 Week Service</th>
+      <th>1 Week Surgeon</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let booking of completeArray">
+      <tr>
+        <td>{{booking[0]}}</td>
+        <td>{{booking[1]}}</td>
+        <td>{{booking[2]}}</td>
+        <td>{{booking[3]}}</td>
+        <td>{{booking[4]}}</td>
+        <td>{{booking[5]}}</td>
+        <td>{{booking[6]}}</td>
+        <td>{{booking[7]}}</td>
+        <td>{{booking[8]}}</td>
+        <td>{{booking[9]}}</td>
+        <td>{{booking[10]}}</td>
+        <td>{{booking[11]}}</td>
+        <td>{{booking[12]}}</td>
+        <td>{{booking[13]}}</td>
+        <td>{{booking[14]}}</td>
+        <td>{{booking[15]}}</td>
+      </tr>
+    </ng-container>
+
+
+
+    </tbody>
+  </table>
+</div>

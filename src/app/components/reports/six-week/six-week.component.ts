@@ -3,6 +3,7 @@ import {Booking, BookingService} from "../../../services/booking.service";
 
 var moment = require('moment');
 moment().format();
+var alasql = require('alasql');
 
 @Component({
   selector: 'app-six-week',
@@ -19,7 +20,8 @@ export class SixWeekComponent implements OnInit {
 
     gatheredGroups: Boolean = false;
 
-
+    finished: Boolean = false;
+    loading: Boolean = false;
 
     constructor(private bookingService: BookingService) {
 
@@ -27,20 +29,6 @@ export class SixWeekComponent implements OnInit {
 
     ngOnInit() {
 
-        this.bookingService.getAllHistoryCreated()
-            .subscribe(
-                data => {
-                    this.bookingHistory = (data as any).results;
-                    console.log(this.bookingHistory);
-                },
-                err => {
-                    // Log errors if any
-                    console.log(err);
-                },
-                () => {
-
-                }
-            );
     }
 
     filter(date?: Date) {
@@ -63,26 +51,47 @@ export class SixWeekComponent implements OnInit {
 
     generate() {
 
-        this.gatheredGroups = false;
-        this.filteredHistory = [];
-        this.groupSessionsArray = [];
-        this.completeArray = [];
+        this.loading = true;
+
+        this.bookingService.getAllHistoryCreated()
+            .subscribe(
+                data => {
+                    this.bookingHistory = (data as any).results;
+                    console.log(this.bookingHistory);
+                },
+                err => {
+                    // Log errors if any
+                    console.log(err);
+                },
+                () => {
+                    this.gatheredGroups = false;
+                    this.filteredHistory = [];
+                    this.groupSessionsArray = [];
+                    this.completeArray = [];
+
+                    this.filter();
+                    this.filteredHistory.sort(this.compare);
+
+                    this.groupSessions(); //groups bookings together
+
+                    this.createReport();
+                }
+            );
 
 
-        this.filter();
-        this.filteredHistory.sort(this.compare);
 
-        this.groupSessions(); //groups bookings together
+    }
 
-        console.log(this.groupSessionsArray.length);
-        this.createReport();
-        console.log(this.groupSessionsArray.length);
+    exportCSV():void {
+        let data = alasql('SELECT * FROM HTML("#six_week_report",{headers:true})');
+        alasql('SELECT * INTO CSV("six_week_report.csv",{headers:true}) FROM ?', [data]);
     }
 
     createReport() {
 
         this.completeArray = [];
         let counter = 0;
+        console.log(this.groupSessionsArray.length);
 
         for(let i = 0; i < this.groupSessionsArray.length; i ++) {
             let currentBooking;
@@ -92,133 +101,128 @@ export class SixWeekComponent implements OnInit {
                     data => {
                         // this.currentBookings.push((data as any).results);
                         currentBooking = (data as any).results;
-                        i++;
 
-                    },
-                    err => console.log(err),
-                    () => {
                         let date = currentBooking[0].date;
 
-                        let n = (this.groupSessionsArray[i].length);
+                        this.tempArr = [];
+
+                        if (currentBooking[0].am_status !== 0) {
+                            for (let j = 0; j < this.groupSessionsArray[i].length; j++) {
+                                // Morning
+
+                                    if (this.tempArr.length === 0) {
+                                        //date
+                                        this.tempArr[0] = currentBooking[0].date;
+                                        //level
+                                        this.tempArr[1] = currentBooking[0].level;
+                                        //room
+                                        this.tempArr[2] = currentBooking[0].room;
+                                        //session
+                                        this.tempArr[3] = "AM";
+                                        //6 week
+                                        this.tempArr[4] = this.groupSessionsArray[i][0].am_dept;
+                                        this.tempArr[5] = this.groupSessionsArray[i][0].am_surg;
+                                        //5 week
+                                        this.tempArr[6] = this.groupSessionsArray[i][0].am_dept;
+                                        this.tempArr[7] = this.groupSessionsArray[i][0].am_surg;
+                                        //4 week
+                                        this.tempArr[8] = this.groupSessionsArray[i][0].am_dept;
+                                        this.tempArr[9] = this.groupSessionsArray[i][0].am_surg;
+                                        //3 week
+                                        this.tempArr[10] = this.groupSessionsArray[i][0].am_dept;
+                                        this.tempArr[11] = this.groupSessionsArray[i][0].am_surg;
+                                        //2 week
+                                        this.tempArr[12] = this.groupSessionsArray[i][0].am_dept;
+                                        this.tempArr[13] = this.groupSessionsArray[i][0].am_surg;
+                                        //1 week
+                                        this.tempArr[14] = this.groupSessionsArray[i][0].am_dept;
+                                        this.tempArr[15] = this.groupSessionsArray[i][0].am_surg;
+                                    }
+
+                                    if (this.groupSessionsArray[i][j].created > moment(date).subtract(42, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(35, 'days').format('DD-MM-YYYY')) {
+                                        this.tempArr[4] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[5] = this.groupSessionsArray[i][j].am_surg;
+                                        //5 week
+                                        this.tempArr[6] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[7] = this.groupSessionsArray[i][j].am_surg;
+                                        //4 week
+                                        this.tempArr[8] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[9] = this.groupSessionsArray[i][j].am_surg;
+                                        //3 week
+                                        this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
+                                        //2 week
+                                        this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
+                                        //1 week
+                                        this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
+
+                                    } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(34, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(28, 'days').format('DD-MM-YYYY')) {
+                                        //5 week
+                                        this.tempArr[6] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[7] = this.groupSessionsArray[i][j].am_surg;
+                                        //4 week
+                                        this.tempArr[8] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[9] = this.groupSessionsArray[i][j].am_surg;
+                                        //3 week
+                                        this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
+                                        //2 week
+                                        this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
+                                        //1 week
+                                        this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
+                                    } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(27, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(21, 'days').format('DD-MM-YYYY')) {
+                                        //4 week
+                                        this.tempArr[8] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[9] = this.groupSessionsArray[i][j].am_surg;
+                                        //3 week
+                                        this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
+                                        //2 week
+                                        this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
+                                        //1 week
+                                        this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
+                                    } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(20, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(14, 'days').format('DD-MM-YYYY')) {
+                                        //3 week
+                                        this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
+                                        //2 week
+                                        this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
+                                        //1 week
+                                        this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
+                                    } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(13, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(7, 'days').format('DD-MM-YYYY')) {
+                                        //2 week
+                                        this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
+                                        //1 week
+                                        this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
+                                        this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
+                                    } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(6, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(0, 'days').format('DD-MM-YYYY')) {
+                                        this.tempArr[14] = currentBooking[0].am_dept;
+                                        this.tempArr[15] = currentBooking[0].am_surg;
+                                    }
+
+                                }
+
+                                if (this.tempArr.length !== 0) {
+                                    this.completeArray.push(this.tempArr);
+                                }
+
+                        }
 
                         this.tempArr = [];
-                        for(let j = 0; j < n; j++) {
-                            // Morning
-                            if (currentBooking[0].am_status != 0) {
 
+                        if (currentBooking[0].pm_status !== 0) {
+                            for (let j = 0; j < this.groupSessionsArray[i].length; j++) {
 
                                 if (this.tempArr.length === 0) {
-                                    //date
-                                    this.tempArr[0] = currentBooking[0].date;
-                                    //level
-                                    this.tempArr[1] = currentBooking[0].level;
-                                    //room
-                                    this.tempArr[2] = currentBooking[0].room;
-                                    //session
-                                    this.tempArr[3] = "AM";
-                                    //6 week
-                                    this.tempArr[4] = this.groupSessionsArray[i][0].am_dept;
-                                    this.tempArr[5] = this.groupSessionsArray[i][0].am_surg;
-                                    //5 week
-                                    this.tempArr[6] = this.groupSessionsArray[i][0].am_dept;
-                                    this.tempArr[7] = this.groupSessionsArray[i][0].am_surg;
-                                    //4 week
-                                    this.tempArr[8] = this.groupSessionsArray[i][0].am_dept;
-                                    this.tempArr[9] = this.groupSessionsArray[i][0].am_surg;
-                                    //3 week
-                                    this.tempArr[10] = this.groupSessionsArray[i][0].am_dept;
-                                    this.tempArr[11] = this.groupSessionsArray[i][0].am_surg;
-                                    //2 week
-                                    this.tempArr[12] = this.groupSessionsArray[i][0].am_dept;
-                                    this.tempArr[13] = this.groupSessionsArray[i][0].am_surg;
-                                    //1 week
-                                    this.tempArr[14] = this.groupSessionsArray[i][0].am_dept;
-                                    this.tempArr[15] = this.groupSessionsArray[i][0].am_surg;
-                                }
-
-                                if (this.groupSessionsArray[i][j].created > moment(date).subtract(42, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(35, 'days').format('DD-MM-YYYY')) {
-                                    this.tempArr[4] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[5] = this.groupSessionsArray[i][j].am_surg;
-                                    //5 week
-                                    this.tempArr[6] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[7] = this.groupSessionsArray[i][j].am_surg;
-                                    //4 week
-                                    this.tempArr[8] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[9] = this.groupSessionsArray[i][j].am_surg;
-                                    //3 week
-                                    this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
-                                    //2 week
-                                    this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
-                                    //1 week
-                                    this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
-
-                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(34, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(28, 'days').format('DD-MM-YYYY')) {
-                                    //5 week
-                                    this.tempArr[6] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[7] = this.groupSessionsArray[i][j].am_surg;
-                                    //4 week
-                                    this.tempArr[8] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[9] = this.groupSessionsArray[i][j].am_surg;
-                                    //3 week
-                                    this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
-                                    //2 week
-                                    this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
-                                    //1 week
-                                    this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
-                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(27, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(21, 'days').format('DD-MM-YYYY')) {
-                                    //4 week
-                                    this.tempArr[8] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[9] = this.groupSessionsArray[i][j].am_surg;
-                                    //3 week
-                                    this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
-                                    //2 week
-                                    this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
-                                    //1 week
-                                    this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
-                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(20, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(14, 'days').format('DD-MM-YYYY')) {
-                                    //3 week
-                                    this.tempArr[10] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[11] = this.groupSessionsArray[i][j].am_surg;
-                                    //2 week
-                                    this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
-                                    //1 week
-                                    this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
-                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(13, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(7, 'days').format('DD-MM-YYYY')) {
-                                    //2 week
-                                    this.tempArr[12] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[13] = this.groupSessionsArray[i][j].am_surg;
-                                    //1 week
-                                    this.tempArr[14] = this.groupSessionsArray[i][j].am_dept;
-                                    this.tempArr[15] = this.groupSessionsArray[i][j].am_surg;
-                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(6, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(0, 'days').format('DD-MM-YYYY')) {
-                                    this.tempArr[14] = currentBooking[0].am_dept;
-                                    this.tempArr[15] = currentBooking[0].am_surg;
-                                }
-
-                            }
-                        }
-                        if(this.tempArr.length !== 0) {
-                            this.completeArray.push(this.tempArr);
-                            this.tempArr = [];
-                        }
-
-
-                        for(let j = 0; j < n; j++) {
-
-                            if(currentBooking[0].pm_status !== 0) {
-
-                                if(this.tempArr.length === 0) {
                                     //date
                                     this.tempArr[0] = this.groupSessionsArray[i][0].date;
                                     //level
@@ -247,7 +251,7 @@ export class SixWeekComponent implements OnInit {
                                     this.tempArr[15] = this.groupSessionsArray[i][0].pm_surg;
                                 }
 
-                                if(this.groupSessionsArray[i][j].created > moment(date).subtract(42,'days').format('DD-MM-YYYY') &&  this.groupSessionsArray[i][j].created < moment(date).subtract(35,'days').format('DD-MM-YYYY')) {
+                                if (this.groupSessionsArray[i][j].created > moment(date).subtract(42, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(35, 'days').format('DD-MM-YYYY')) {
                                     this.tempArr[4] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[5] = this.groupSessionsArray[i][j].pm_surg;
                                     //5 week
@@ -266,7 +270,7 @@ export class SixWeekComponent implements OnInit {
                                     this.tempArr[14] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[15] = this.groupSessionsArray[i][j].pm_surg;
 
-                                } else if(this.groupSessionsArray[i][j].created > moment(date).subtract(34,'days').format('DD-MM-YYYY') &&  this.groupSessionsArray[i][j].created < moment(date).subtract(28,'days').format('DD-MM-YYYY')) {
+                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(34, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(28, 'days').format('DD-MM-YYYY')) {
                                     //5 week
                                     this.tempArr[6] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[7] = this.groupSessionsArray[i][j].pm_surg;
@@ -282,7 +286,7 @@ export class SixWeekComponent implements OnInit {
                                     //1 week
                                     this.tempArr[14] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[15] = this.groupSessionsArray[i][j].pm_surg;
-                                } else if(this.groupSessionsArray[i][j].created > moment(date).subtract(27,'days').format('DD-MM-YYYY') &&  this.groupSessionsArray[i][j].created < moment(date).subtract(21,'days').format('DD-MM-YYYY')) {
+                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(27, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(21, 'days').format('DD-MM-YYYY')) {
                                     //4 week
                                     this.tempArr[8] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[9] = this.groupSessionsArray[i][j].pm_surg;
@@ -295,7 +299,7 @@ export class SixWeekComponent implements OnInit {
                                     //1 week
                                     this.tempArr[14] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[15] = this.groupSessionsArray[i][j].pm_surg;
-                                } else if(this.groupSessionsArray[i][j].created > moment(date).subtract(20,'days').format('DD-MM-YYYY') &&  this.groupSessionsArray[i][j].created < moment(date).subtract(14,'days').format('DD-MM-YYYY')) {
+                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(20, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(14, 'days').format('DD-MM-YYYY')) {
                                     //3 week
                                     this.tempArr[10] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[11] = this.groupSessionsArray[i][j].pm_surg;
@@ -305,34 +309,40 @@ export class SixWeekComponent implements OnInit {
                                     //1 week
                                     this.tempArr[14] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[15] = this.groupSessionsArray[i][j].pm_surg;
-                                } else if(this.groupSessionsArray[i][j].created > moment(date).subtract(13,'days').format('DD-MM-YYYY') &&  this.groupSessionsArray[i][j].created < moment(date).subtract(7,'days').format('DD-MM-YYYY')) {
+                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(13, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(7, 'days').format('DD-MM-YYYY')) {
                                     //2 week
                                     this.tempArr[12] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[13] = this.groupSessionsArray[i][j].pm_surg;
                                     //1 week
                                     this.tempArr[14] = this.groupSessionsArray[i][j].pm_dept;
                                     this.tempArr[15] = this.groupSessionsArray[i][j].pm_surg;
-                                } else if(this.groupSessionsArray[i][j].created > moment(date).subtract(6,'days').format('DD-MM-YYYY') &&  this.groupSessionsArray[i][j].created < moment(date).subtract(0,'days').format('DD-MM-YYYY')) {
+                                } else if (this.groupSessionsArray[i][j].created > moment(date).subtract(6, 'days').format('DD-MM-YYYY') && this.groupSessionsArray[i][j].created < moment(date).subtract(0, 'days').format('DD-MM-YYYY')) {
                                     this.tempArr[14] = currentBooking[0].pm_dept;
                                     this.tempArr[15] = currentBooking[0].pm_surg;
                                 }
 
 
                             }
-
+                            if (this.tempArr.length !== 0) {
+                                this.completeArray.push(this.tempArr);
+                            }
                         }
 
-                        if(this.tempArr.length !== 0) {
-                            this.completeArray.push(this.tempArr);
+                    },
+                    err => console.log(err),
+                    () => {
+                        counter++;
+                        console.log(counter);
+                        if(counter === this.groupSessionsArray.length-1) {
+                            this.loading = false;
+                            this.finished = true;
                         }
-
 
                     })
-
-
         }
 
-        console.log(this.completeArray);
+
+
 
     }
 
@@ -351,8 +361,6 @@ export class SixWeekComponent implements OnInit {
         }
 
         this.gatheredGroups = true;
-
-
 
         console.log(this.groupSessionsArray);
     }
