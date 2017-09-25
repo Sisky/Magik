@@ -53,7 +53,7 @@ Proposed and Confirmed Session Reallocations
     <ng-container *ngFor="let booking of filteredBookingHistory; index as i">
           <!--Morning-->
 
-          <tr *ngIf="currentBookings[i][0].am_status !== 0">
+          <tr *ngIf="currentBookings[i][0].am_status !== 0 || currentBookings[i][0].am_confirmed !== 1">
             <!--Levels-->
             <td *ngIf="booking.level === 1">GSU</td>
             <td *ngIf="booking.level === 2">SSOR</td>
@@ -81,7 +81,7 @@ Proposed and Confirmed Session Reallocations
         </tr>
 
           <!--Afternoon-->
-          <tr *ngIf="currentBookings[i][0].pm_status !== 0">
+          <tr *ngIf="currentBookings[i][0].pm_status !== 0 || currentBookings[i][0].pm_confirmed !== 1">
             <!--Levels-->
             <td *ngIf="booking.level === 1">GSU</td>
             <td *ngIf="booking.level === 2">SSOR</td>
