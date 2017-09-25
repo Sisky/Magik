@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Booking, BookingService} from "../../../services/booking.service";
+import {DateService} from "../../../services/date.service";
 
 var moment = require('moment');
 moment().format();
@@ -23,7 +24,7 @@ export class SixWeekComponent implements OnInit {
     finished: Boolean = false;
     loading: Boolean = false;
 
-    constructor(private bookingService: BookingService) {
+    constructor(private bookingService: BookingService, private dateService: DateService) {
 
     }
 
@@ -57,7 +58,6 @@ export class SixWeekComponent implements OnInit {
             .subscribe(
                 data => {
                     this.bookingHistory = (data as any).results;
-                    console.log(this.bookingHistory);
                 },
                 err => {
                     // Log errors if any
@@ -74,13 +74,16 @@ export class SixWeekComponent implements OnInit {
 
                     this.groupSessions(); //groups bookings together
 
+
                     this.createReport();
+                    console.log(this.completeArray);
                 }
             );
 
 
 
     }
+
 
     exportCSV():void {
         let data = alasql('SELECT * FROM HTML("#six_week_report",{headers:true})');
@@ -91,7 +94,6 @@ export class SixWeekComponent implements OnInit {
 
         this.completeArray = [];
         let counter = 0;
-        console.log(this.groupSessionsArray.length);
 
         for(let i = 0; i < this.groupSessionsArray.length; i ++) {
             let currentBooking;
@@ -211,6 +213,12 @@ export class SixWeekComponent implements OnInit {
 
                                 }
 
+                                this.groupSessionsArray[i].sort(this.urlCompare);
+                                // original dept
+                                this.tempArr[16] = this.groupSessionsArray[i][0].am_dept
+                                this.tempArr[17] = this.groupSessionsArray[i][0].am_surg
+
+
                                 if (this.tempArr.length !== 0) {
                                     this.completeArray.push(this.tempArr);
                                 }
@@ -321,8 +329,13 @@ export class SixWeekComponent implements OnInit {
                                     this.tempArr[15] = currentBooking[0].pm_surg;
                                 }
 
-
                             }
+
+                            this.groupSessionsArray[i].sort(this.urlCompare);
+                            // original dept
+                            this.tempArr[16] = this.groupSessionsArray[i][0].pm_dept
+                            this.tempArr[17] = this.groupSessionsArray[i][0].pm_surg
+
                             if (this.tempArr.length !== 0) {
                                 this.completeArray.push(this.tempArr);
                             }
@@ -332,7 +345,6 @@ export class SixWeekComponent implements OnInit {
                     err => console.log(err),
                     () => {
                         counter++;
-                        console.log(counter);
                         if(counter === this.groupSessionsArray.length-1) {
                             this.loading = false;
                             this.finished = true;
@@ -340,10 +352,6 @@ export class SixWeekComponent implements OnInit {
 
                     })
         }
-
-
-
-
     }
 
     groupSessions() {
@@ -362,7 +370,6 @@ export class SixWeekComponent implements OnInit {
 
         this.gatheredGroups = true;
 
-        console.log(this.groupSessionsArray);
     }
 
     isSameSession(a: Booking, b: Booking) {
@@ -378,10 +385,10 @@ export class SixWeekComponent implements OnInit {
         return true;
     }
 
-    compareCreated(a: any, b: any): number {
-        if(a.url > b.url) {
+    urlCompare(a: any, b: any): number {
+        if (a.url > b.url) {
             return 1;
-        } if(a.url < b.url) {
+        } else if(a.url < b.url) {
             return -1;
         }
 
@@ -415,4 +422,12 @@ export class SixWeekComponent implements OnInit {
         }
         return 0;
     }
+
+    pad(num:number): string {
+        var s = num+"";
+        while (s.length < 2) s = "0" + s;
+        return s;
+    }
 }
+
+

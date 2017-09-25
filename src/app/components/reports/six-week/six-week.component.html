@@ -21,10 +21,15 @@
   <table id="six_week_report" class="w3-table w3-striped">
     <thead>
     <tr>
-      <th>Date</th>
-      <th>Level</th>
-      <th>Operating Room</th>
+      <th>Allocated Date</th>
+      <th>Theatre Location</th>
+      <th>Theatre Name</th>
       <th>Session</th>
+      <th>Day of Week</th>
+      <th>Week</th>
+      <th>Allocated Service</th>
+      <th>Allocated Surgeon</th>
+      <th>Utilisation Code 1</th>
       <th>6 Week Service</th>
       <th>6 Week Surgeon</th>
       <th>5 Week Service</th>
@@ -42,10 +47,39 @@
     <tbody>
     <ng-container *ngFor="let booking of completeArray">
       <tr>
+        <!--Date-->
         <td>{{booking[0]}}</td>
-        <td>{{booking[1]}}</td>
-        <td>{{booking[2]}}</td>
+        <!--Level-->
+        <td *ngIf="booking[1] === 1">GSU</td>
+        <td *ngIf="booking[1] === 2">SS</td>
+        <td *ngIf="booking[1] === 4">L4</td>
+        <td *ngIf="booking[1] === 8">L8</td>
+        <td *ngIf="booking[1] === 9">L9</td>
+        <!--OR-->
+        <td *ngIf="booking[1] === 1">GSUOR{{pad(booking[2])}}</td>
+        <td *ngIf="booking[1] === 2">S2OR{{pad(booking[2])}}</td>
+        <td *ngIf="booking[1] === 4">A4OR{{pad(booking[2])}}</td>
+        <td *ngIf="booking[1] === 8">A8OR{{pad(booking[2])}}</td>
+        <td *ngIf="booking[1] === 9">A9OR{{pad(booking[2])}}</td>
+        <!--Session-->
         <td>{{booking[3]}}</td>
+        <!--Day of Week-->
+        <td>{{booking[0] | datex:'dddd'}}</td>
+
+        <!--Week-->
+        <td>Week {{this.dateService.getWeekLetter(booking[0])}}</td>
+
+        <!--Original allocs-->
+        <td>{{booking[16]}}</td>
+        <td>{{booking[17]}}</td>
+
+        <!--Utilisation Code-->
+        <td *ngIf="booking[1] === 1">{{booking[0] | datex:'D-M-YYYY'}}-GSUOR{{pad(booking[2])}}-{{booking[3]}}</td>
+        <td *ngIf="booking[1] === 2">{{booking[0] | datex:'D-M-YYYY'}}-S2OR{{pad(booking[2])}}-{{booking[3]}}</td>
+        <td *ngIf="booking[1] === 4">{{booking[0] | datex:'D-M-YYYY'}}-A4OR{{pad(booking[2])}}-{{booking[3]}}</td>
+        <td *ngIf="booking[1] === 8">{{booking[0] | datex:'D-M-YYYY'}}-A8OR{{pad(booking[2])}}-{{booking[3]}}</td>
+        <td *ngIf="booking[1] === 9">{{booking[0] | datex:'D-M-YYYY'}}-A9OR{{pad(booking[2])}}-{{booking[3]}}</td>
+
         <td>{{booking[4]}}</td>
         <td>{{booking[5]}}</td>
         <td>{{booking[6]}}</td>
