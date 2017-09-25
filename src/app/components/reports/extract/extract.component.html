@@ -1,0 +1,159 @@
+<form #myForm="ngForm" novalidate>
+  <my-date-picker name="mydate" [options]="myDatePickerOptions"
+                  [(ngModel)]="model" required>
+  </my-date-picker>
+</form>
+
+<button (click)="generate()">Generate ALL</button>
+<button *ngIf="myForm.form.dirty" (click)="generate(model)">Generate FROM</button>
+
+<div *ngIf="loading">
+  <div class="row">
+    <div class="col-md-5"></div>
+
+    <div class="col-md-2">
+      <div style="margin: 0 auto"><img src="../../../../assets/loading.svg"> </div>
+    </div>
+
+    <div class="col-md-5"></div>
+  </div>
+</div>
+
+<div id="tableWrapper"*ngIf="finished">
+  <Button (click)="exportCSV()">Export as CSV</Button>
+
+  <table id="extract_report" class="w3-table w3-striped">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Code Utilisation</th>
+      <th>Session Date</th>
+      <th>Operating Room</th>
+      <th>Day of Week</th>
+      <th>Session</th>
+      <th>Week</th>
+      <th>Theatre</th>
+      <th>Service Allocated</th>
+      <th>Service on Week 0</th>
+      <th>Service change days in advance</th>
+      <th>Service PIMs</th>
+      <th>Acute / Elective</th>
+      <th>Adult / Paed</th>
+      <th>Surgeon</th>
+    </tr>
+  </thead>
+
+
+  <ng-container *ngFor="let booking of filteredBookings; index as i">
+    <!--Morning-->
+    <ng-container *ngIf="booking.room !== 14 && booking.level !== 8">
+    <tr>
+    <!--<tr *ngIf="!booking.level === 8 && booking.room === 14">-->
+      <!--Code -->
+      <td *ngIf="booking.level === 1">{{booking.date | datex:'D-M-YYYY'}}-GSUOR{{pad(booking.room)}}-AM</td>
+      <td *ngIf="booking.level === 2">{{booking.date | datex:'D-M-YYYY'}}-S2OR{{pad(booking.room)}}-AM</td>
+      <td *ngIf="booking.level === 4">{{booking.date | datex:'D-M-YYYY'}}-A4OR{{pad(booking.room)}}-AM</td>
+      <td *ngIf="booking.level === 8">{{booking.date | datex:'D-M-YYYY'}}-A8OR{{pad(booking.room)}}-AM</td>
+      <td *ngIf="booking.level === 9">{{booking.date | datex:'D-M-YYYY'}}-A9R{{pad(booking.room)}}-AM</td>
+      <!--code utilisation-->
+      <td *ngIf="booking.level === 1">{{booking.date | datex:'D-M-YYYY'}}-GSUOR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level === 2">{{booking.date | datex:'D-M-YYYY'}}-S2OR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level === 4">{{booking.date | datex:'D-M-YYYY'}}-A4OR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level === 8">{{booking.date | datex:'D-M-YYYY'}}-A8OR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level === 9">{{booking.date | datex:'D-M-YYYY'}}-A9R{{pad(booking.room)}}</td>
+      <!--Date-->
+      <td>{{booking.date | datex: 'M/D/ YYYY'}}</td>
+      <!--Operating Room-->
+      <td *ngIf="booking.level === 1">GSU Greenlane Surgical Unit</td>
+      <td *ngIf="booking.level === 2">SST</td>
+      <td *ngIf="booking.level === 4">AKCH4</td>
+      <td *ngIf="booking.level === 8">AKCH8</td>
+      <td *ngIf="booking.level === 9">AKCH9</td>
+      <!--Day of week-->
+      <td>{{booking.date | datex:'dddd'}}</td>
+      <!--AM/PM-->
+      <td>AM</td>
+      <!--Week-->
+      <td>Week {{this.dateService.getWeekLetter(booking.date)}}</td>
+      <!--Theatre-->
+      <td *ngIf="booking.level === 1">GSUOR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level  === 2">S2OR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level  === 4">A4OR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level  === 8">A8OR{{pad(booking.room)}}</td>
+      <td *ngIf="booking.level  === 9">A9OR{{pad(booking.room)}}</td>
+      <!--Original service-->
+      <td *ngIf="filteredHistory[i].length > 0">{{filteredHistory[i][0].am_dept}}</td>
+      <td *ngIf="filteredHistory[i].length === 0">{{booking.am_dept}}</td>
+      <!--Service at end-->
+      <td>{{booking.am_dept}}</td>
+      <!--Day diff-->
+      <td *ngIf="filteredHistory[i].length === 0 || filteredHistory[i][0].am_status === 0">No Change</td>
+      <td *ngIf="filteredHistory[i].length > 0 && filteredHistory[i][0].am_status !== 0">{{daysDifference(booking.date, filteredHistory[i][filteredHistory[i].length-1].created)}}</td>
+      <!--Service PIMs-->
+      <td>{{getPIMS(booking.am_dept)}}</td>
+      <!--Acute/Elective-->
+      <td>{{getType(booking.am_dept)}}</td>
+      <!--Age-->
+      <td>{{getAge(booking.am_dept)}}</td>
+      <!--surgeon-->
+      <td>{{booking.am_surg}}</td>
+    <!--</tr>-->
+   </tr>
+
+      <tr>
+        <!--<tr *ngIf="!booking.level === 8 && booking.room === 14">-->
+        <!--Code -->
+        <td *ngIf="booking.level === 1">{{booking.date | datex:'D-M-YYYY'}}-GSUOR{{pad(booking.room)}}-PM</td>
+        <td *ngIf="booking.level === 2">{{booking.date | datex:'D-M-YYYY'}}-S2OR{{pad(booking.room)}}-PM</td>
+        <td *ngIf="booking.level === 4">{{booking.date | datex:'D-M-YYYY'}}-A4OR{{pad(booking.room)}}-PM</td>
+        <td *ngIf="booking.level === 8">{{booking.date | datex:'D-M-YYYY'}}-A8OR{{pad(booking.room)}}-PM</td>
+        <td *ngIf="booking.level === 9">{{booking.date | datex:'D-M-YYYY'}}-A9R{{pad(booking.room)}}-PM</td>
+        <!--code utilisation-->
+        <td *ngIf="booking.level === 1">{{booking.date | datex:'D-M-YYYY'}}-GSUOR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level === 2">{{booking.date | datex:'D-M-YYYY'}}-S2OR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level === 4">{{booking.date | datex:'D-M-YYYY'}}-A4OR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level === 8">{{booking.date | datex:'D-M-YYYY'}}-A8OR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level === 9">{{booking.date | datex:'D-M-YYYY'}}-A9R{{pad(booking.room)}}</td>
+        <!--Date-->
+        <td>{{booking.date | datex: 'M/D/ YYYY'}}</td>
+        <!--Operating Room-->
+        <td *ngIf="booking.level === 1">GSU Greenlane Surgical Unit</td>
+        <td *ngIf="booking.level === 2">SST</td>
+        <td *ngIf="booking.level === 4">AKCH4</td>
+        <td *ngIf="booking.level === 8">AKCH8</td>
+        <td *ngIf="booking.level === 9">AKCH9</td>
+        <!--Day of week-->
+        <td>{{booking.date | datex:'dddd'}}</td>
+        <!--AM/PM-->
+        <td>PM</td>
+        <!--Week-->
+        <td>Week {{this.dateService.getWeekLetter(booking.date)}}</td>
+        <!--Theatre-->
+        <td *ngIf="booking.level === 1">GSUOR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level  === 2">S2OR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level  === 4">A4OR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level  === 8">A8OR{{pad(booking.room)}}</td>
+        <td *ngIf="booking.level  === 9">A9OR{{pad(booking.room)}}</td>
+        <!--Original service-->
+        <td *ngIf="filteredHistory[i].length > 0">{{filteredHistory[i][0].pm_dept}}</td>
+        <td *ngIf="filteredHistory[i].length === 0">{{booking.pm_dept}}</td>
+        <!--Service at end-->
+        <td>{{booking.pm_dept}}</td>
+        <!--Day diff-->
+        <td *ngIf="filteredHistory[i].length === 0 || filteredHistory[i][0].pm_status === 0">No Change</td>
+        <td *ngIf="filteredHistory[i].length > 0 && filteredHistory[i][0].pm_status !== 0">{{daysDifference(booking.date, filteredHistory[i][filteredHistory[i].length-1].created)}}</td>
+        <!--Service PIMs-->
+        <td>{{getPIMS(booking.pm_dept)}}</td>
+        <!--Acute/Elective-->
+        <td>{{getType(booking.pm_dept)}}</td>
+        <!--Age-->
+        <td>{{getAge(booking.pm_dept)}}</td>
+        <!--surgeon-->
+        <td>{{booking.pm_surg}}</td>
+        <!--</tr>-->
+      </tr>
+
+    </ng-container>
+  </ng-container>
+  </table>
+</div>

@@ -32,10 +32,19 @@ export class SixWeekComponent implements OnInit {
 
     }
 
-    filter(date?: Date) {
+    filter(date?: any) {
 
         if(date) {
             //Do something
+            let from = moment(new Date(date.date.year, date.date.month-1, date.date.day)).format('YYYY-MM-DD');
+            let today = moment(new Date()).format('YYYY-MM-DD');
+
+            for(let i = 0; i < this.bookingHistory.length; i++) {
+                if(this.bookingHistory[i].date >= from &&  this.bookingHistory[i].date <= today) {
+                    this.filteredHistory.push(this.bookingHistory[i]);
+                }
+            }
+
         } else {
 
             let date = moment(new Date()).format('YYYY-MM-DD');
@@ -50,7 +59,7 @@ export class SixWeekComponent implements OnInit {
 
     }
 
-    generate() {
+    generate(date?: any) {
 
         this.loading = true;
 
@@ -68,8 +77,13 @@ export class SixWeekComponent implements OnInit {
                     this.filteredHistory = [];
                     this.groupSessionsArray = [];
                     this.completeArray = [];
+                    if(date) {
+                        this.filter(date);
+                    } else {
+                        this.filter();
+                    }
 
-                    this.filter();
+
                     this.filteredHistory.sort(this.compare);
 
                     this.groupSessions(); //groups bookings together

@@ -25,4 +25,10 @@ export class ReportsComponent implements OnInit {
     this.router.navigate(['reports/six-week']);
 
   }
+
+  extractReport() {
+
+      this.router.navigate(['reports/extract']);
+
+  }
 }

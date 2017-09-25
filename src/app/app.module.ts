@@ -29,6 +29,7 @@ import { RequestComponent } from './components/reports/requests/request/request.
 import { ReportsComponent } from './components/reports/reports.component';
 import { HistoryComponent } from './components/reports/history/history.component';
 import {SixWeekComponent} from "./components/reports/six-week/six-week.component";
+import { ExtractComponent } from './components/reports/extract/extract.component';
 
 
 
@@ -49,6 +50,7 @@ import {SixWeekComponent} from "./components/reports/six-week/six-week.component
     ReportsComponent,
     HistoryComponent,
     SixWeekComponent,
+    ExtractComponent,
   ],
   imports: [
     BrowserModule,

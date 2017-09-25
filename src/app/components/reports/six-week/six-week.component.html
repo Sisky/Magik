@@ -1,5 +1,11 @@
+<form #myForm="ngForm" novalidate>
+  <my-date-picker name="mydate" [options]="myDatePickerOptions"
+                  [(ngModel)]="model" required>
+  </my-date-picker>
+</form>
 
-  <button (click)="generate()">Generate</button>
+  <button (click)="generate()">Generate ALL</button>
+  <button *ngIf="myForm.form.dirty" (click)="generate(model)">Generate FROM</button>
 
 
 <div *ngIf="loading">

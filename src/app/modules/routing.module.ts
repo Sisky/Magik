@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {SixWeekComponent} from "../components/reports/six-week/six-week.component";
+import {ExtractComponent} from "../components/reports/extract/extract.component";
 
 const routes: Routes = [
   {path: '',           component: HomeComponent},
@@ -20,7 +21,7 @@ const routes: Routes = [
       children: [
           { path: 'history', component: HistoryComponent},
           { path: 'six-week', component: SixWeekComponent},
-          { path: 'requests', component: RequestsComponent},
+          { path: 'extract', component: ExtractComponent},
       ]
   },
   {path: '**',         redirectTo: '' }
