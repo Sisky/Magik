@@ -6,33 +6,22 @@ moment().format();
 
 @Injectable()
 export class DateService {
-
   date: Date;
   private dateChange = new Subject<any>();
   dateChange$ = this.dateChange.asObservable();
 
-  constructor() {
-
-  }
+  constructor() {}
 
   getWeekLetter(monday: Date) {
-
     if(moment(new Date(monday)).week() % 4 === 3) {
       return 'A';
-    }
-
-    if(moment(new Date(monday)).week() % 4 === 0) {
+    } else if(moment(new Date(monday)).week() % 4 === 0) {
       return 'B';
-    }
-
-    if(moment(new Date(monday)).week() % 4 === 1) {
+    } else if(moment(new Date(monday)).week() % 4 === 1) {
         return 'C';
-    }
-
-    if(moment(new Date(monday)).week() % 4 === 2) {
+    } else{
         return 'D';
     }
-
   }
 
   setDate(date: Date) {
