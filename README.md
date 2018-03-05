@@ -1,4 +1,4 @@
-# Project Title
+# Operating Room Scheduling System
 
 This application was developed in partial fulfilment of the requirements for the degree of Master of Computer and Information Sciences at Auckland University of Technology.
 
