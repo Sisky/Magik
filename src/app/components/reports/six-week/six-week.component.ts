@@ -229,8 +229,8 @@ export class SixWeekComponent implements OnInit {
 
                                 this.groupSessionsArray[i].sort(this.urlCompare);
                                 // original dept
-                                this.tempArr[16] = this.groupSessionsArray[i][0].am_dept
-                                this.tempArr[17] = this.groupSessionsArray[i][0].am_surg
+                                this.tempArr[16] = this.groupSessionsArray[i][0].am_dept;
+                                this.tempArr[17] = this.groupSessionsArray[i][0].am_surg;
 
 
                                 if (this.tempArr.length !== 0) {
@@ -347,8 +347,8 @@ export class SixWeekComponent implements OnInit {
 
                             this.groupSessionsArray[i].sort(this.urlCompare);
                             // original dept
-                            this.tempArr[16] = this.groupSessionsArray[i][0].pm_dept
-                            this.tempArr[17] = this.groupSessionsArray[i][0].pm_surg
+                            this.tempArr[16] = this.groupSessionsArray[i][0].pm_dept;
+                            this.tempArr[17] = this.groupSessionsArray[i][0].pm_surg;
 
                             if (this.tempArr.length !== 0) {
                                 this.completeArray.push(this.tempArr);

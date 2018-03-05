@@ -8,12 +8,9 @@ export class DataService {
   surgeonData: String[];
   serviceData: String[];
 
-
   constructor() {
       this.surgeonData = surgeons;
       this.serviceData = services;
-
-
   }
 
   getSurgeons(): String[] {
@@ -26,7 +23,6 @@ export class DataService {
   }
 
 }
-
 
 export class Name {
 

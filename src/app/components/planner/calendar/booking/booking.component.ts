@@ -1,9 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {DataService} from "../../../../services/data.service";
-import {Booking, BookingService} from "../../../../services/booking.service";
-import {CalendarComponent} from "../calendar.component";
-import {PermissionService} from "../../../../services/permission.service";
+import { DataService } from '../../../../services/data.service';
+import { Booking, BookingService } from '../../../../services/booking.service';
+import { CalendarComponent } from '../calendar.component';
+import { PermissionService } from '../../../../services/permission.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-booking',
@@ -63,16 +63,16 @@ export class BookingComponent implements OnInit {
     const fb = new FormBuilder();
 
     this.formModel = fb.group({
-      'f_deptAM': [this.deptAM],
-      'f_surgAM': [this.surgAM],
-      'f_deptPM': [this.deptPM],
-      'f_surgPM': [this.surgPM],
-      'f_am_confirmed': [this.is_am_confirmed],
-      'f_pm_confirmed': [this.is_pm_confirmed],
-      'f_am_shut': [this.is_am_shutdown],
-      'f_pm_shut': [this.is_pm_shutdown],
-      'f_am_leave': [this.is_am_leave],
-      'f_pm_leave': [this.is_pm_leave],
+      f_deptAM: [this.deptAM],
+      f_surgAM: [this.surgAM],
+      f_deptPM: [this.deptPM],
+      f_surgPM: [this.surgPM],
+      f_am_confirmed: [this.is_am_confirmed],
+      f_pm_confirmed: [this.is_pm_confirmed],
+      f_am_shut: [this.is_am_shutdown],
+      f_pm_shut: [this.is_pm_shutdown],
+      f_am_leave: [this.is_am_leave],
+      f_pm_leave: [this.is_pm_leave],
 
     });
 
@@ -93,7 +93,7 @@ export class BookingComponent implements OnInit {
 
     this.bookingService.getRoomHistoryBooking(this.date,this.level,this.room)
       .subscribe(data => this.changedBookings = (data as any).results,
-        err => {
+                 err => {
           // Log errors if any
           console.log(err);
         });
@@ -112,7 +112,7 @@ export class BookingComponent implements OnInit {
           console.log(err);
         },
         () => {
-          for(let i of this.requestedBookings) {
+          for(const i of this.requestedBookings) {
               if(i.am_status === 5)
                 this.requestsAM += 1;
               if(i.pm_status === 5)
@@ -129,39 +129,39 @@ export class BookingComponent implements OnInit {
       this.bookingService.postNewBooking(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1, 1, 1, 1).subscribe();
 
       // Update orginal to new
-      if (this.formModel.get("f_deptAM").dirty)
-          this.deptAM = this.formModel.get("f_deptAM").value;
+      if (this.formModel.get('f_deptAM').dirty)
+          this.deptAM = this.formModel.get('f_deptAM').value;
 
-      if (this.formModel.get("f_deptPM").dirty)
-          this.deptPM = this.formModel.get("f_deptPM").value;
+      if (this.formModel.get('f_deptPM').dirty)
+          this.deptPM = this.formModel.get('f_deptPM').value;
 
-      if (this.formModel.get("f_surgAM").dirty)
-          this.surgAM = this.formModel.get("f_surgAM").value;
+      if (this.formModel.get('f_surgAM').dirty)
+          this.surgAM = this.formModel.get('f_surgAM').value;
 
-      if (this.formModel.get("f_surgPM").dirty)
-          this.surgPM = this.formModel.get("f_surgPM").value;
+      if (this.formModel.get('f_surgPM').dirty)
+          this.surgPM = this.formModel.get('f_surgPM').value;
 
-      if ((this.formModel).get("f_am_confirmed").value) {
+      if ((this.formModel).get('f_am_confirmed').value) {
           this.am_confirmed = 1;
       } else {
           this.am_confirmed = 0;
       }
 
-      if ((this.formModel).get("f_pm_confirmed").value) {
+      if ((this.formModel).get('f_pm_confirmed').value) {
           this.pm_confirmed = 1;
       } else {
           this.pm_confirmed = 0;
       }
       // If dirty needs to show recycled
-      if (this.formModel.get("f_surgAM").dirty || this.formModel.get("f_deptAM").dirty) {
+      if (this.formModel.get('f_surgAM').dirty || this.formModel.get('f_deptAM').dirty) {
         this.am_status = 1;
       }
-      if (this.formModel.get("f_surgPM").dirty || this.formModel.get("f_deptPM").dirty) {
+      if (this.formModel.get('f_surgPM').dirty || this.formModel.get('f_deptPM').dirty) {
         this.pm_status = 1;
       }
 
       //Leave
-      if ((this.formModel).get("f_am_leave").value) {
+      if ((this.formModel).get('f_am_leave').value) {
           this.am_status = 4;
       } else {
           if(this.am_status == 4) {
@@ -169,7 +169,7 @@ export class BookingComponent implements OnInit {
           }
       }
 
-      if ((this.formModel).get("f_pm_leave").value) {
+      if ((this.formModel).get('f_pm_leave').value) {
           this.pm_status = 4;
       } else {
           if(this.pm_status == 4) {
@@ -178,7 +178,7 @@ export class BookingComponent implements OnInit {
       }
 
       // Shutdown
-      if ((this.formModel).get("f_am_shut").value) {
+      if ((this.formModel).get('f_am_shut').value) {
         this.am_status = 3;
         this.deptAM = 'SHUTDOWN';
         this.surgAM = 'SHUTDOWN';
@@ -188,7 +188,7 @@ export class BookingComponent implements OnInit {
         }
       }
 
-      if ((this.formModel).get("f_pm_shut").value) {
+      if ((this.formModel).get('f_pm_shut').value) {
         this.pm_status = 3;
         this.deptPM = 'SHUTDOWN';
         this.surgPM = 'SHUTDOWN';
@@ -198,8 +198,7 @@ export class BookingComponent implements OnInit {
           }
       }
 
-
-      this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 1, this.am_status, this.pm_status, this.am_confirmed, this.pm_confirmed).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+      this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 1, this.am_status, this.pm_status, this.am_confirmed, this.pm_confirmed).subscribe( null,error => console.log('Error: ', error),() =>this.calendar.populate());
 
     }
 
@@ -207,19 +206,19 @@ export class BookingComponent implements OnInit {
 
   private request() {
 
-    if (this.formModel.get("f_deptAM").dirty || this.formModel.get("f_surgAM").dirty) {
-      this.deptAM = this.formModel.get("f_deptAM").value;
-      this.surgAM = this.formModel.get("f_surgAM").value;
+    if (this.formModel.get('f_deptAM').dirty || this.formModel.get('f_surgAM').dirty) {
+      this.deptAM = this.formModel.get('f_deptAM').value;
+      this.surgAM = this.formModel.get('f_surgAM').value;
       this.am_status = 5;
     }
 
-    if (this.formModel.get("f_deptPM").dirty || this.formModel.get("f_surgPM").dirty) {
-        this.deptPM = this.formModel.get("f_deptPM").value;
-        this.surgPM = this.formModel.get("f_surgPM").value;
+    if (this.formModel.get('f_deptPM').dirty || this.formModel.get('f_surgPM').dirty) {
+        this.deptPM = this.formModel.get('f_deptPM').value;
+        this.surgPM = this.formModel.get('f_surgPM').value;
       this.pm_status = 5;
     }
 
-    this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 3, this.am_status, this.pm_status, 1, 1).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+    this.bookingService.postNewRequest(this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 3, this.am_status, this.pm_status, 1, 1).subscribe( null,error => console.log('Error: ', error),() =>this.calendar.populate());
 
   }
 
@@ -236,7 +235,7 @@ export class BookingComponent implements OnInit {
       }
 
     this.bookingService.updateRoomBooking(this.url, this.date, this.level, this.room, this.deptAM, this.surgAM, this.deptPM, this.surgPM, 0, 1, 1, 1, 1).subscribe();
-    this.bookingService.updateRoomBooking(url, date, level, room, am_dept, am_surg, pm_dept, pm_surg, 1,temp_am_status, temp_pm_status,  this.am_confirmed, this.pm_confirmed   ).subscribe( null,error => console.log("Error: ", error),() =>this.calendar.populate());
+    this.bookingService.updateRoomBooking(url, date, level, room, am_dept, am_surg, pm_dept, pm_surg, 1,temp_am_status, temp_pm_status,  this.am_confirmed, this.pm_confirmed   ).subscribe( null,error => console.log('Error: ', error),() =>this.calendar.populate());
 
   }
 

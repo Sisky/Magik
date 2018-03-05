@@ -30,7 +30,7 @@ export class DateService {
   }
 
   getDate(): Date {
-    return new Date();
+    return new Date('2017-09-01');
   }
 
   getMonday(): Date {
@@ -55,7 +55,6 @@ export class DateService {
 
   getFriday() {
     let friday = moment(this.date).startOf('isoweek').add(4, 'days').format('YYYY-MM-DD');
-    console.log(friday);
     return new Date(friday);
   }
 

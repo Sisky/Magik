@@ -122,7 +122,7 @@ export class ExtractComponent implements OnInit {
                     },
                     () => {
                         this.filteredHistory.push(tempArr);
-                        counter++
+                        counter++;
                         if(counter === this.filteredBookings.length-1) {
                             this.loading = false;
                             this.finished = true;

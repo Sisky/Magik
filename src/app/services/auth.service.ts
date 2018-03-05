@@ -1,10 +1,7 @@
 import 'rxjs/add/operator/filter';
 import auth0 from 'auth0-js';
-
-import { Injectable } from '@angular/core';
+import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
-
-
 
 declare var auth0: any;
 
@@ -34,25 +31,27 @@ export class AuthService {
 
   public handleAuthentication(): void {
 
-    this.auth0.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
-        this.setSession(authResult);
-        this.router.navigate(['profile']);
-      } else if (err) {
-        this.router.navigate(['/']);
-        console.log(err);
-      }
-    });
+    // this.auth0.parseHash((err, authResult) => {
+    //   if (authResult && authResult.accessToken && authResult.idToken) {
+    //     window.location.hash = '';
+    //     this.setSession(authResult);
+    //     this.router.navigate(['profile']);
+    //   } else if (err) {
+    //     this.router.navigate(['/']);
+    //     console.log(err);
+    //   }
+    // });
+
+      this.router.navigate(['/']);
 
   }
 
   private setSession(authResult): void {
     // Set the time that the access token will expire at
-    const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
-    localStorage.setItem('access_token', authResult.accessToken);
-    localStorage.setItem('id_token', authResult.idToken);
-    localStorage.setItem('expires_at', expiresAt);
+    // const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
+    // localStorage.setItem('access_token', authResult.accessToken);
+    // localStorage.setItem('id_token', authResult.idToken);
+    // localStorage.setItem('expires_at', expiresAt);
   }
 
   public logout(): void {
@@ -66,32 +65,29 @@ export class AuthService {
   public isAuthenticated(): boolean {
     // Check whether the current time is past the
     // access token's expiry time
-    const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-    return new Date().getTime() < expiresAt;
+    // const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
+    // return new Date().getTime() < expiresAt;
+      return true;
 
   }
 
   public getProfile(cb): void {
 
-    const accessToken = localStorage.getItem('access_token');
-
-    if (!accessToken)
-      throw new Error('Access token must exist to fetch profile');
-
-
-    this.auth0.client.userInfo(accessToken, (err, profile) => {
-
-      if (profile) {
-        this.userProfile = profile;
-        localStorage.setItem("profile", JSON.stringify(this.userProfile));
-      }
-      cb(err, profile);
-
-    });
+    // const accessToken = localStorage.getItem('access_token');
+    //
+    // if (!accessToken)
+    //   throw new Error('Access token must exist to fetch profile');
+    //
+    //
+    // this.auth0.client.userInfo(accessToken, (err, profile) => {
+    //
+    //   if (profile) {
+    //     this.userProfile = profile;
+    //     localStorage.setItem("profile", JSON.stringify(this.userProfile));
+    //   }
+    //   cb(err, profile);
+    //
+    // });
 
   }
-
-
-
-
 }

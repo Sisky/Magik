@@ -21,28 +21,29 @@ export class PermissionService {
 
     if(this.permission === undefined) {
 
-      if (this.auth.isAuthenticated()) {
-        if (this.auth.userProfile) {
-          this.profile = this.auth.userProfile;
-          this.permission = (this.profile ? this.profile['http://test.com/roles'] : '');
-        } else {
-          this.auth.getProfile((err, profile) => {
-            this.profile = profile;
-            this.permission = (this.profile ? this.profile['http://test.com/roles'] : '');
-
-          });
-        }
-      }
+      // if (this.auth.isAuthenticated()) {
+      //   if (this.auth.userProfile) {
+      //     this.profile = this.auth.userProfile;
+      //     this.permission = (this.profile ? this.profile['http://test.com/roles'] : '');
+      //   } else {
+      //     this.auth.getProfile((err, profile) => {
+      //       this.profile = profile;
+      //       this.permission = (this.profile ? this.profile['http://test.com/roles'] : '');
+      //
+      //     });
+      //   }
+      // }
 
     }
 
-    if(this.permission == "admin") {
+    // if(this.permission == "admin") {
+    //   localStorage.setItem("permission", "1");
+    // } else if(this.permission == "guest") {
+    //   localStorage.setItem("permission", "2");
+    // } else {
+    //   localStorage.setItem("permission", "0");
+    // }
       localStorage.setItem("permission", "1");
-    } else if(this.permission == "guest") {
-      localStorage.setItem("permission", "2");
-    } else {
-      localStorage.setItem("permission", "0");
-    }
 
   }
 
